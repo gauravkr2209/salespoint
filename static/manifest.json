@@ -1,0 +1,16 @@
+{
+  "name": "SalesPoint — Smart Price Comparison",
+  "short_name": "SalesPoint",
+  "description": "Compare real-time prices across Amazon, Flipkart, Blinkit, Zepto & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

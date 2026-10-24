@@ -5,7 +5,7 @@
 {#if visible}
 	<div class="w-full bg-primary text-white text-center py-2 px-4 text-sm relative z-50">
 		<span class="font-medium">
-			💡 Pro tip: Add <span class="bg-white/20 rounded px-1.5 py-0.5 font-mono text-xs">copyweb.com/</span> before any product link to compare prices instantly!
+			💡 Pro tip: Add <span class="bg-white/20 rounded px-1.5 py-0.5 font-mono text-xs">salespoint.in/</span> before any product link to compare prices instantly!
 		</span>
 		<button
 			onclick={() => (visible = false)}

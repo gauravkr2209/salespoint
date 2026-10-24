@@ -16,9 +16,21 @@
 	let rating = $derived(getDealRating(currentPrice, lowestPrice, highestPrice, averagePrice));
 
 	const colorMap = {
-		success: { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-300' },
-		warning: { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300' },
-		danger: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300' }
+		success: {
+			bg: 'bg-green-100 dark:bg-emerald-950/60',
+			text: 'text-green-800 dark:text-emerald-300',
+			border: 'border-green-300 dark:border-emerald-800'
+		},
+		warning: {
+			bg: 'bg-amber-100 dark:bg-amber-950/60',
+			text: 'text-amber-800 dark:text-amber-300',
+			border: 'border-amber-300 dark:border-amber-800'
+		},
+		danger: {
+			bg: 'bg-red-100 dark:bg-red-950/60',
+			text: 'text-red-800 dark:text-red-300',
+			border: 'border-red-300 dark:border-red-800'
+		}
 	};
 
 	let colors = $derived(colorMap[rating.color]);

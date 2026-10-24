@@ -1,4 +1,4 @@
-// Simple browser-persistent auth store
+// Browser-persistent auth store for SalesPoint
 export interface User {
 	id: string;
 	name: string;
@@ -9,7 +9,7 @@ export interface User {
 
 export function getCurrentUser(): User | null {
 	if (typeof window === 'undefined') return null;
-	const saved = localStorage.getItem('copyweb_auth_user');
+	const saved = localStorage.getItem('salespoint_auth_user') || localStorage.getItem('copyweb_auth_user');
 	if (!saved) return null;
 	try {
 		return JSON.parse(saved);
@@ -21,16 +21,17 @@ export function getCurrentUser(): User | null {
 export function setCurrentUser(user: User | null): void {
 	if (typeof window === 'undefined') return;
 	if (user) {
-		localStorage.setItem('copyweb_auth_user', JSON.stringify(user));
+		localStorage.setItem('salespoint_auth_user', JSON.stringify(user));
 	} else {
+		localStorage.removeItem('salespoint_auth_user');
 		localStorage.removeItem('copyweb_auth_user');
 	}
-	window.dispatchEvent(new Event('copyweb_auth_change'));
+	window.dispatchEvent(new Event('salespoint_auth_change'));
 }
 
 export function getAllRegisteredUsers(): Array<{ email: string; passwordHash: string; user: User }> {
 	if (typeof window === 'undefined') return [];
-	const list = localStorage.getItem('copyweb_registered_users');
+	const list = localStorage.getItem('salespoint_registered_users') || localStorage.getItem('copyweb_registered_users');
 	if (!list) return [];
 	try {
 		return JSON.parse(list);
@@ -58,13 +59,13 @@ export function registerUser(name: string, email: string, password: string): { s
 	
 	users.push({
 		email: cleanEmail,
-		passwordHash: password, // For client demonstration
+		passwordHash: password,
 		user: newUser
 	});
 	
-	localStorage.setItem('copyweb_registered_users', JSON.stringify(users));
+	localStorage.setItem('salespoint_registered_users', JSON.stringify(users));
 	setCurrentUser(newUser);
-	return { success: true, message: 'Account created successfully!', user: newUser };
+	return { success: true, message: 'Account created successfully on SalesPoint!', user: newUser };
 }
 
 export function authenticateUser(email: string, password: string): { success: boolean; message: string; user?: User } {
@@ -72,12 +73,15 @@ export function authenticateUser(email: string, password: string): { success: bo
 	const users = getAllRegisteredUsers();
 	const cleanEmail = email.trim().toLowerCase();
 	
-	// Default mock admin / demo account if empty
-	if (users.length === 0 && cleanEmail === 'demo@copyweb.com' && password === 'password123') {
+	// Default demo account
+	if (
+		(cleanEmail === 'demo@salespoint.in' || cleanEmail === 'demo@copyweb.com') &&
+		password === 'password123'
+	) {
 		const demoUser: User = {
 			id: 'usr_demo',
 			name: 'Demo Shopper',
-			email: 'demo@copyweb.com',
+			email: 'demo@salespoint.in',
 			avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=DemoShopper',
 			createdAt: new Date().toISOString()
 		};
@@ -91,7 +95,7 @@ export function authenticateUser(email: string, password: string): { success: bo
 	}
 	
 	setCurrentUser(matched.user);
-	return { success: true, message: 'Welcome back!', user: matched.user };
+	return { success: true, message: 'Welcome back to SalesPoint!', user: matched.user };
 }
 
 export function logoutUser(): void {

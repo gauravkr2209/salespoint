@@ -36,7 +36,10 @@
 		Flipkart: { line: '#2874F0', bg: 'rgba(40,116,240,0.08)' },
 		Myntra: { line: '#FF3F6C', bg: 'rgba(255,63,108,0.08)' },
 		Croma: { line: '#00966B', bg: 'rgba(0,150,107,0.08)' },
-		Ajio: { line: '#3B3A3C', bg: 'rgba(59,58,60,0.08)' }
+		Ajio: { line: '#3B3A3C', bg: 'rgba(59,58,60,0.08)' },
+		Blinkit: { line: '#F59E0B', bg: 'rgba(245,158,11,0.08)' },
+		Zepto: { line: '#8B5CF6', bg: 'rgba(139,92,246,0.08)' },
+		'Flipkart Minutes': { line: '#10B981', bg: 'rgba(16,185,129,0.08)' }
 	};
 
 	/** Generate mock price history data for the given product */
@@ -213,26 +216,26 @@
 	});
 </script>
 
-<div class="bg-surface rounded-xl border border-border overflow-hidden">
+<div class="bg-white dark:bg-slate-800 rounded-2xl border border-border/80 dark:border-slate-700 overflow-hidden shadow-sm">
 	<!-- Header -->
-	<div class="flex items-center justify-between px-5 py-4 border-b border-border">
-		<h3 class="text-base font-semibold text-text-primary">Price History</h3>
-		<div class="flex gap-1 bg-slate-100 p-0.5 rounded-lg">
+	<div class="flex items-center justify-between px-6 py-4 border-b border-border/80 dark:border-slate-700">
+		<h3 class="text-base font-bold text-text-primary dark:text-white">Price History Analytics</h3>
+		<div class="flex gap-1 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl">
 			<button
 				onclick={() => (activeRange = '30d')}
-				class="px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer
+				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-colors cursor-pointer
 					{activeRange === '30d'
-					? 'bg-surface text-primary shadow-sm'
-					: 'text-text-secondary hover:text-text-primary'}"
+					? 'bg-white dark:bg-slate-800 text-primary dark:text-indigo-400 shadow-xs'
+					: 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
 			>
 				30 Days
 			</button>
 			<button
 				onclick={() => (activeRange = '90d')}
-				class="px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer
+				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-colors cursor-pointer
 					{activeRange === '90d'
-					? 'bg-surface text-primary shadow-sm'
-					: 'text-text-secondary hover:text-text-primary'}"
+					? 'bg-white dark:bg-slate-800 text-primary dark:text-indigo-400 shadow-xs'
+					: 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
 			>
 				90 Days
 			</button>

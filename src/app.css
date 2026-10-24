@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* Custom theme tokens */
+/* Custom theme tokens with light / dark mode support */
 @theme {
   --color-primary: #5855E5;
   --color-primary-dark: #4543B8;
@@ -17,14 +17,33 @@
   --color-myntra: #FF3F6C;
   --color-croma: #00966B;
   --color-ajio: #3B3A3C;
+  --color-blinkit: #F8CB46;
+  --color-zepto: #8B5CF6;
+  --color-minutes: #22C55E;
 }
 
 /* Base styles */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #F8FAFC;
-  color: var(--color-text-primary);
+  color: #0F172A;
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.dark body {
+  background-color: #0B0F19;
+  color: #F1F5F9;
+}
+
+/* Reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Animations */
@@ -34,8 +53,8 @@ body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
 }
 
 @keyframes shimmer {
@@ -62,7 +81,7 @@ body {
 }
 
 .animated-gradient-text {
-  background: linear-gradient(135deg, #5855E5 0%, #8B5CF6 35%, #EC4899 70%, #5855E5 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #A855F7 35%, #EC4899 70%, #6366F1 100%);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -70,12 +89,12 @@ body {
 }
 
 .animated-gradient-bg {
-  background: linear-gradient(-45deg, #5855E5, #7C3AED, #3B82F6, #10B981);
+  background: linear-gradient(-45deg, #4F46E5, #7C3AED, #2563EB, #059669);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility with dark mode variants */
 .glass-panel {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
@@ -83,11 +102,21 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+html.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(55, 65, 81, 0.6);
+}
+
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+html.dark .glass-card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.7);
 }
 
 /* Scrollbar */
@@ -98,9 +127,15 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
 ::-webkit-scrollbar-thumb {
   background: #CAD5E2;
   border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;

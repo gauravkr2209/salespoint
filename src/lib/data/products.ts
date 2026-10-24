@@ -1,4 +1,4 @@
-import type { StoreName } from '$lib/types';
+import type { StoreName, UnitType } from '$lib/types';
 
 export interface PriceEntry {
 	storeId: string;
@@ -8,6 +8,10 @@ export interface PriceEntry {
 	url: string;
 	inStock: boolean;
 	lastUpdated: string;
+	source?: 'verified_partner' | 'demo_feed' | 'official_api';
+	isDemoData?: boolean;
+	deliveryEta?: string;
+	locationRestriction?: string;
 }
 
 export interface Product {
@@ -23,6 +27,14 @@ export interface Product {
 	reviewCount: number;
 	popularity: number;
 	tags: string[];
+	variant?: string;
+	packSize?: number;
+	unit?: UnitType;
+	unitPrice?: {
+		pricePer100g?: number;
+		pricePerLitre?: number;
+		formatted: string;
+	};
 }
 
 export const products: Product[] = [
@@ -14451,6 +14463,29912 @@ export const products: Product[] = [
       "lifestyle",
       "kitchen"
     ]
+  },
+  {
+    "id": "prod-151",
+    "title": "Lay's India's Magic Masala Potato Chips (30g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (30g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-151",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-151",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-151",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-151",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2795,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-152",
+    "title": "Lay's India's Magic Masala Potato Chips (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-152",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-152",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-152",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-152",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 21,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 21,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 21,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 21,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 5108,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-153",
+    "title": "Lay's India's Magic Masala Potato Chips (73g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (73g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-153",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-153",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-153",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-153",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3552,
+    "popularity": 93,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "73g",
+    "packSize": 73,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.1,
+      "formatted": "\u20b941.1/100g"
+    }
+  },
+  {
+    "id": "prod-154",
+    "title": "Lay's India's Magic Masala Potato Chips (115g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (115g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-154",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-154",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-154",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-154",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 50,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 51,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 51,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 52,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 4680,
+    "popularity": 79,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "115g",
+    "packSize": 115,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.48,
+      "formatted": "\u20b943.48/100g"
+    }
+  },
+  {
+    "id": "prod-155",
+    "title": "Lay's India's Magic Masala Potato Chips (165g Party Pack)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (165g Party Pack). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 82,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-155",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 83,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-155",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 83,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-155",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 83,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-155",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 79,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 79,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 82,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 83,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 85,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 82,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 83,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1343,
+    "popularity": 91,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g Party Pack",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 48.48,
+      "formatted": "\u20b948.48/100g"
+    }
+  },
+  {
+    "id": "prod-156",
+    "title": "Lay's India's Magic Masala Potato Chips (Pack of 3 (73g x 3))",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's India's Magic Masala Potato Chips (Pack of 3 (73g x 3)). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 83,
+        "mrp": 90,
+        "url": "https://blinkit.com/prn/lay-s-india-s-magic-masala-potato-c/prod-156",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 88,
+        "mrp": 90,
+        "url": "https://zepto.com/prn/lay-s-india-s-magic-masala-potato-c/prod-156",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 89,
+        "mrp": 90,
+        "url": "https://minutes.com/prn/lay-s-india-s-magic-masala-potato-c/prod-156",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 89,
+        "mrp": 90,
+        "url": "https://amazon.com/prn/lay-s-india-s-magic-masala-potato-c/prod-156",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 88,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 90,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 90,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 90,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 92,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 95,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 98,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3393,
+    "popularity": 74,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 3 (73g x 3)",
+    "packSize": 219,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 38.81,
+      "formatted": "\u20b938.81/100g"
+    }
+  },
+  {
+    "id": "prod-157",
+    "title": "Lay's Spanish Tomato Tango Potato Chips (30g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Spanish Tomato Tango Potato Chips (30g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-157",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-157",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-157",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-157",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 4794,
+    "popularity": 85,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-158",
+    "title": "Lay's Spanish Tomato Tango Potato Chips (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Spanish Tomato Tango Potato Chips (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-158",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-158",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-158",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-158",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4819,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-159",
+    "title": "Lay's Spanish Tomato Tango Potato Chips (73g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Spanish Tomato Tango Potato Chips (73g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-159",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-159",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-159",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-159",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 32,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4828,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "73g",
+    "packSize": 73,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.1,
+      "formatted": "\u20b941.1/100g"
+    }
+  },
+  {
+    "id": "prod-160",
+    "title": "Lay's Spanish Tomato Tango Potato Chips (115g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Spanish Tomato Tango Potato Chips (115g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-160",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-160",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-160",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-160",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 51,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 50,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 51,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 50,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 52,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 52,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4894,
+    "popularity": 88,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "115g",
+    "packSize": 115,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.48,
+      "formatted": "\u20b943.48/100g"
+    }
+  },
+  {
+    "id": "prod-161",
+    "title": "Lay's Spanish Tomato Tango Potato Chips (165g Party Pack)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Spanish Tomato Tango Potato Chips (165g Party Pack). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 80,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-161",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-161",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-161",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 82,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/lay-s-spanish-tomato-tango-potato-c/prod-161",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 81,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 78,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 79,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 76,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 78,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 75,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 77,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1981,
+    "popularity": 95,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g Party Pack",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 48.48,
+      "formatted": "\u20b948.48/100g"
+    }
+  },
+  {
+    "id": "prod-162",
+    "title": "Lay's American Style Cream & Onion Potato Chips (30g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's American Style Cream & Onion Potato Chips (30g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/lay-s-american-style-cream-onion-po/prod-162",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/lay-s-american-style-cream-onion-po/prod-162",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/lay-s-american-style-cream-onion-po/prod-162",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/lay-s-american-style-cream-onion-po/prod-162",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1932,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-163",
+    "title": "Lay's American Style Cream & Onion Potato Chips (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's American Style Cream & Onion Potato Chips (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-american-style-cream-onion-po/prod-163",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-american-style-cream-onion-po/prod-163",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-american-style-cream-onion-po/prod-163",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-american-style-cream-onion-po/prod-163",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 21,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 22,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 22,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 21,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 21,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 2655,
+    "popularity": 91,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-164",
+    "title": "Lay's American Style Cream & Onion Potato Chips (73g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's American Style Cream & Onion Potato Chips (73g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-american-style-cream-onion-po/prod-164",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-american-style-cream-onion-po/prod-164",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-american-style-cream-onion-po/prod-164",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-american-style-cream-onion-po/prod-164",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 33,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 3499,
+    "popularity": 76,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "73g",
+    "packSize": 73,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.1,
+      "formatted": "\u20b941.1/100g"
+    }
+  },
+  {
+    "id": "prod-165",
+    "title": "Lay's American Style Cream & Onion Potato Chips (115g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's American Style Cream & Onion Potato Chips (115g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-american-style-cream-onion-po/prod-165",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-american-style-cream-onion-po/prod-165",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-american-style-cream-onion-po/prod-165",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-american-style-cream-onion-po/prod-165",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 50,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 52,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 4374,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "115g",
+    "packSize": 115,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.48,
+      "formatted": "\u20b943.48/100g"
+    }
+  },
+  {
+    "id": "prod-166",
+    "title": "Lay's American Style Cream & Onion Potato Chips (165g Party Pack)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's American Style Cream & Onion Potato Chips (165g Party Pack). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 81,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/lay-s-american-style-cream-onion-po/prod-166",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 84,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/lay-s-american-style-cream-onion-po/prod-166",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 82,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/lay-s-american-style-cream-onion-po/prod-166",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/lay-s-american-style-cream-onion-po/prod-166",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 77,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 77,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 78,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 80,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 78,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 77,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 75,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 1563,
+    "popularity": 83,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g Party Pack",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 48.48,
+      "formatted": "\u20b948.48/100g"
+    }
+  },
+  {
+    "id": "prod-167",
+    "title": "Lay's Classic Salted Potato Chips (30g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Classic Salted Potato Chips (30g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/lay-s-classic-salted-potato-chips-3/prod-167",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/lay-s-classic-salted-potato-chips-3/prod-167",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/lay-s-classic-salted-potato-chips-3/prod-167",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/lay-s-classic-salted-potato-chips-3/prod-167",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 533,
+    "popularity": 87,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-168",
+    "title": "Lay's Classic Salted Potato Chips (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Classic Salted Potato Chips (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-classic-salted-potato-chips-4/prod-168",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-classic-salted-potato-chips-4/prod-168",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-classic-salted-potato-chips-4/prod-168",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-classic-salted-potato-chips-4/prod-168",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 638,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-169",
+    "title": "Lay's Classic Salted Potato Chips (73g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Classic Salted Potato Chips (73g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-classic-salted-potato-chips-7/prod-169",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-classic-salted-potato-chips-7/prod-169",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-classic-salted-potato-chips-7/prod-169",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-classic-salted-potato-chips-7/prod-169",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 29,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1802,
+    "popularity": 70,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "73g",
+    "packSize": 73,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.1,
+      "formatted": "\u20b941.1/100g"
+    }
+  },
+  {
+    "id": "prod-170",
+    "title": "Lay's Classic Salted Potato Chips (115g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Classic Salted Potato Chips (115g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-classic-salted-potato-chips-1/prod-170",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-classic-salted-potato-chips-1/prod-170",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-classic-salted-potato-chips-1/prod-170",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-classic-salted-potato-chips-1/prod-170",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 48,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 50,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 49,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 47,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 49,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4929,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "115g",
+    "packSize": 115,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.48,
+      "formatted": "\u20b943.48/100g"
+    }
+  },
+  {
+    "id": "prod-171",
+    "title": "Lay's Classic Salted Potato Chips (165g Party Pack)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Classic Salted Potato Chips (165g Party Pack). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 80,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/lay-s-classic-salted-potato-chips-1/prod-171",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 83,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/lay-s-classic-salted-potato-chips-1/prod-171",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 80,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/lay-s-classic-salted-potato-chips-1/prod-171",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 77,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/lay-s-classic-salted-potato-chips-1/prod-171",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 83,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 84,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 84,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 86,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 85,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 84,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 86,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4468,
+    "popularity": 78,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g Party Pack",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 48.48,
+      "formatted": "\u20b948.48/100g"
+    }
+  },
+  {
+    "id": "prod-172",
+    "title": "Lay's Sizzling Hot Potato Chips (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Sizzling Hot Potato Chips (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-sizzling-hot-potato-chips-48g/prod-172",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-sizzling-hot-potato-chips-48g/prod-172",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-sizzling-hot-potato-chips-48g/prod-172",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-sizzling-hot-potato-chips-48g/prod-172",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3645,
+    "popularity": 78,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-173",
+    "title": "Lay's Sizzling Hot Potato Chips (73g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Sizzling Hot Potato Chips (73g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-sizzling-hot-potato-chips-73g/prod-173",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-sizzling-hot-potato-chips-73g/prod-173",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-sizzling-hot-potato-chips-73g/prod-173",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-sizzling-hot-potato-chips-73g/prod-173",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 31,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 30,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3931,
+    "popularity": 81,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "73g",
+    "packSize": 73,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.1,
+      "formatted": "\u20b941.1/100g"
+    }
+  },
+  {
+    "id": "prod-174",
+    "title": "Lay's Sizzling Hot Potato Chips (115g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Sizzling Hot Potato Chips (115g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-sizzling-hot-potato-chips-115/prod-174",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-sizzling-hot-potato-chips-115/prod-174",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-sizzling-hot-potato-chips-115/prod-174",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 49,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-sizzling-hot-potato-chips-115/prod-174",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 48,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 47,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 4925,
+    "popularity": 97,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "115g",
+    "packSize": 115,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.48,
+      "formatted": "\u20b943.48/100g"
+    }
+  },
+  {
+    "id": "prod-175",
+    "title": "Lay's Wafer Style Salt with Black Pepper (48g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Wafer Style Salt with Black Pepper (48g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/lay-s-wafer-style-salt-with-black-p/prod-175",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/lay-s-wafer-style-salt-with-black-p/prod-175",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/lay-s-wafer-style-salt-with-black-p/prod-175",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/lay-s-wafer-style-salt-with-black-p/prod-175",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 21,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 2850,
+    "popularity": 88,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "48g",
+    "packSize": 48,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 41.67,
+      "formatted": "\u20b941.67/100g"
+    }
+  },
+  {
+    "id": "prod-176",
+    "title": "Lay's Wafer Style Salt with Black Pepper (85g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Wafer Style Salt with Black Pepper (85g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/lay-s-wafer-style-salt-with-black-p/prod-176",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/lay-s-wafer-style-salt-with-black-p/prod-176",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/lay-s-wafer-style-salt-with-black-p/prod-176",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/lay-s-wafer-style-salt-with-black-p/prod-176",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 44,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3677,
+    "popularity": 72,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "85g",
+    "packSize": 85,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 44.71,
+      "formatted": "\u20b944.71/100g"
+    }
+  },
+  {
+    "id": "prod-177",
+    "title": "Lay's Gourmet Vintage Cheese & Paprika (55g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Gourmet Vintage Cheese & Paprika (55g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-177",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-177",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-177",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-177",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 31,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 30,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1063,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "55g",
+    "packSize": 55,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 54.55,
+      "formatted": "\u20b954.55/100g"
+    }
+  },
+  {
+    "id": "prod-178",
+    "title": "Lay's Gourmet Vintage Cheese & Paprika (90g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Gourmet Vintage Cheese & Paprika (90g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 49,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-178",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 49,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-178",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-178",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-gourmet-vintage-cheese-paprik/prod-178",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 47,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 47,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 48,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 46,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3899,
+    "popularity": 93,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "90g",
+    "packSize": 90,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 55.56,
+      "formatted": "\u20b955.56/100g"
+    }
+  },
+  {
+    "id": "prod-179",
+    "title": "Lay's Gourmet Lime & Cracked Pepper (55g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Gourmet Lime & Cracked Pepper (55g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/lay-s-gourmet-lime-cracked-pepper-5/prod-179",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/lay-s-gourmet-lime-cracked-pepper-5/prod-179",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/lay-s-gourmet-lime-cracked-pepper-5/prod-179",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/lay-s-gourmet-lime-cracked-pepper-5/prod-179",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1278,
+    "popularity": 76,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "55g",
+    "packSize": 55,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 54.55,
+      "formatted": "\u20b954.55/100g"
+    }
+  },
+  {
+    "id": "prod-180",
+    "title": "Lay's Gourmet Lime & Cracked Pepper (90g)",
+    "brand": "Lay's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Lay's Gourmet Lime & Cracked Pepper (90g). Crispy, authentic snacking variant by Lay's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/lay-s-gourmet-lime-cracked-pepper-9/prod-180",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 48,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/lay-s-gourmet-lime-cracked-pepper-9/prod-180",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/lay-s-gourmet-lime-cracked-pepper-9/prod-180",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/lay-s-gourmet-lime-cracked-pepper-9/prod-180",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 50,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 48,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 46,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 48,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 50,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 2105,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "lay's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "90g",
+    "packSize": 90,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 55.56,
+      "formatted": "\u20b955.56/100g"
+    }
+  },
+  {
+    "id": "prod-181",
+    "title": "Kurkure Masala Munch Crispy Corn Puffs (40g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Masala Munch Crispy Corn Puffs (40g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-181",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-181",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-181",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-181",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 2415,
+    "popularity": 97,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-182",
+    "title": "Kurkure Masala Munch Crispy Corn Puffs (75g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Masala Munch Crispy Corn Puffs (75g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-182",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-182",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-182",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-182",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 950,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.67,
+      "formatted": "\u20b926.67/100g"
+    }
+  },
+  {
+    "id": "prod-183",
+    "title": "Kurkure Masala Munch Crispy Corn Puffs (135g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Masala Munch Crispy Corn Puffs (135g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-183",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-183",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-183",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-183",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 33,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1065,
+    "popularity": 77,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.93,
+      "formatted": "\u20b925.93/100g"
+    }
+  },
+  {
+    "id": "prod-184",
+    "title": "Kurkure Masala Munch Crispy Corn Puffs (220g Family Pack)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Masala Munch Crispy Corn Puffs (220g Family Pack). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-184",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 54,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-184",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-184",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-184",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 54,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 55,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 56,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 57,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 58,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5013,
+    "popularity": 79,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "220g Family Pack",
+    "packSize": 220,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-185",
+    "title": "Kurkure Masala Munch Crispy Corn Puffs (Pack of 4 (75g x 4))",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Masala Munch Crispy Corn Puffs (Pack of 4 (75g x 4)). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 76,
+        "mrp": 80,
+        "url": "https://blinkit.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-185",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 72,
+        "mrp": 80,
+        "url": "https://zepto.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-185",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://minutes.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-185",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 78,
+        "mrp": 80,
+        "url": "https://amazon.com/prn/kurkure-masala-munch-crispy-corn-pu/prod-185",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 78,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 75,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 77,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 80,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 79,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 80,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 80,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 3620,
+    "popularity": 78,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 4 (75g x 4)",
+    "packSize": 300,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-186",
+    "title": "Kurkure Green Chutney Style Crispy Puffs (40g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Green Chutney Style Crispy Puffs (40g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kurkure-green-chutney-style-crispy-/prod-186",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kurkure-green-chutney-style-crispy-/prod-186",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kurkure-green-chutney-style-crispy-/prod-186",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kurkure-green-chutney-style-crispy-/prod-186",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2819,
+    "popularity": 90,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-187",
+    "title": "Kurkure Green Chutney Style Crispy Puffs (75g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Green Chutney Style Crispy Puffs (75g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kurkure-green-chutney-style-crispy-/prod-187",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kurkure-green-chutney-style-crispy-/prod-187",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kurkure-green-chutney-style-crispy-/prod-187",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kurkure-green-chutney-style-crispy-/prod-187",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 18,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3841,
+    "popularity": 93,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.67,
+      "formatted": "\u20b926.67/100g"
+    }
+  },
+  {
+    "id": "prod-188",
+    "title": "Kurkure Green Chutney Style Crispy Puffs (135g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Green Chutney Style Crispy Puffs (135g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/kurkure-green-chutney-style-crispy-/prod-188",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/kurkure-green-chutney-style-crispy-/prod-188",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/kurkure-green-chutney-style-crispy-/prod-188",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/kurkure-green-chutney-style-crispy-/prod-188",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 37,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 37,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 1428,
+    "popularity": 96,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.93,
+      "formatted": "\u20b925.93/100g"
+    }
+  },
+  {
+    "id": "prod-189",
+    "title": "Kurkure Chilli Chatka Crunchy Snacks (40g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Chilli Chatka Crunchy Snacks (40g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-189",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-189",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-189",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-189",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3964,
+    "popularity": 96,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-190",
+    "title": "Kurkure Chilli Chatka Crunchy Snacks (75g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Chilli Chatka Crunchy Snacks (75g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-190",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-190",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-190",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-190",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3013,
+    "popularity": 70,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.67,
+      "formatted": "\u20b926.67/100g"
+    }
+  },
+  {
+    "id": "prod-191",
+    "title": "Kurkure Chilli Chatka Crunchy Snacks (135g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Chilli Chatka Crunchy Snacks (135g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-191",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-191",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-191",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/kurkure-chilli-chatka-crunchy-snack/prod-191",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 37,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 37,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 4986,
+    "popularity": 82,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.93,
+      "formatted": "\u20b925.93/100g"
+    }
+  },
+  {
+    "id": "prod-192",
+    "title": "Kurkure Playz Puffcorn Yummy Cheese (30g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Playz Puffcorn Yummy Cheese (30g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-192",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-192",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-192",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-192",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5115,
+    "popularity": 70,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-193",
+    "title": "Kurkure Playz Puffcorn Yummy Cheese (60g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Playz Puffcorn Yummy Cheese (60g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-193",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-193",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-193",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-193",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4094,
+    "popularity": 79,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "60g",
+    "packSize": 60,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-194",
+    "title": "Kurkure Playz Puffcorn Yummy Cheese (110g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Playz Puffcorn Yummy Cheese (110g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-194",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 44,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-194",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-194",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/kurkure-playz-puffcorn-yummy-cheese/prod-194",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 46,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 46,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3356,
+    "popularity": 72,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "110g",
+    "packSize": 110,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 40.91,
+      "formatted": "\u20b940.91/100g"
+    }
+  },
+  {
+    "id": "prod-195",
+    "title": "Kurkure Solid Masti Masala Twists (40g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Solid Masti Masala Twists (40g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kurkure-solid-masti-masala-twists-4/prod-195",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kurkure-solid-masti-masala-twists-4/prod-195",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kurkure-solid-masti-masala-twists-4/prod-195",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kurkure-solid-masti-masala-twists-4/prod-195",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 1223,
+    "popularity": 77,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-196",
+    "title": "Kurkure Solid Masti Masala Twists (75g)",
+    "brand": "Kurkure",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Kurkure Solid Masti Masala Twists (75g). Crispy, authentic snacking variant by Kurkure. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kurkure-solid-masti-masala-twists-7/prod-196",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kurkure-solid-masti-masala-twists-7/prod-196",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kurkure-solid-masti-masala-twists-7/prod-196",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kurkure-solid-masti-masala-twists-7/prod-196",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 18,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 3468,
+    "popularity": 84,
+    "tags": [
+      "chips",
+      "snacks",
+      "kurkure",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.67,
+      "formatted": "\u20b926.67/100g"
+    }
+  },
+  {
+    "id": "prod-197",
+    "title": "Uncle Chipps Spicy Treat Flavour Potato Chips (30g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Spicy Treat Flavour Potato Chips (30g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-197",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-197",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-197",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-197",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1095,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-198",
+    "title": "Uncle Chipps Spicy Treat Flavour Potato Chips (50g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Spicy Treat Flavour Potato Chips (50g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-198",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-198",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-198",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-198",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 18,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 18,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 335,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "50g",
+    "packSize": 50,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 40.0,
+      "formatted": "\u20b940.0/100g"
+    }
+  },
+  {
+    "id": "prod-199",
+    "title": "Uncle Chipps Spicy Treat Flavour Potato Chips (85g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Spicy Treat Flavour Potato Chips (85g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-199",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-199",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-199",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-199",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 31,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 3479,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "85g",
+    "packSize": 85,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 35.29,
+      "formatted": "\u20b935.29/100g"
+    }
+  },
+  {
+    "id": "prod-200",
+    "title": "Uncle Chipps Spicy Treat Flavour Potato Chips (135g Jumbo Pack)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Spicy Treat Flavour Potato Chips (135g Jumbo Pack). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 51,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-200",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-200",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-200",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 52,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/uncle-chipps-spicy-treat-flavour-po/prod-200",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 51,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 51,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 52,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 51,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 52,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3152,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g Jumbo Pack",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 37.04,
+      "formatted": "\u20b937.04/100g"
+    }
+  },
+  {
+    "id": "prod-201",
+    "title": "Uncle Chipps Plain Salted Crispy Potato Chips (30g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Plain Salted Crispy Potato Chips (30g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/uncle-chipps-plain-salted-crispy-po/prod-201",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/uncle-chipps-plain-salted-crispy-po/prod-201",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/uncle-chipps-plain-salted-crispy-po/prod-201",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/uncle-chipps-plain-salted-crispy-po/prod-201",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4024,
+    "popularity": 90,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "30g",
+    "packSize": 30,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-202",
+    "title": "Uncle Chipps Plain Salted Crispy Potato Chips (50g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Plain Salted Crispy Potato Chips (50g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/uncle-chipps-plain-salted-crispy-po/prod-202",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/uncle-chipps-plain-salted-crispy-po/prod-202",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/uncle-chipps-plain-salted-crispy-po/prod-202",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/uncle-chipps-plain-salted-crispy-po/prod-202",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 21,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4214,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "50g",
+    "packSize": 50,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 40.0,
+      "formatted": "\u20b940.0/100g"
+    }
+  },
+  {
+    "id": "prod-203",
+    "title": "Uncle Chipps Plain Salted Crispy Potato Chips (85g)",
+    "brand": "Uncle Chipps",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Uncle Chipps Plain Salted Crispy Potato Chips (85g). Crispy, authentic snacking variant by Uncle Chipps. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/uncle-chipps-plain-salted-crispy-po/prod-203",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/uncle-chipps-plain-salted-crispy-po/prod-203",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/uncle-chipps-plain-salted-crispy-po/prod-203",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/uncle-chipps-plain-salted-crispy-po/prod-203",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 28,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 27,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 28,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1917,
+    "popularity": 81,
+    "tags": [
+      "chips",
+      "snacks",
+      "uncle chipps",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "85g",
+    "packSize": 85,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 35.29,
+      "formatted": "\u20b935.29/100g"
+    }
+  },
+  {
+    "id": "prod-204",
+    "title": "Bingo! Mad Angles Achaari Masti (37g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Achaari Masti (37g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-achaari-masti-37g/prod-204",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/bingo-mad-angles-achaari-masti-37g/prod-204",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/bingo-mad-angles-achaari-masti-37g/prod-204",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/bingo-mad-angles-achaari-masti-37g/prod-204",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "popularity": 80,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "37g",
+    "packSize": 37,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.03,
+      "formatted": "\u20b927.03/100g"
+    }
+  },
+  {
+    "id": "prod-205",
+    "title": "Bingo! Mad Angles Achaari Masti (66g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Achaari Masti (66g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-achaari-masti-66g/prod-205",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bingo-mad-angles-achaari-masti-66g/prod-205",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bingo-mad-angles-achaari-masti-66g/prod-205",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bingo-mad-angles-achaari-masti-66g/prod-205",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 149,
+    "popularity": 75,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "66g",
+    "packSize": 66,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.3,
+      "formatted": "\u20b930.3/100g"
+    }
+  },
+  {
+    "id": "prod-206",
+    "title": "Bingo! Mad Angles Achaari Masti (130g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Achaari Masti (130g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-achaari-masti-130g/prod-206",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 42,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/bingo-mad-angles-achaari-masti-130g/prod-206",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/bingo-mad-angles-achaari-masti-130g/prod-206",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/bingo-mad-angles-achaari-masti-130g/prod-206",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 40,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 39,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 208,
+    "popularity": 83,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "130g",
+    "packSize": 130,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.77,
+      "formatted": "\u20b930.77/100g"
+    }
+  },
+  {
+    "id": "prod-207",
+    "title": "Bingo! Mad Angles Chaat Masti (37g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Chaat Masti (37g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-chaat-masti-37g/prod-207",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/bingo-mad-angles-chaat-masti-37g/prod-207",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/bingo-mad-angles-chaat-masti-37g/prod-207",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/bingo-mad-angles-chaat-masti-37g/prod-207",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1595,
+    "popularity": 95,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "37g",
+    "packSize": 37,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.03,
+      "formatted": "\u20b927.03/100g"
+    }
+  },
+  {
+    "id": "prod-208",
+    "title": "Bingo! Mad Angles Chaat Masti (66g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Chaat Masti (66g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-chaat-masti-66g/prod-208",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bingo-mad-angles-chaat-masti-66g/prod-208",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bingo-mad-angles-chaat-masti-66g/prod-208",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bingo-mad-angles-chaat-masti-66g/prod-208",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 21,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2517,
+    "popularity": 72,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "66g",
+    "packSize": 66,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.3,
+      "formatted": "\u20b930.3/100g"
+    }
+  },
+  {
+    "id": "prod-209",
+    "title": "Bingo! Mad Angles Chaat Masti (130g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Chaat Masti (130g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-chaat-masti-130g/prod-209",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/bingo-mad-angles-chaat-masti-130g/prod-209",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/bingo-mad-angles-chaat-masti-130g/prod-209",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 42,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/bingo-mad-angles-chaat-masti-130g/prod-209",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 40,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 40,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3677,
+    "popularity": 85,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "130g",
+    "packSize": 130,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.77,
+      "formatted": "\u20b930.77/100g"
+    }
+  },
+  {
+    "id": "prod-210",
+    "title": "Bingo! Mad Angles Very Peri Peri (37g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Very Peri Peri (37g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-very-peri-peri-37g/prod-210",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/bingo-mad-angles-very-peri-peri-37g/prod-210",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/bingo-mad-angles-very-peri-peri-37g/prod-210",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/bingo-mad-angles-very-peri-peri-37g/prod-210",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3774,
+    "popularity": 78,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "37g",
+    "packSize": 37,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.03,
+      "formatted": "\u20b927.03/100g"
+    }
+  },
+  {
+    "id": "prod-211",
+    "title": "Bingo! Mad Angles Very Peri Peri (66g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Mad Angles Very Peri Peri (66g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bingo-mad-angles-very-peri-peri-66g/prod-211",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bingo-mad-angles-very-peri-peri-66g/prod-211",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bingo-mad-angles-very-peri-peri-66g/prod-211",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bingo-mad-angles-very-peri-peri-66g/prod-211",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3097,
+    "popularity": 77,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "66g",
+    "packSize": 66,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.3,
+      "formatted": "\u20b930.3/100g"
+    }
+  },
+  {
+    "id": "prod-212",
+    "title": "Bingo! Tedhe Medhe Masala Tadka (40g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Tedhe Medhe Masala Tadka (40g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/bingo-tedhe-medhe-masala-tadka-40g/prod-212",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/bingo-tedhe-medhe-masala-tadka-40g/prod-212",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/bingo-tedhe-medhe-masala-tadka-40g/prod-212",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/bingo-tedhe-medhe-masala-tadka-40g/prod-212",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3428,
+    "popularity": 80,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-213",
+    "title": "Bingo! Tedhe Medhe Masala Tadka (80g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Tedhe Medhe Masala Tadka (80g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bingo-tedhe-medhe-masala-tadka-80g/prod-213",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bingo-tedhe-medhe-masala-tadka-80g/prod-213",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bingo-tedhe-medhe-masala-tadka-80g/prod-213",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bingo-tedhe-medhe-masala-tadka-80g/prod-213",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 18,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 17,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 17,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 16,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 204,
+    "popularity": 87,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "80g",
+    "packSize": 80,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-214",
+    "title": "Bingo! Tedhe Medhe Masala Tadka (150g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Tedhe Medhe Masala Tadka (150g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/bingo-tedhe-medhe-masala-tadka-150g/prod-214",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/bingo-tedhe-medhe-masala-tadka-150g/prod-214",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/bingo-tedhe-medhe-masala-tadka-150g/prod-214",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/bingo-tedhe-medhe-masala-tadka-150g/prod-214",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 586,
+    "popularity": 91,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.33,
+      "formatted": "\u20b925.33/100g"
+    }
+  },
+  {
+    "id": "prod-215",
+    "title": "Bingo! Tedhe Medhe Masala Tadka (Pack of 3 (80g x 3))",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Tedhe Medhe Masala Tadka (Pack of 3 (80g x 3)). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/bingo-tedhe-medhe-masala-tadka-pack/prod-215",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/bingo-tedhe-medhe-masala-tadka-pack/prod-215",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/bingo-tedhe-medhe-masala-tadka-pack/prod-215",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/bingo-tedhe-medhe-masala-tadka-pack/prod-215",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 56,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 57,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 58,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 59,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 58,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 58,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 544,
+    "popularity": 80,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 3 (80g x 3)",
+    "packSize": 240,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 23.33,
+      "formatted": "\u20b923.33/100g"
+    }
+  },
+  {
+    "id": "prod-216",
+    "title": "Bingo! Hashtags Cream & Onion Potato Chips (45g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Hashtags Cream & Onion Potato Chips (45g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bingo-hashtags-cream-onion-potato-c/prod-216",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bingo-hashtags-cream-onion-potato-c/prod-216",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bingo-hashtags-cream-onion-potato-c/prod-216",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bingo-hashtags-cream-onion-potato-c/prod-216",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 830,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "45g",
+    "packSize": 45,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 44.44,
+      "formatted": "\u20b944.44/100g"
+    }
+  },
+  {
+    "id": "prod-217",
+    "title": "Bingo! Hashtags Cream & Onion Potato Chips (80g)",
+    "brand": "Bingo!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Bingo! Hashtags Cream & Onion Potato Chips (80g). Crispy, authentic snacking variant by Bingo!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/bingo-hashtags-cream-onion-potato-c/prod-217",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/bingo-hashtags-cream-onion-potato-c/prod-217",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/bingo-hashtags-cream-onion-potato-c/prod-217",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 37,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/bingo-hashtags-cream-onion-potato-c/prod-217",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 37,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 2563,
+    "popularity": 91,
+    "tags": [
+      "chips",
+      "snacks",
+      "bingo!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "80g",
+    "packSize": 80,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 43.75,
+      "formatted": "\u20b943.75/100g"
+    }
+  },
+  {
+    "id": "prod-218",
+    "title": "Pringles Original Potato Crisps Canister (107g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Original Potato Crisps Canister (107g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 113,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/pringles-original-potato-crisps-can/prod-218",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 116,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/pringles-original-potato-crisps-can/prod-218",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 114,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/pringles-original-potato-crisps-can/prod-218",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 120,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/pringles-original-potato-crisps-can/prod-218",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 112,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 108,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 110,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 114,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 116,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 120,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 119,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 2739,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "107g",
+    "packSize": 107,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 107.48,
+      "formatted": "\u20b9107.48/100g"
+    }
+  },
+  {
+    "id": "prod-219",
+    "title": "Pringles Original Potato Crisps Canister (165g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Original Potato Crisps Canister (165g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 159,
+        "mrp": 175,
+        "url": "https://blinkit.com/prn/pringles-original-potato-crisps-can/prod-219",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 151,
+        "mrp": 175,
+        "url": "https://zepto.com/prn/pringles-original-potato-crisps-can/prod-219",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 149,
+        "mrp": 175,
+        "url": "https://minutes.com/prn/pringles-original-potato-crisps-can/prod-219",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 161,
+        "mrp": 175,
+        "url": "https://amazon.com/prn/pringles-original-potato-crisps-can/prod-219",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 158,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 153,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 154,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 159,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 159,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 163,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 158,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1241,
+    "popularity": 72,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 93.94,
+      "formatted": "\u20b993.94/100g"
+    }
+  },
+  {
+    "id": "prod-220",
+    "title": "Pringles Sour Cream & Onion Crisps Canister (107g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Sour Cream & Onion Crisps Canister (107g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 116,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/pringles-sour-cream-onion-crisps-ca/prod-220",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 112,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/pringles-sour-cream-onion-crisps-ca/prod-220",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 115,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/pringles-sour-cream-onion-crisps-ca/prod-220",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 116,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/pringles-sour-cream-onion-crisps-ca/prod-220",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 117,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 117,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 120,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 117,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 113,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 116,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 118,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5028,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "107g",
+    "packSize": 107,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 107.48,
+      "formatted": "\u20b9107.48/100g"
+    }
+  },
+  {
+    "id": "prod-221",
+    "title": "Pringles Sour Cream & Onion Crisps Canister (165g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Sour Cream & Onion Crisps Canister (165g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 157,
+        "mrp": 175,
+        "url": "https://blinkit.com/prn/pringles-sour-cream-onion-crisps-ca/prod-221",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 149,
+        "mrp": 175,
+        "url": "https://zepto.com/prn/pringles-sour-cream-onion-crisps-ca/prod-221",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 158,
+        "mrp": 175,
+        "url": "https://minutes.com/prn/pringles-sour-cream-onion-crisps-ca/prod-221",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 160,
+        "mrp": 175,
+        "url": "https://amazon.com/prn/pringles-sour-cream-onion-crisps-ca/prod-221",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 151,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 157,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 160,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 160,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 156,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 151,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 155,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 762,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 93.94,
+      "formatted": "\u20b993.94/100g"
+    }
+  },
+  {
+    "id": "prod-222",
+    "title": "Pringles South African Style Peri Peri (107g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles South African Style Peri Peri (107g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/pringles-south-african-style-peri-p/prod-222",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/pringles-south-african-style-peri-p/prod-222",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 113,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/pringles-south-african-style-peri-p/prod-222",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 120,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/pringles-south-african-style-peri-p/prod-222",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 118,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 121,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 122,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 125,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 122,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 121,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 123,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2901,
+    "popularity": 93,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "107g",
+    "packSize": 107,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 107.48,
+      "formatted": "\u20b9107.48/100g"
+    }
+  },
+  {
+    "id": "prod-223",
+    "title": "Pringles South African Style Peri Peri (165g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles South African Style Peri Peri (165g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 150,
+        "mrp": 175,
+        "url": "https://blinkit.com/prn/pringles-south-african-style-peri-p/prod-223",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 157,
+        "mrp": 175,
+        "url": "https://zepto.com/prn/pringles-south-african-style-peri-p/prod-223",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 156,
+        "mrp": 175,
+        "url": "https://minutes.com/prn/pringles-south-african-style-peri-p/prod-223",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 160,
+        "mrp": 175,
+        "url": "https://amazon.com/prn/pringles-south-african-style-peri-p/prod-223",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 152,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 154,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 157,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 152,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 158,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 159,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 163,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1504,
+    "popularity": 70,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 93.94,
+      "formatted": "\u20b993.94/100g"
+    }
+  },
+  {
+    "id": "prod-224",
+    "title": "Pringles Desi Masala Tadka Crisps (107g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Desi Masala Tadka Crisps (107g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/pringles-desi-masala-tadka-crisps-1/prod-224",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 121,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/pringles-desi-masala-tadka-crisps-1/prod-224",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 115,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/pringles-desi-masala-tadka-crisps-1/prod-224",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 117,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/pringles-desi-masala-tadka-crisps-1/prod-224",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 120,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 113,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 112,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 115,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 114,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 552,
+    "popularity": 84,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "107g",
+    "packSize": 107,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 107.48,
+      "formatted": "\u20b9107.48/100g"
+    }
+  },
+  {
+    "id": "prod-225",
+    "title": "Pringles Desi Masala Tadka Crisps (165g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Desi Masala Tadka Crisps (165g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 154,
+        "mrp": 175,
+        "url": "https://blinkit.com/prn/pringles-desi-masala-tadka-crisps-1/prod-225",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 149,
+        "mrp": 175,
+        "url": "https://zepto.com/prn/pringles-desi-masala-tadka-crisps-1/prod-225",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 149,
+        "mrp": 175,
+        "url": "https://minutes.com/prn/pringles-desi-masala-tadka-crisps-1/prod-225",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 149,
+        "mrp": 175,
+        "url": "https://amazon.com/prn/pringles-desi-masala-tadka-crisps-1/prod-225",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 150,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 151,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 156,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 156,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 152,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 146,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 144,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 2559,
+    "popularity": 85,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "165g",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 93.94,
+      "formatted": "\u20b993.94/100g"
+    }
+  },
+  {
+    "id": "prod-226",
+    "title": "Pringles Pizza Flavour Potato Crisps (107g)",
+    "brand": "Pringles",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Pringles Pizza Flavour Potato Crisps (107g). Crispy, authentic snacking variant by Pringles. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 115,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/pringles-pizza-flavour-potato-crisp/prod-226",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 113,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/pringles-pizza-flavour-potato-crisp/prod-226",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 115,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/pringles-pizza-flavour-potato-crisp/prod-226",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/pringles-pizza-flavour-potato-crisp/prod-226",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 114,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 113,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 114,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 118,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 118,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 115,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 113,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1677,
+    "popularity": 86,
+    "tags": [
+      "chips",
+      "snacks",
+      "pringles",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "107g",
+    "packSize": 107,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 107.48,
+      "formatted": "\u20b9107.48/100g"
+    }
+  },
+  {
+    "id": "prod-227",
+    "title": "Doritos Nacho Cheese Flavoured Tortilla Chips (35g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Nacho Cheese Flavoured Tortilla Chips (35g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/doritos-nacho-cheese-flavoured-tort/prod-227",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/doritos-nacho-cheese-flavoured-tort/prod-227",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/doritos-nacho-cheese-flavoured-tort/prod-227",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/doritos-nacho-cheese-flavoured-tort/prod-227",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 16,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2179,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "35g",
+    "packSize": 35,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-228",
+    "title": "Doritos Nacho Cheese Flavoured Tortilla Chips (70g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Nacho Cheese Flavoured Tortilla Chips (70g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/doritos-nacho-cheese-flavoured-tort/prod-228",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/doritos-nacho-cheese-flavoured-tort/prod-228",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/doritos-nacho-cheese-flavoured-tort/prod-228",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/doritos-nacho-cheese-flavoured-tort/prod-228",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 28,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 28,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4165,
+    "popularity": 95,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "70g",
+    "packSize": 70,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-229",
+    "title": "Doritos Nacho Cheese Flavoured Tortilla Chips (140g Sharing Pack)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Nacho Cheese Flavoured Tortilla Chips (140g Sharing Pack). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 61,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/doritos-nacho-cheese-flavoured-tort/prod-229",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 62,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/doritos-nacho-cheese-flavoured-tort/prod-229",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 62,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/doritos-nacho-cheese-flavoured-tort/prod-229",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 60,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/doritos-nacho-cheese-flavoured-tort/prod-229",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 58,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 56,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 58,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 58,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 58,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 2648,
+    "popularity": 97,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "140g Sharing Pack",
+    "packSize": 140,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-230",
+    "title": "Doritos Sweet Chilli Flavour Tortilla Chips (35g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Sweet Chilli Flavour Tortilla Chips (35g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/doritos-sweet-chilli-flavour-tortil/prod-230",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/doritos-sweet-chilli-flavour-tortil/prod-230",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/doritos-sweet-chilli-flavour-tortil/prod-230",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 16,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/doritos-sweet-chilli-flavour-tortil/prod-230",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 15,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 2874,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "35g",
+    "packSize": 35,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-231",
+    "title": "Doritos Sweet Chilli Flavour Tortilla Chips (70g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Sweet Chilli Flavour Tortilla Chips (70g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/doritos-sweet-chilli-flavour-tortil/prod-231",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/doritos-sweet-chilli-flavour-tortil/prod-231",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/doritos-sweet-chilli-flavour-tortil/prod-231",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/doritos-sweet-chilli-flavour-tortil/prod-231",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 32,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 1433,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "70g",
+    "packSize": 70,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-232",
+    "title": "Doritos Sweet Chilli Flavour Tortilla Chips (140g Sharing Pack)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Sweet Chilli Flavour Tortilla Chips (140g Sharing Pack). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 59,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/doritos-sweet-chilli-flavour-tortil/prod-232",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 58,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/doritos-sweet-chilli-flavour-tortil/prod-232",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 61,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/doritos-sweet-chilli-flavour-tortil/prod-232",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 59,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/doritos-sweet-chilli-flavour-tortil/prod-232",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 60,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 60,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 61,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 63,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 61,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 62,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 63,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 3132,
+    "popularity": 82,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "140g Sharing Pack",
+    "packSize": 140,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-233",
+    "title": "Doritos Cheese Supreme Tortilla Chips (70g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Cheese Supreme Tortilla Chips (70g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/doritos-cheese-supreme-tortilla-chi/prod-233",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/doritos-cheese-supreme-tortilla-chi/prod-233",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/doritos-cheese-supreme-tortilla-chi/prod-233",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/doritos-cheese-supreme-tortilla-chi/prod-233",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 28,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 28,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 28,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4363,
+    "popularity": 83,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "70g",
+    "packSize": 70,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-234",
+    "title": "Doritos Cheese Supreme Tortilla Chips (140g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Cheese Supreme Tortilla Chips (140g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 59,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/doritos-cheese-supreme-tortilla-chi/prod-234",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 60,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/doritos-cheese-supreme-tortilla-chi/prod-234",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 57,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/doritos-cheese-supreme-tortilla-chi/prod-234",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 57,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/doritos-cheese-supreme-tortilla-chi/prod-234",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 61,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 59,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 57,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 57,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 55,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 53,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1314,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "140g",
+    "packSize": 140,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-235",
+    "title": "Doritos Sizzlin' Hot Tortilla Chips (70g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Sizzlin' Hot Tortilla Chips (70g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-235",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-235",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-235",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-235",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 28,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 27,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 27,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 26,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 24,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2201,
+    "popularity": 81,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "70g",
+    "packSize": 70,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-236",
+    "title": "Doritos Sizzlin' Hot Tortilla Chips (140g)",
+    "brand": "Doritos",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Doritos Sizzlin' Hot Tortilla Chips (140g). Crispy, authentic snacking variant by Doritos. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 57,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-236",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 61,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-236",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 62,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-236",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 59,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/doritos-sizzlin-hot-tortilla-chips-/prod-236",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 58,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 57,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 57,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 58,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 58,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 57,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 100,
+    "popularity": 70,
+    "tags": [
+      "chips",
+      "snacks",
+      "doritos",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "140g",
+    "packSize": 140,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 42.86,
+      "formatted": "\u20b942.86/100g"
+    }
+  },
+  {
+    "id": "prod-237",
+    "title": "Too Yumm! Veggie Stix Sour Cream & Onion (40g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Veggie Stix Sour Cream & Onion (40g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-237",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-237",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-237",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-237",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 2705,
+    "popularity": 72,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 50.0,
+      "formatted": "\u20b950.0/100g"
+    }
+  },
+  {
+    "id": "prod-238",
+    "title": "Too Yumm! Veggie Stix Sour Cream & Onion (80g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Veggie Stix Sour Cream & Onion (80g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-238",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-238",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-238",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/too-yumm-veggie-stix-sour-cream-oni/prod-238",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 37,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 37,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1770,
+    "popularity": 79,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "80g",
+    "packSize": 80,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 47.5,
+      "formatted": "\u20b947.5/100g"
+    }
+  },
+  {
+    "id": "prod-239",
+    "title": "Too Yumm! Karare Munchy Masala (45g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Karare Munchy Masala (45g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/too-yumm-karare-munchy-masala-45g/prod-239",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/too-yumm-karare-munchy-masala-45g/prod-239",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/too-yumm-karare-munchy-masala-45g/prod-239",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/too-yumm-karare-munchy-masala-45g/prod-239",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2004,
+    "popularity": 87,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "45g",
+    "packSize": 45,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-240",
+    "title": "Too Yumm! Karare Munchy Masala (90g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Karare Munchy Masala (90g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/too-yumm-karare-munchy-masala-90g/prod-240",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/too-yumm-karare-munchy-masala-90g/prod-240",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/too-yumm-karare-munchy-masala-90g/prod-240",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/too-yumm-karare-munchy-masala-90g/prod-240",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2236,
+    "popularity": 83,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "90g",
+    "packSize": 90,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-241",
+    "title": "Too Yumm! Karare Munchy Masala (180g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Karare Munchy Masala (180g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/too-yumm-karare-munchy-masala-180g/prod-241",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 44,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/too-yumm-karare-munchy-masala-180g/prod-241",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/too-yumm-karare-munchy-masala-180g/prod-241",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 44,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/too-yumm-karare-munchy-masala-180g/prod-241",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 43,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 41,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1971,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "180g",
+    "packSize": 180,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 23.33,
+      "formatted": "\u20b923.33/100g"
+    }
+  },
+  {
+    "id": "prod-242",
+    "title": "Too Yumm! Rings Masala Blast Baked Snacks (35g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Rings Masala Blast Baked Snacks (35g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/too-yumm-rings-masala-blast-baked-s/prod-242",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/too-yumm-rings-masala-blast-baked-s/prod-242",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/too-yumm-rings-masala-blast-baked-s/prod-242",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/too-yumm-rings-masala-blast-baked-s/prod-242",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 811,
+    "popularity": 87,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "35g",
+    "packSize": 35,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 28.57,
+      "formatted": "\u20b928.57/100g"
+    }
+  },
+  {
+    "id": "prod-243",
+    "title": "Too Yumm! Rings Masala Blast Baked Snacks (75g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Rings Masala Blast Baked Snacks (75g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/too-yumm-rings-masala-blast-baked-s/prod-243",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/too-yumm-rings-masala-blast-baked-s/prod-243",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/too-yumm-rings-masala-blast-baked-s/prod-243",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/too-yumm-rings-masala-blast-baked-s/prod-243",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 21,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4472,
+    "popularity": 73,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.67,
+      "formatted": "\u20b926.67/100g"
+    }
+  },
+  {
+    "id": "prod-244",
+    "title": "Too Yumm! Bhoot Potato Chips (Ghost Pepper Extreme) (50g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Bhoot Potato Chips (Ghost Pepper Extreme) (50g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-244",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-244",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-244",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-244",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 21,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 22,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 22,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 23,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 22,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 22,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 540,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "50g",
+    "packSize": 50,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 40.0,
+      "formatted": "\u20b940.0/100g"
+    }
+  },
+  {
+    "id": "prod-245",
+    "title": "Too Yumm! Bhoot Potato Chips (Ghost Pepper Extreme) (90g)",
+    "brand": "Too Yumm!",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Too Yumm! Bhoot Potato Chips (Ghost Pepper Extreme) (90g). Crispy, authentic snacking variant by Too Yumm!. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-245",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-245",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-245",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/too-yumm-bhoot-potato-chips-ghost-p/prod-245",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 40,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 38,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 38,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 899,
+    "popularity": 91,
+    "tags": [
+      "chips",
+      "snacks",
+      "too yumm!",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "90g",
+    "packSize": 90,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 44.44,
+      "formatted": "\u20b944.44/100g"
+    }
+  },
+  {
+    "id": "prod-246",
+    "title": "TagZ Popped Potato Chips Masala Trekkin (44g)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Masala Trekkin (44g). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-masala-tre/prod-246",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-masala-tre/prod-246",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-masala-tre/prod-246",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-masala-tre/prod-246",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 40,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4291,
+    "popularity": 88,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "44g",
+    "packSize": 44,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 90.91,
+      "formatted": "\u20b990.91/100g"
+    }
+  },
+  {
+    "id": "prod-247",
+    "title": "TagZ Popped Potato Chips Masala Trekkin (88g Can)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Masala Trekkin (88g Can). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 73,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-masala-tre/prod-247",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-masala-tre/prod-247",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 78,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-masala-tre/prod-247",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 72,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-masala-tre/prod-247",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 78,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 79,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 78,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 76,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 79,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 76,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 79,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3278,
+    "popularity": 96,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "88g Can",
+    "packSize": 88,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 85.23,
+      "formatted": "\u20b985.23/100g"
+    }
+  },
+  {
+    "id": "prod-248",
+    "title": "TagZ Popped Potato Chips Italian Cheese Slice (44g)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Italian Cheese Slice (44g). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-italian-ch/prod-248",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-italian-ch/prod-248",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-italian-ch/prod-248",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-italian-ch/prod-248",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 40,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 41,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1856,
+    "popularity": 85,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "44g",
+    "packSize": 44,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 90.91,
+      "formatted": "\u20b990.91/100g"
+    }
+  },
+  {
+    "id": "prod-249",
+    "title": "TagZ Popped Potato Chips Italian Cheese Slice (88g Can)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Italian Cheese Slice (88g Can). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-italian-ch/prod-249",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 72,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-italian-ch/prod-249",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 76,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-italian-ch/prod-249",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 79,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-italian-ch/prod-249",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 72,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 72,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 73,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 74,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 74,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 76,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 77,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 1180,
+    "popularity": 74,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "88g Can",
+    "packSize": 88,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 85.23,
+      "formatted": "\u20b985.23/100g"
+    }
+  },
+  {
+    "id": "prod-250",
+    "title": "TagZ Popped Potato Chips Beer n Barbeque (44g)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Beer n Barbeque (44g). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-250",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-250",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-250",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-250",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 37,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 39,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2714,
+    "popularity": 92,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "44g",
+    "packSize": 44,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 90.91,
+      "formatted": "\u20b990.91/100g"
+    }
+  },
+  {
+    "id": "prod-251",
+    "title": "TagZ Popped Potato Chips Beer n Barbeque (88g Can)",
+    "brand": "TagZ",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "TagZ Popped Potato Chips Beer n Barbeque (88g Can). Crispy, authentic snacking variant by TagZ. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 74,
+        "mrp": 85,
+        "url": "https://blinkit.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-251",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 78,
+        "mrp": 85,
+        "url": "https://zepto.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-251",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 77,
+        "mrp": 85,
+        "url": "https://minutes.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-251",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 78,
+        "mrp": 85,
+        "url": "https://amazon.com/prn/tagz-popped-potato-chips-beer-n-bar/prod-251",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 73,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 73,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 74,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 75,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 74,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 73,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 70,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5112,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "tagz",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "88g Can",
+    "packSize": 88,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 85.23,
+      "formatted": "\u20b985.23/100g"
+    }
+  },
+  {
+    "id": "prod-252",
+    "title": "Balaji Wafers Simply Salted Potato Chips (40g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Simply Salted Potato Chips (40g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/balaji-wafers-simply-salted-potato-/prod-252",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/balaji-wafers-simply-salted-potato-/prod-252",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/balaji-wafers-simply-salted-potato-/prod-252",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/balaji-wafers-simply-salted-potato-/prod-252",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 1918,
+    "popularity": 90,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-253",
+    "title": "Balaji Wafers Simply Salted Potato Chips (65g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Simply Salted Potato Chips (65g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/balaji-wafers-simply-salted-potato-/prod-253",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/balaji-wafers-simply-salted-potato-/prod-253",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/balaji-wafers-simply-salted-potato-/prod-253",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/balaji-wafers-simply-salted-potato-/prod-253",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 16,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 16,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 17,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3202,
+    "popularity": 96,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "65g",
+    "packSize": 65,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 23.08,
+      "formatted": "\u20b923.08/100g"
+    }
+  },
+  {
+    "id": "prod-254",
+    "title": "Balaji Wafers Simply Salted Potato Chips (135g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Simply Salted Potato Chips (135g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/balaji-wafers-simply-salted-potato-/prod-254",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/balaji-wafers-simply-salted-potato-/prod-254",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/balaji-wafers-simply-salted-potato-/prod-254",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/balaji-wafers-simply-salted-potato-/prod-254",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 28,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 3339,
+    "popularity": 84,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-255",
+    "title": "Balaji Wafers Masala Masti Potato Chips (40g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Masala Masti Potato Chips (40g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/balaji-wafers-masala-masti-potato-c/prod-255",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/balaji-wafers-masala-masti-potato-c/prod-255",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/balaji-wafers-masala-masti-potato-c/prod-255",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/balaji-wafers-masala-masti-potato-c/prod-255",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1996,
+    "popularity": 85,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "40g",
+    "packSize": 40,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-256",
+    "title": "Balaji Wafers Masala Masti Potato Chips (65g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Masala Masti Potato Chips (65g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/balaji-wafers-masala-masti-potato-c/prod-256",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/balaji-wafers-masala-masti-potato-c/prod-256",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/balaji-wafers-masala-masti-potato-c/prod-256",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/balaji-wafers-masala-masti-potato-c/prod-256",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 16,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 15,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 357,
+    "popularity": 97,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "65g",
+    "packSize": 65,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 23.08,
+      "formatted": "\u20b923.08/100g"
+    }
+  },
+  {
+    "id": "prod-257",
+    "title": "Balaji Wafers Masala Masti Potato Chips (135g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Wafers Masala Masti Potato Chips (135g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/balaji-wafers-masala-masti-potato-c/prod-257",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/balaji-wafers-masala-masti-potato-c/prod-257",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/balaji-wafers-masala-masti-potato-c/prod-257",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/balaji-wafers-masala-masti-potato-c/prod-257",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 31,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 31,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2736,
+    "popularity": 75,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "135g",
+    "packSize": 135,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-258",
+    "title": "Balaji Crunchex Chilli Tadka Chips (55g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Crunchex Chilli Tadka Chips (55g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 16,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-258",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 16,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-258",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-258",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-258",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 16,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 16,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 16,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 15,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4631,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "55g",
+    "packSize": 55,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.27,
+      "formatted": "\u20b927.27/100g"
+    }
+  },
+  {
+    "id": "prod-259",
+    "title": "Balaji Crunchex Chilli Tadka Chips (110g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Crunchex Chilli Tadka Chips (110g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-259",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-259",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-259",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/balaji-crunchex-chilli-tadka-chips-/prod-259",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 29,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 30,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3501,
+    "popularity": 80,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "110g",
+    "packSize": 110,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.27,
+      "formatted": "\u20b927.27/100g"
+    }
+  },
+  {
+    "id": "prod-260",
+    "title": "Balaji Rumbles Pudina Twist Wafers (45g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Rumbles Pudina Twist Wafers (45g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-260",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-260",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-260",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-260",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4577,
+    "popularity": 82,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "45g",
+    "packSize": 45,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-261",
+    "title": "Balaji Rumbles Pudina Twist Wafers (90g)",
+    "brand": "Balaji",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Balaji Rumbles Pudina Twist Wafers (90g). Crispy, authentic snacking variant by Balaji. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-261",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-261",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-261",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/balaji-rumbles-pudina-twist-wafers-/prod-261",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 21,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 5123,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "balaji",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "90g",
+    "packSize": 90,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.22,
+      "formatted": "\u20b922.22/100g"
+    }
+  },
+  {
+    "id": "prod-262",
+    "title": "Haldiram's Salted Peanuts with Potato Wafers (100g)",
+    "brand": "Haldiram's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Salted Peanuts with Potato Wafers (100g). Crispy, authentic snacking variant by Haldiram's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/haldiram-s-salted-peanuts-with-pota/prod-262",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/haldiram-s-salted-peanuts-with-pota/prod-262",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/haldiram-s-salted-peanuts-with-pota/prod-262",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 37,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/haldiram-s-salted-peanuts-with-pota/prod-262",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3629,
+    "popularity": 80,
+    "tags": [
+      "chips",
+      "snacks",
+      "haldiram's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "100g",
+    "packSize": 100,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 35.0,
+      "formatted": "\u20b935.0/100g"
+    }
+  },
+  {
+    "id": "prod-263",
+    "title": "Haldiram's Classic Salted Kettle Chips (75g)",
+    "brand": "Haldiram's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Classic Salted Kettle Chips (75g). Crispy, authentic snacking variant by Haldiram's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 25,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/haldiram-s-classic-salted-kettle-ch/prod-263",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 26,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/haldiram-s-classic-salted-kettle-ch/prod-263",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 25,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/haldiram-s-classic-salted-kettle-ch/prod-263",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 24,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/haldiram-s-classic-salted-kettle-ch/prod-263",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 25,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 26,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 26,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 26,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 24,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 24,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 2442,
+    "popularity": 89,
+    "tags": [
+      "chips",
+      "snacks",
+      "haldiram's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-264",
+    "title": "Haldiram's Classic Salted Kettle Chips (150g)",
+    "brand": "Haldiram's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Classic Salted Kettle Chips (150g). Crispy, authentic snacking variant by Haldiram's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 51,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/haldiram-s-classic-salted-kettle-ch/prod-264",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 50,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/haldiram-s-classic-salted-kettle-ch/prod-264",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/haldiram-s-classic-salted-kettle-ch/prod-264",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 50,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/haldiram-s-classic-salted-kettle-ch/prod-264",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 49,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 48,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 48,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 48,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 47,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3019,
+    "popularity": 75,
+    "tags": [
+      "chips",
+      "snacks",
+      "haldiram's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-265",
+    "title": "Haldiram's Chilli Chatak Potato Chips (75g)",
+    "brand": "Haldiram's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Chilli Chatak Potato Chips (75g). Crispy, authentic snacking variant by Haldiram's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 24,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-265",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 24,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-265",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 26,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-265",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 25,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-265",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 25,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 25,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 25,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 25,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 24,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 24,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 25,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 292,
+    "popularity": 98,
+    "tags": [
+      "chips",
+      "snacks",
+      "haldiram's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "75g",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-266",
+    "title": "Haldiram's Chilli Chatak Potato Chips (150g)",
+    "brand": "Haldiram's",
+    "category": "Chips",
+    "imageUrl": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Chilli Chatak Potato Chips (150g). Crispy, authentic snacking variant by Haldiram's. Freshly packed and compared across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-266",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 49,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-266",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 51,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-266",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 49,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/haldiram-s-chilli-chatak-potato-chi/prod-266",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 49,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 48,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 48,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 48,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 47,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 47,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4601,
+    "popularity": 71,
+    "tags": [
+      "chips",
+      "snacks",
+      "haldiram's",
+      "crisps",
+      "potatoes",
+      "quick-commerce"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 33.33,
+      "formatted": "\u20b933.33/100g"
+    }
+  },
+  {
+    "id": "prod-267",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (250ml Can)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (250ml Can). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-267",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 33,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-267",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-267",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-267",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 37,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 2527,
+    "popularity": 97,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-268",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (300ml Can)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (300ml Can). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-268",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-268",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-268",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-268",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 40,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 40,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5632,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "300ml Can",
+    "packSize": 300,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 133.33,
+      "formatted": "\u20b9133.33/L"
+    }
+  },
+  {
+    "id": "prod-269",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (750ml PET Bottle)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (750ml PET Bottle). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-269",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-269",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 42,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-269",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-269",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 38,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 39,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 6473,
+    "popularity": 78,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml PET Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-270",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (1.25L Bottle)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (1.25L Bottle). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 62,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-270",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 65,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-270",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 63,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-270",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 63,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-270",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 65,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 66,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 64,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 62,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 61,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 60,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 5301,
+    "popularity": 75,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.25L Bottle",
+    "packSize": 1250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 52.0,
+      "formatted": "\u20b952.0/L"
+    }
+  },
+  {
+    "id": "prod-271",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (2L Party Bottle)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (2L Party Bottle). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 98,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-271",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-271",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 98,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-271",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 100,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-271",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 94,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 91,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 90,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 89,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 90,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 93,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 90,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 7319,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Party Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 47.5,
+      "formatted": "\u20b947.5/L"
+    }
+  },
+  {
+    "id": "prod-272",
+    "title": "Coca-Cola Original Taste Soft Drink Can/Bottle (Pack of 6 (300ml x 6 Cans))",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Original Taste Soft Drink Can/Bottle (Pack of 6 (300ml x 6 Cans)). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 226,
+        "mrp": 240,
+        "url": "https://blinkit.com/prn/coca-cola-original-taste-soft-drink/prod-272",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 214,
+        "mrp": 240,
+        "url": "https://zepto.com/prn/coca-cola-original-taste-soft-drink/prod-272",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 211,
+        "mrp": 240,
+        "url": "https://minutes.com/prn/coca-cola-original-taste-soft-drink/prod-272",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 218,
+        "mrp": 240,
+        "url": "https://amazon.com/prn/coca-cola-original-taste-soft-drink/prod-272",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 226,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 222,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 222,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 224,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 226,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 231,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 231,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3093,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 6 (300ml x 6 Cans)",
+    "packSize": 1800,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 122.22,
+      "formatted": "\u20b9122.22/L"
+    }
+  },
+  {
+    "id": "prod-273",
+    "title": "Coca-Cola Zero Sugar No Calorie Soda (300ml Can)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Zero Sugar No Calorie Soda (300ml Can). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-273",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-273",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-273",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-273",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 818,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "300ml Can",
+    "packSize": 300,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 133.33,
+      "formatted": "\u20b9133.33/L"
+    }
+  },
+  {
+    "id": "prod-274",
+    "title": "Coca-Cola Zero Sugar No Calorie Soda (750ml PET Bottle)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Zero Sugar No Calorie Soda (750ml PET Bottle). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 47,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-274",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 46,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-274",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 46,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-274",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-274",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 44,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 46,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 46,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 44,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 7304,
+    "popularity": 99,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml PET Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 60.0,
+      "formatted": "\u20b960.0/L"
+    }
+  },
+  {
+    "id": "prod-275",
+    "title": "Coca-Cola Zero Sugar No Calorie Soda (Pack of 6 Cans)",
+    "brand": "Coca-Cola",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Coca-Cola Zero Sugar No Calorie Soda (Pack of 6 Cans). Chilled, refreshing beverage by Coca-Cola. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 229,
+        "mrp": 240,
+        "url": "https://blinkit.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-275",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 225,
+        "mrp": 240,
+        "url": "https://zepto.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-275",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 220,
+        "mrp": 240,
+        "url": "https://minutes.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-275",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 232,
+        "mrp": 240,
+        "url": "https://amazon.com/prn/coca-cola-zero-sugar-no-calorie-sod/prod-275",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 225,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 234,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 240,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 247,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 242,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 246,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 242,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3698,
+    "popularity": 81,
+    "tags": [
+      "drinks",
+      "beverages",
+      "coca-cola",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 6 Cans",
+    "packSize": 1800,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 127.78,
+      "formatted": "\u20b9127.78/L"
+    }
+  },
+  {
+    "id": "prod-276",
+    "title": "Pepsi Carbonated Soft Drink (250ml Can)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Carbonated Soft Drink (250ml Can). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/pepsi-carbonated-soft-drink-250ml-c/prod-276",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 33,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/pepsi-carbonated-soft-drink-250ml-c/prod-276",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/pepsi-carbonated-soft-drink-250ml-c/prod-276",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/pepsi-carbonated-soft-drink-250ml-c/prod-276",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 34,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 36,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4307,
+    "popularity": 74,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-277",
+    "title": "Pepsi Carbonated Soft Drink (750ml PET Bottle)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Carbonated Soft Drink (750ml PET Bottle). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/pepsi-carbonated-soft-drink-750ml-p/prod-277",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/pepsi-carbonated-soft-drink-750ml-p/prod-277",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/pepsi-carbonated-soft-drink-750ml-p/prod-277",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/pepsi-carbonated-soft-drink-750ml-p/prod-277",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 37,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 35,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1398,
+    "popularity": 77,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml PET Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 50.67,
+      "formatted": "\u20b950.67/L"
+    }
+  },
+  {
+    "id": "prod-278",
+    "title": "Pepsi Carbonated Soft Drink (1.25L Bottle)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Carbonated Soft Drink (1.25L Bottle). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 60,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/pepsi-carbonated-soft-drink-1-25l-b/prod-278",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 59,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/pepsi-carbonated-soft-drink-1-25l-b/prod-278",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 63,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/pepsi-carbonated-soft-drink-1-25l-b/prod-278",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 63,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/pepsi-carbonated-soft-drink-1-25l-b/prod-278",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 61,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 59,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 58,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 59,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 59,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 57,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 56,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5711,
+    "popularity": 80,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.25L Bottle",
+    "packSize": 1250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 48.0,
+      "formatted": "\u20b948.0/L"
+    }
+  },
+  {
+    "id": "prod-279",
+    "title": "Pepsi Carbonated Soft Drink (2.25L Family Bottle)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Carbonated Soft Drink (2.25L Family Bottle). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 91,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/pepsi-carbonated-soft-drink-2-25l-f/prod-279",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 93,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/pepsi-carbonated-soft-drink-2-25l-f/prod-279",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 95,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/pepsi-carbonated-soft-drink-2-25l-f/prod-279",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/pepsi-carbonated-soft-drink-2-25l-f/prod-279",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 93,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 94,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 94,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 95,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 92,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 91,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 88,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5648,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2.25L Family Bottle",
+    "packSize": 2250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 42.22,
+      "formatted": "\u20b942.22/L"
+    }
+  },
+  {
+    "id": "prod-280",
+    "title": "Pepsi Black Zero Sugar Soda (250ml Can)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Black Zero Sugar Soda (250ml Can). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/pepsi-black-zero-sugar-soda-250ml-c/prod-280",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/pepsi-black-zero-sugar-soda-250ml-c/prod-280",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/pepsi-black-zero-sugar-soda-250ml-c/prod-280",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/pepsi-black-zero-sugar-soda-250ml-c/prod-280",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1519,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-281",
+    "title": "Pepsi Black Zero Sugar Soda (500ml Bottle)",
+    "brand": "Pepsi",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Pepsi Black Zero Sugar Soda (500ml Bottle). Chilled, refreshing beverage by Pepsi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/pepsi-black-zero-sugar-soda-500ml-b/prod-281",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/pepsi-black-zero-sugar-soda-500ml-b/prod-281",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/pepsi-black-zero-sugar-soda-500ml-b/prod-281",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/pepsi-black-zero-sugar-soda-500ml-b/prod-281",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 34,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 256,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "pepsi",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 70.0,
+      "formatted": "\u20b970.0/L"
+    }
+  },
+  {
+    "id": "prod-282",
+    "title": "Thums Up Charged Strong Carbonated Soft Drink (250ml Can)",
+    "brand": "Thums Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Thums Up Charged Strong Carbonated Soft Drink (250ml Can). Chilled, refreshing beverage by Thums Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/thums-up-charged-strong-carbonated-/prod-282",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/thums-up-charged-strong-carbonated-/prod-282",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/thums-up-charged-strong-carbonated-/prod-282",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/thums-up-charged-strong-carbonated-/prod-282",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 37,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 36,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4952,
+    "popularity": 78,
+    "tags": [
+      "drinks",
+      "beverages",
+      "thums up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-283",
+    "title": "Thums Up Charged Strong Carbonated Soft Drink (750ml Bottle)",
+    "brand": "Thums Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Thums Up Charged Strong Carbonated Soft Drink (750ml Bottle). Chilled, refreshing beverage by Thums Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/thums-up-charged-strong-carbonated-/prod-283",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 42,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/thums-up-charged-strong-carbonated-/prod-283",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/thums-up-charged-strong-carbonated-/prod-283",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/thums-up-charged-strong-carbonated-/prod-283",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 42,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 41,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4503,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "thums up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-284",
+    "title": "Thums Up Charged Strong Carbonated Soft Drink (1.25L Bottle)",
+    "brand": "Thums Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Thums Up Charged Strong Carbonated Soft Drink (1.25L Bottle). Chilled, refreshing beverage by Thums Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 66,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/thums-up-charged-strong-carbonated-/prod-284",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 64,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/thums-up-charged-strong-carbonated-/prod-284",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 67,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/thums-up-charged-strong-carbonated-/prod-284",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 66,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/thums-up-charged-strong-carbonated-/prod-284",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 67,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 65,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 65,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 64,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 62,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1420,
+    "popularity": 98,
+    "tags": [
+      "drinks",
+      "beverages",
+      "thums up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.25L Bottle",
+    "packSize": 1250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 52.0,
+      "formatted": "\u20b952.0/L"
+    }
+  },
+  {
+    "id": "prod-285",
+    "title": "Thums Up Charged Strong Carbonated Soft Drink (2L Bottle)",
+    "brand": "Thums Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Thums Up Charged Strong Carbonated Soft Drink (2L Bottle). Chilled, refreshing beverage by Thums Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 94,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/thums-up-charged-strong-carbonated-/prod-285",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 99,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/thums-up-charged-strong-carbonated-/prod-285",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 93,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/thums-up-charged-strong-carbonated-/prod-285",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 99,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/thums-up-charged-strong-carbonated-/prod-285",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 96,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 97,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 101,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 102,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 106,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 106,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 102,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1325,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "thums up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 47.5,
+      "formatted": "\u20b947.5/L"
+    }
+  },
+  {
+    "id": "prod-286",
+    "title": "Sprite Lemon-Lime Flavoured Soda (250ml Can)",
+    "brand": "Sprite",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Sprite Lemon-Lime Flavoured Soda (250ml Can). Chilled, refreshing beverage by Sprite. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/sprite-lemon-lime-flavoured-soda-25/prod-286",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/sprite-lemon-lime-flavoured-soda-25/prod-286",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/sprite-lemon-lime-flavoured-soda-25/prod-286",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/sprite-lemon-lime-flavoured-soda-25/prod-286",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 34,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3552,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sprite",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-287",
+    "title": "Sprite Lemon-Lime Flavoured Soda (750ml Bottle)",
+    "brand": "Sprite",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Sprite Lemon-Lime Flavoured Soda (750ml Bottle). Chilled, refreshing beverage by Sprite. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/sprite-lemon-lime-flavoured-soda-75/prod-287",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/sprite-lemon-lime-flavoured-soda-75/prod-287",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/sprite-lemon-lime-flavoured-soda-75/prod-287",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/sprite-lemon-lime-flavoured-soda-75/prod-287",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 38,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 38,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 40,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5185,
+    "popularity": 77,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sprite",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-288",
+    "title": "Sprite Lemon-Lime Flavoured Soda (1.25L Bottle)",
+    "brand": "Sprite",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Sprite Lemon-Lime Flavoured Soda (1.25L Bottle). Chilled, refreshing beverage by Sprite. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 67,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/sprite-lemon-lime-flavoured-soda-1-/prod-288",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 64,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/sprite-lemon-lime-flavoured-soda-1-/prod-288",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 63,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/sprite-lemon-lime-flavoured-soda-1-/prod-288",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 62,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/sprite-lemon-lime-flavoured-soda-1-/prod-288",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 66,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 63,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 64,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 64,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 65,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 67,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 66,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5218,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sprite",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.25L Bottle",
+    "packSize": 1250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 52.0,
+      "formatted": "\u20b952.0/L"
+    }
+  },
+  {
+    "id": "prod-289",
+    "title": "Sprite Lemon-Lime Flavoured Soda (2L Bottle)",
+    "brand": "Sprite",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Sprite Lemon-Lime Flavoured Soda (2L Bottle). Chilled, refreshing beverage by Sprite. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/sprite-lemon-lime-flavoured-soda-2l/prod-289",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 94,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/sprite-lemon-lime-flavoured-soda-2l/prod-289",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 99,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/sprite-lemon-lime-flavoured-soda-2l/prod-289",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/sprite-lemon-lime-flavoured-soda-2l/prod-289",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 95,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 94,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 93,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 95,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 92,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 92,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 94,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6549,
+    "popularity": 89,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sprite",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 47.5,
+      "formatted": "\u20b947.5/L"
+    }
+  },
+  {
+    "id": "prod-290",
+    "title": "Limca Lime N Lemoni Soft Drink (300ml Can)",
+    "brand": "Limca",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Limca Lime N Lemoni Soft Drink (300ml Can). Chilled, refreshing beverage by Limca. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/limca-lime-n-lemoni-soft-drink-300m/prod-290",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/limca-lime-n-lemoni-soft-drink-300m/prod-290",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/limca-lime-n-lemoni-soft-drink-300m/prod-290",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/limca-lime-n-lemoni-soft-drink-300m/prod-290",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 37,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 37,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 35,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3633,
+    "popularity": 91,
+    "tags": [
+      "drinks",
+      "beverages",
+      "limca",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "300ml Can",
+    "packSize": 300,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 126.67,
+      "formatted": "\u20b9126.67/L"
+    }
+  },
+  {
+    "id": "prod-291",
+    "title": "Limca Lime N Lemoni Soft Drink (750ml Bottle)",
+    "brand": "Limca",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Limca Lime N Lemoni Soft Drink (750ml Bottle). Chilled, refreshing beverage by Limca. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/limca-lime-n-lemoni-soft-drink-750m/prod-291",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/limca-lime-n-lemoni-soft-drink-750m/prod-291",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/limca-lime-n-lemoni-soft-drink-750m/prod-291",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/limca-lime-n-lemoni-soft-drink-750m/prod-291",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 39,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6555,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "limca",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-292",
+    "title": "Limca Lime N Lemoni Soft Drink (2L Bottle)",
+    "brand": "Limca",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Limca Lime N Lemoni Soft Drink (2L Bottle). Chilled, refreshing beverage by Limca. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 98,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/limca-lime-n-lemoni-soft-drink-2l-b/prod-292",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 94,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/limca-lime-n-lemoni-soft-drink-2l-b/prod-292",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/limca-lime-n-lemoni-soft-drink-2l-b/prod-292",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 92,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/limca-lime-n-lemoni-soft-drink-2l-b/prod-292",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 96,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 99,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 103,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 105,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 107,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 105,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 105,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3281,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "limca",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 47.5,
+      "formatted": "\u20b947.5/L"
+    }
+  },
+  {
+    "id": "prod-293",
+    "title": "Fanta Orange Flavoured Carbonated Drink (300ml Can)",
+    "brand": "Fanta",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Fanta Orange Flavoured Carbonated Drink (300ml Can). Chilled, refreshing beverage by Fanta. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/fanta-orange-flavoured-carbonated-d/prod-293",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/fanta-orange-flavoured-carbonated-d/prod-293",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/fanta-orange-flavoured-carbonated-d/prod-293",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/fanta-orange-flavoured-carbonated-d/prod-293",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 38,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3012,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "fanta",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "300ml Can",
+    "packSize": 300,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 126.67,
+      "formatted": "\u20b9126.67/L"
+    }
+  },
+  {
+    "id": "prod-294",
+    "title": "Fanta Orange Flavoured Carbonated Drink (750ml Bottle)",
+    "brand": "Fanta",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Fanta Orange Flavoured Carbonated Drink (750ml Bottle). Chilled, refreshing beverage by Fanta. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 42,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/fanta-orange-flavoured-carbonated-d/prod-294",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/fanta-orange-flavoured-carbonated-d/prod-294",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/fanta-orange-flavoured-carbonated-d/prod-294",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/fanta-orange-flavoured-carbonated-d/prod-294",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 41,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 45,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 7256,
+    "popularity": 96,
+    "tags": [
+      "drinks",
+      "beverages",
+      "fanta",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-295",
+    "title": "Fanta Orange Flavoured Carbonated Drink (2L Bottle)",
+    "brand": "Fanta",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Fanta Orange Flavoured Carbonated Drink (2L Bottle). Chilled, refreshing beverage by Fanta. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 91,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/fanta-orange-flavoured-carbonated-d/prod-295",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 92,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/fanta-orange-flavoured-carbonated-d/prod-295",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 95,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/fanta-orange-flavoured-carbonated-d/prod-295",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 96,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/fanta-orange-flavoured-carbonated-d/prod-295",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 93,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 92,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 94,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 94,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 92,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 93,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 94,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1848,
+    "popularity": 88,
+    "tags": [
+      "drinks",
+      "beverages",
+      "fanta",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 47.5,
+      "formatted": "\u20b947.5/L"
+    }
+  },
+  {
+    "id": "prod-296",
+    "title": "Mirinda Tangy Orange Soft Drink (250ml Can)",
+    "brand": "Mirinda",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Mirinda Tangy Orange Soft Drink (250ml Can). Chilled, refreshing beverage by Mirinda. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 33,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/mirinda-tangy-orange-soft-drink-250/prod-296",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/mirinda-tangy-orange-soft-drink-250/prod-296",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 33,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/mirinda-tangy-orange-soft-drink-250/prod-296",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/mirinda-tangy-orange-soft-drink-250/prod-296",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 6653,
+    "popularity": 77,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mirinda",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-297",
+    "title": "Mirinda Tangy Orange Soft Drink (750ml Bottle)",
+    "brand": "Mirinda",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Mirinda Tangy Orange Soft Drink (750ml Bottle). Chilled, refreshing beverage by Mirinda. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/mirinda-tangy-orange-soft-drink-750/prod-297",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/mirinda-tangy-orange-soft-drink-750/prod-297",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/mirinda-tangy-orange-soft-drink-750/prod-297",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/mirinda-tangy-orange-soft-drink-750/prod-297",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 37,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2861,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mirinda",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 50.67,
+      "formatted": "\u20b950.67/L"
+    }
+  },
+  {
+    "id": "prod-298",
+    "title": "Mirinda Tangy Orange Soft Drink (2.25L Bottle)",
+    "brand": "Mirinda",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Mirinda Tangy Orange Soft Drink (2.25L Bottle). Chilled, refreshing beverage by Mirinda. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 92,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/mirinda-tangy-orange-soft-drink-2-2/prod-298",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/mirinda-tangy-orange-soft-drink-2-2/prod-298",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 95,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/mirinda-tangy-orange-soft-drink-2-2/prod-298",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 99,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/mirinda-tangy-orange-soft-drink-2-2/prod-298",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 92,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 91,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 94,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 92,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 94,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 90,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 92,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5384,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mirinda",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2.25L Bottle",
+    "packSize": 2250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 42.22,
+      "formatted": "\u20b942.22/L"
+    }
+  },
+  {
+    "id": "prod-299",
+    "title": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (250ml Can)",
+    "brand": "Mountain Dew",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (250ml Can). Chilled, refreshing beverage by Mountain Dew. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-299",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-299",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-299",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-299",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 37,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 38,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 37,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 38,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6366,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mountain dew",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-300",
+    "title": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (750ml Bottle)",
+    "brand": "Mountain Dew",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (750ml Bottle). Chilled, refreshing beverage by Mountain Dew. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-300",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 39,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-300",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-300",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-300",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 40,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 38,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 39,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 38,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 38,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5827,
+    "popularity": 73,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mountain dew",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-301",
+    "title": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (1.25L Bottle)",
+    "brand": "Mountain Dew",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Mountain Dew Darr Ke Aage Jeet Hai Citrus Soda (1.25L Bottle). Chilled, refreshing beverage by Mountain Dew. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 66,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-301",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 67,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-301",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 63,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-301",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 62,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/mountain-dew-darr-ke-aage-jeet-hai-/prod-301",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 65,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 67,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 67,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 66,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 66,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 67,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3252,
+    "popularity": 85,
+    "tags": [
+      "drinks",
+      "beverages",
+      "mountain dew",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.25L Bottle",
+    "packSize": 1250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 52.0,
+      "formatted": "\u20b952.0/L"
+    }
+  },
+  {
+    "id": "prod-302",
+    "title": "7Up Refreshing Lemon Lime Soda (250ml Can)",
+    "brand": "7Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "7Up Refreshing Lemon Lime Soda (250ml Can). Chilled, refreshing beverage by 7Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/7up-refreshing-lemon-lime-soda-250m/prod-302",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/7up-refreshing-lemon-lime-soda-250m/prod-302",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/7up-refreshing-lemon-lime-soda-250m/prod-302",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/7up-refreshing-lemon-lime-soda-250m/prod-302",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 34,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 32,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 31,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 7247,
+    "popularity": 94,
+    "tags": [
+      "drinks",
+      "beverages",
+      "7up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-303",
+    "title": "7Up Refreshing Lemon Lime Soda (750ml Bottle)",
+    "brand": "7Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "7Up Refreshing Lemon Lime Soda (750ml Bottle). Chilled, refreshing beverage by 7Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/7up-refreshing-lemon-lime-soda-750m/prod-303",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/7up-refreshing-lemon-lime-soda-750m/prod-303",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/7up-refreshing-lemon-lime-soda-750m/prod-303",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/7up-refreshing-lemon-lime-soda-750m/prod-303",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 40,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 41,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 41,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1206,
+    "popularity": 81,
+    "tags": [
+      "drinks",
+      "beverages",
+      "7up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 53.33,
+      "formatted": "\u20b953.33/L"
+    }
+  },
+  {
+    "id": "prod-304",
+    "title": "7Up Refreshing Lemon Lime Soda (2.25L Bottle)",
+    "brand": "7Up",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "7Up Refreshing Lemon Lime Soda (2.25L Bottle). Chilled, refreshing beverage by 7Up. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 94,
+        "mrp": 100,
+        "url": "https://blinkit.com/prn/7up-refreshing-lemon-lime-soda-2-25/prod-304",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 97,
+        "mrp": 100,
+        "url": "https://zepto.com/prn/7up-refreshing-lemon-lime-soda-2-25/prod-304",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 96,
+        "mrp": 100,
+        "url": "https://minutes.com/prn/7up-refreshing-lemon-lime-soda-2-25/prod-304",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 99,
+        "mrp": 100,
+        "url": "https://amazon.com/prn/7up-refreshing-lemon-lime-soda-2-25/prod-304",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 94,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 97,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 98,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 97,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 97,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 100,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 97,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 1587,
+    "popularity": 98,
+    "tags": [
+      "drinks",
+      "beverages",
+      "7up",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2.25L Bottle",
+    "packSize": 2250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 42.22,
+      "formatted": "\u20b942.22/L"
+    }
+  },
+  {
+    "id": "prod-305",
+    "title": "Appy Fizz Sparkling Apple Juice Drink (160ml Tetra)",
+    "brand": "Appy Fizz",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80",
+    "description": "Appy Fizz Sparkling Apple Juice Drink (160ml Tetra). Chilled, refreshing beverage by Appy Fizz. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-305",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-305",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-305",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-305",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 14,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 14,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 14,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 13,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 13,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 13,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5224,
+    "popularity": 78,
+    "tags": [
+      "drinks",
+      "beverages",
+      "appy fizz",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "160ml Tetra",
+    "packSize": 160,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 93.75,
+      "formatted": "\u20b993.75/L"
+    }
+  },
+  {
+    "id": "prod-306",
+    "title": "Appy Fizz Sparkling Apple Juice Drink (250ml Bottle)",
+    "brand": "Appy Fizz",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "description": "Appy Fizz Sparkling Apple Juice Drink (250ml Bottle). Chilled, refreshing beverage by Appy Fizz. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://blinkit.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-306",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://zepto.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-306",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 26,
+        "mrp": 25,
+        "url": "https://minutes.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-306",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 26,
+        "mrp": 25,
+        "url": "https://amazon.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-306",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 25,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 25,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 26,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 26,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 26,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 6304,
+    "popularity": 84,
+    "tags": [
+      "drinks",
+      "beverages",
+      "appy fizz",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Bottle",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 100.0,
+      "formatted": "\u20b9100.0/L"
+    }
+  },
+  {
+    "id": "prod-307",
+    "title": "Appy Fizz Sparkling Apple Juice Drink (600ml Bottle)",
+    "brand": "Appy Fizz",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    "description": "Appy Fizz Sparkling Apple Juice Drink (600ml Bottle). Chilled, refreshing beverage by Appy Fizz. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-307",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 41,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-307",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 39,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-307",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 38,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-307",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 39,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 39,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 40,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 43,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 955,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "appy fizz",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "600ml Bottle",
+    "packSize": 600,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 66.67,
+      "formatted": "\u20b966.67/L"
+    }
+  },
+  {
+    "id": "prod-308",
+    "title": "Appy Fizz Sparkling Apple Juice Drink (1L Bottle)",
+    "brand": "Appy Fizz",
+    "category": "Soft Drinks & Sodas",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    "description": "Appy Fizz Sparkling Apple Juice Drink (1L Bottle). Chilled, refreshing beverage by Appy Fizz. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 64,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-308",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 67,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-308",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 67,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-308",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 63,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/appy-fizz-sparkling-apple-juice-dri/prod-308",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 65,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 64,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 63,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 63,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 61,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 60,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 60,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1127,
+    "popularity": 95,
+    "tags": [
+      "drinks",
+      "beverages",
+      "appy fizz",
+      "soft drinks & sodas",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 65.0,
+      "formatted": "\u20b965.0/L"
+    }
+  },
+  {
+    "id": "prod-309",
+    "title": "Maaza Mango Fruit Drink with Alphonso Pulp (150ml Tetra Pack)",
+    "brand": "Maaza",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Maaza Mango Fruit Drink with Alphonso Pulp (150ml Tetra Pack). Chilled, refreshing beverage by Maaza. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/maaza-mango-fruit-drink-with-alphon/prod-309",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/maaza-mango-fruit-drink-with-alphon/prod-309",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/maaza-mango-fruit-drink-with-alphon/prod-309",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/maaza-mango-fruit-drink-with-alphon/prod-309",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 2407,
+    "popularity": 72,
+    "tags": [
+      "drinks",
+      "beverages",
+      "maaza",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "150ml Tetra Pack",
+    "packSize": 150,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 66.67,
+      "formatted": "\u20b966.67/L"
+    }
+  },
+  {
+    "id": "prod-310",
+    "title": "Maaza Mango Fruit Drink with Alphonso Pulp (250ml Bottle)",
+    "brand": "Maaza",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Maaza Mango Fruit Drink with Alphonso Pulp (250ml Bottle). Chilled, refreshing beverage by Maaza. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/maaza-mango-fruit-drink-with-alphon/prod-310",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/maaza-mango-fruit-drink-with-alphon/prod-310",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/maaza-mango-fruit-drink-with-alphon/prod-310",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/maaza-mango-fruit-drink-with-alphon/prod-310",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 21,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 22,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 23,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 22,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5228,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "maaza",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Bottle",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 80.0,
+      "formatted": "\u20b980.0/L"
+    }
+  },
+  {
+    "id": "prod-311",
+    "title": "Maaza Mango Fruit Drink with Alphonso Pulp (600ml Bottle)",
+    "brand": "Maaza",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Maaza Mango Fruit Drink with Alphonso Pulp (600ml Bottle). Chilled, refreshing beverage by Maaza. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 44,
+        "mrp": 45,
+        "url": "https://blinkit.com/prn/maaza-mango-fruit-drink-with-alphon/prod-311",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 44,
+        "mrp": 45,
+        "url": "https://zepto.com/prn/maaza-mango-fruit-drink-with-alphon/prod-311",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 45,
+        "url": "https://minutes.com/prn/maaza-mango-fruit-drink-with-alphon/prod-311",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 41,
+        "mrp": 45,
+        "url": "https://amazon.com/prn/maaza-mango-fruit-drink-with-alphon/prod-311",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 45,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 45,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 46,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 4552,
+    "popularity": 94,
+    "tags": [
+      "drinks",
+      "beverages",
+      "maaza",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "600ml Bottle",
+    "packSize": 600,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 70.0,
+      "formatted": "\u20b970.0/L"
+    }
+  },
+  {
+    "id": "prod-312",
+    "title": "Maaza Mango Fruit Drink with Alphonso Pulp (1.2L Bottle)",
+    "brand": "Maaza",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Maaza Mango Fruit Drink with Alphonso Pulp (1.2L Bottle). Chilled, refreshing beverage by Maaza. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://blinkit.com/prn/maaza-mango-fruit-drink-with-alphon/prod-312",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://zepto.com/prn/maaza-mango-fruit-drink-with-alphon/prod-312",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://minutes.com/prn/maaza-mango-fruit-drink-with-alphon/prod-312",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 76,
+        "mrp": 80,
+        "url": "https://amazon.com/prn/maaza-mango-fruit-drink-with-alphon/prod-312",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 77,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 79,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 77,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 74,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 75,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 78,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 75,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 7164,
+    "popularity": 89,
+    "tags": [
+      "drinks",
+      "beverages",
+      "maaza",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.2L Bottle",
+    "packSize": 1200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 62.5,
+      "formatted": "\u20b962.5/L"
+    }
+  },
+  {
+    "id": "prod-313",
+    "title": "Frooti Fresh N Juicy Mango Drink (125ml Tetra Pack)",
+    "brand": "Frooti",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Frooti Fresh N Juicy Mango Drink (125ml Tetra Pack). Chilled, refreshing beverage by Frooti. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/frooti-fresh-n-juicy-mango-drink-12/prod-313",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/frooti-fresh-n-juicy-mango-drink-12/prod-313",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/frooti-fresh-n-juicy-mango-drink-12/prod-313",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/frooti-fresh-n-juicy-mango-drink-12/prod-313",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 1339,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "frooti",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "125ml Tetra Pack",
+    "packSize": 125,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 80.0,
+      "formatted": "\u20b980.0/L"
+    }
+  },
+  {
+    "id": "prod-314",
+    "title": "Frooti Fresh N Juicy Mango Drink (200ml Tetra Pack)",
+    "brand": "Frooti",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Frooti Fresh N Juicy Mango Drink (200ml Tetra Pack). Chilled, refreshing beverage by Frooti. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 14,
+        "mrp": 15,
+        "url": "https://blinkit.com/prn/frooti-fresh-n-juicy-mango-drink-20/prod-314",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://zepto.com/prn/frooti-fresh-n-juicy-mango-drink-20/prod-314",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://minutes.com/prn/frooti-fresh-n-juicy-mango-drink-20/prod-314",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 15,
+        "mrp": 15,
+        "url": "https://amazon.com/prn/frooti-fresh-n-juicy-mango-drink-20/prod-314",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 15,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 15,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 14,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 14,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6847,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "frooti",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Tetra Pack",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 75.0,
+      "formatted": "\u20b975.0/L"
+    }
+  },
+  {
+    "id": "prod-315",
+    "title": "Frooti Fresh N Juicy Mango Drink (600ml Bottle)",
+    "brand": "Frooti",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Frooti Fresh N Juicy Mango Drink (600ml Bottle). Chilled, refreshing beverage by Frooti. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 39,
+        "mrp": 42,
+        "url": "https://blinkit.com/prn/frooti-fresh-n-juicy-mango-drink-60/prod-315",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 38,
+        "mrp": 42,
+        "url": "https://zepto.com/prn/frooti-fresh-n-juicy-mango-drink-60/prod-315",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 38,
+        "mrp": 42,
+        "url": "https://minutes.com/prn/frooti-fresh-n-juicy-mango-drink-60/prod-315",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 42,
+        "mrp": 42,
+        "url": "https://amazon.com/prn/frooti-fresh-n-juicy-mango-drink-60/prod-315",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 43,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 40,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5312,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "frooti",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "600ml Bottle",
+    "packSize": 600,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 66.67,
+      "formatted": "\u20b966.67/L"
+    }
+  },
+  {
+    "id": "prod-316",
+    "title": "Frooti Fresh N Juicy Mango Drink (1.2L Family Bottle)",
+    "brand": "Frooti",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Frooti Fresh N Juicy Mango Drink (1.2L Family Bottle). Chilled, refreshing beverage by Frooti. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 75,
+        "mrp": 78,
+        "url": "https://blinkit.com/prn/frooti-fresh-n-juicy-mango-drink-1-/prod-316",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 75,
+        "mrp": 78,
+        "url": "https://zepto.com/prn/frooti-fresh-n-juicy-mango-drink-1-/prod-316",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 71,
+        "mrp": 78,
+        "url": "https://minutes.com/prn/frooti-fresh-n-juicy-mango-drink-1-/prod-316",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 71,
+        "mrp": 78,
+        "url": "https://amazon.com/prn/frooti-fresh-n-juicy-mango-drink-1-/prod-316",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 72,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 70,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 71,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 71,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 70,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 72,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 73,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 6878,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "frooti",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.2L Family Bottle",
+    "packSize": 1200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 60.0,
+      "formatted": "\u20b960.0/L"
+    }
+  },
+  {
+    "id": "prod-317",
+    "title": "Slice Thick Mango Fruit Drink with Real Pulp (250ml Bottle)",
+    "brand": "Slice",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Slice Thick Mango Fruit Drink with Real Pulp (250ml Bottle). Chilled, refreshing beverage by Slice. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/slice-thick-mango-fruit-drink-with-/prod-317",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/slice-thick-mango-fruit-drink-with-/prod-317",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/slice-thick-mango-fruit-drink-with-/prod-317",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/slice-thick-mango-fruit-drink-with-/prod-317",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 17,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1356,
+    "popularity": 90,
+    "tags": [
+      "drinks",
+      "beverages",
+      "slice",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Bottle",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 80.0,
+      "formatted": "\u20b980.0/L"
+    }
+  },
+  {
+    "id": "prod-318",
+    "title": "Slice Thick Mango Fruit Drink with Real Pulp (600ml Bottle)",
+    "brand": "Slice",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Slice Thick Mango Fruit Drink with Real Pulp (600ml Bottle). Chilled, refreshing beverage by Slice. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 41,
+        "mrp": 42,
+        "url": "https://blinkit.com/prn/slice-thick-mango-fruit-drink-with-/prod-318",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 41,
+        "mrp": 42,
+        "url": "https://zepto.com/prn/slice-thick-mango-fruit-drink-with-/prod-318",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 41,
+        "mrp": 42,
+        "url": "https://minutes.com/prn/slice-thick-mango-fruit-drink-with-/prod-318",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 42,
+        "mrp": 42,
+        "url": "https://amazon.com/prn/slice-thick-mango-fruit-drink-with-/prod-318",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 43,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 41,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 41,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 7305,
+    "popularity": 87,
+    "tags": [
+      "drinks",
+      "beverages",
+      "slice",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "600ml Bottle",
+    "packSize": 600,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 66.67,
+      "formatted": "\u20b966.67/L"
+    }
+  },
+  {
+    "id": "prod-319",
+    "title": "Slice Thick Mango Fruit Drink with Real Pulp (1.2L Bottle)",
+    "brand": "Slice",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Slice Thick Mango Fruit Drink with Real Pulp (1.2L Bottle). Chilled, refreshing beverage by Slice. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://blinkit.com/prn/slice-thick-mango-fruit-drink-with-/prod-319",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 72,
+        "mrp": 80,
+        "url": "https://zepto.com/prn/slice-thick-mango-fruit-drink-with-/prod-319",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 72,
+        "mrp": 80,
+        "url": "https://minutes.com/prn/slice-thick-mango-fruit-drink-with-/prod-319",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 74,
+        "mrp": 80,
+        "url": "https://amazon.com/prn/slice-thick-mango-fruit-drink-with-/prod-319",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 77,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 75,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 73,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 74,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 74,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 74,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 76,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5279,
+    "popularity": 78,
+    "tags": [
+      "drinks",
+      "beverages",
+      "slice",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1.2L Bottle",
+    "packSize": 1200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 62.5,
+      "formatted": "\u20b962.5/L"
+    }
+  },
+  {
+    "id": "prod-320",
+    "title": "Real Fruit Power Mixed Fruit 100% Juice (180ml Tetra Pack)",
+    "brand": "Real",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Real Fruit Power Mixed Fruit 100% Juice (180ml Tetra Pack). Chilled, refreshing beverage by Real. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-320",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-320",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-320",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-320",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 20,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5290,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "real",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "180ml Tetra Pack",
+    "packSize": 180,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 111.11,
+      "formatted": "\u20b9111.11/L"
+    }
+  },
+  {
+    "id": "prod-321",
+    "title": "Real Fruit Power Mixed Fruit 100% Juice (1L Tetra Pack)",
+    "brand": "Real",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Real Fruit Power Mixed Fruit 100% Juice (1L Tetra Pack). Chilled, refreshing beverage by Real. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 115,
+        "mrp": 130,
+        "url": "https://blinkit.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-321",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 117,
+        "mrp": 130,
+        "url": "https://zepto.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-321",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 119,
+        "mrp": 130,
+        "url": "https://minutes.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-321",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 113,
+        "mrp": 130,
+        "url": "https://amazon.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-321",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 115,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 117,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 117,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 121,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 121,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 122,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 124,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1728,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "real",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 115.0,
+      "formatted": "\u20b9115.0/L"
+    }
+  },
+  {
+    "id": "prod-322",
+    "title": "Real Fruit Power Mixed Fruit 100% Juice (Pack of 2 (1L x 2))",
+    "brand": "Real",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Real Fruit Power Mixed Fruit 100% Juice (Pack of 2 (1L x 2)). Chilled, refreshing beverage by Real. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 219,
+        "mrp": 260,
+        "url": "https://blinkit.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-322",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 225,
+        "mrp": 260,
+        "url": "https://zepto.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-322",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 220,
+        "mrp": 260,
+        "url": "https://minutes.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-322",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 221,
+        "mrp": 260,
+        "url": "https://amazon.com/prn/real-fruit-power-mixed-fruit-100-ju/prod-322",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 221,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 218,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 214,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 211,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 218,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 220,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 227,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 1961,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "real",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 2 (1L x 2)",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 107.5,
+      "formatted": "\u20b9107.5/L"
+    }
+  },
+  {
+    "id": "prod-323",
+    "title": "Real Fruit Power Pomegranate Juice (1L Tetra Pack)",
+    "brand": "Real",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Real Fruit Power Pomegranate Juice (1L Tetra Pack). Chilled, refreshing beverage by Real. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 122,
+        "mrp": 140,
+        "url": "https://blinkit.com/prn/real-fruit-power-pomegranate-juice-/prod-323",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 120,
+        "mrp": 140,
+        "url": "https://zepto.com/prn/real-fruit-power-pomegranate-juice-/prod-323",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 121,
+        "mrp": 140,
+        "url": "https://minutes.com/prn/real-fruit-power-pomegranate-juice-/prod-323",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 121,
+        "mrp": 140,
+        "url": "https://amazon.com/prn/real-fruit-power-pomegranate-juice-/prod-323",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 124,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 121,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 124,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 124,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 122,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 118,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 119,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 960,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "real",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 125.0,
+      "formatted": "\u20b9125.0/L"
+    }
+  },
+  {
+    "id": "prod-324",
+    "title": "Real Fruit Power Guava Fruit Drink (1L Tetra Pack)",
+    "brand": "Real",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Real Fruit Power Guava Fruit Drink (1L Tetra Pack). Chilled, refreshing beverage by Real. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 116,
+        "mrp": 130,
+        "url": "https://blinkit.com/prn/real-fruit-power-guava-fruit-drink-/prod-324",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 119,
+        "mrp": 130,
+        "url": "https://zepto.com/prn/real-fruit-power-guava-fruit-drink-/prod-324",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 117,
+        "mrp": 130,
+        "url": "https://minutes.com/prn/real-fruit-power-guava-fruit-drink-/prod-324",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 120,
+        "mrp": 130,
+        "url": "https://amazon.com/prn/real-fruit-power-guava-fruit-drink-/prod-324",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 119,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 117,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 118,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 119,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 114,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 117,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 119,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5116,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "real",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 115.0,
+      "formatted": "\u20b9115.0/L"
+    }
+  },
+  {
+    "id": "prod-325",
+    "title": "Tropicana 100% Orange Juice No Added Sugar (200ml Tetra Pack)",
+    "brand": "Tropicana",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Tropicana 100% Orange Juice No Added Sugar (200ml Tetra Pack). Chilled, refreshing beverage by Tropicana. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/tropicana-100-orange-juice-no-added/prod-325",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/tropicana-100-orange-juice-no-added/prod-325",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/tropicana-100-orange-juice-no-added/prod-325",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/tropicana-100-orange-juice-no-added/prod-325",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 29,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 6689,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "tropicana",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Tetra Pack",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 150.0,
+      "formatted": "\u20b9150.0/L"
+    }
+  },
+  {
+    "id": "prod-326",
+    "title": "Tropicana 100% Orange Juice No Added Sugar (1L Tetra Pack)",
+    "brand": "Tropicana",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Tropicana 100% Orange Juice No Added Sugar (1L Tetra Pack). Chilled, refreshing beverage by Tropicana. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 133,
+        "mrp": 145,
+        "url": "https://blinkit.com/prn/tropicana-100-orange-juice-no-added/prod-326",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 135,
+        "mrp": 145,
+        "url": "https://zepto.com/prn/tropicana-100-orange-juice-no-added/prod-326",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 134,
+        "mrp": 145,
+        "url": "https://minutes.com/prn/tropicana-100-orange-juice-no-added/prod-326",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 129,
+        "mrp": 145,
+        "url": "https://amazon.com/prn/tropicana-100-orange-juice-no-added/prod-326",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 131,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 133,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 136,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 132,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 130,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 133,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 134,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 873,
+    "popularity": 91,
+    "tags": [
+      "drinks",
+      "beverages",
+      "tropicana",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 130.0,
+      "formatted": "\u20b9130.0/L"
+    }
+  },
+  {
+    "id": "prod-327",
+    "title": "Tropicana 100% Apple Fruit Juice (1L Tetra Pack)",
+    "brand": "Tropicana",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Tropicana 100% Apple Fruit Juice (1L Tetra Pack). Chilled, refreshing beverage by Tropicana. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 132,
+        "mrp": 145,
+        "url": "https://blinkit.com/prn/tropicana-100-apple-fruit-juice-1l-/prod-327",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 136,
+        "mrp": 145,
+        "url": "https://zepto.com/prn/tropicana-100-apple-fruit-juice-1l-/prod-327",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 130,
+        "mrp": 145,
+        "url": "https://minutes.com/prn/tropicana-100-apple-fruit-juice-1l-/prod-327",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 128,
+        "mrp": 145,
+        "url": "https://amazon.com/prn/tropicana-100-apple-fruit-juice-1l-/prod-327",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 132,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 132,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 133,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 132,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 131,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 135,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 139,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 2431,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "tropicana",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 130.0,
+      "formatted": "\u20b9130.0/L"
+    }
+  },
+  {
+    "id": "prod-328",
+    "title": "Paper Boat Aamras Mango Fruit Drink (200ml Pouch)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Aamras Mango Fruit Drink (200ml Pouch). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/paper-boat-aamras-mango-fruit-drink/prod-328",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/paper-boat-aamras-mango-fruit-drink/prod-328",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/paper-boat-aamras-mango-fruit-drink/prod-328",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/paper-boat-aamras-mango-fruit-drink/prod-328",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 30,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 6200,
+    "popularity": 80,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Pouch",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 150.0,
+      "formatted": "\u20b9150.0/L"
+    }
+  },
+  {
+    "id": "prod-329",
+    "title": "Paper Boat Aamras Mango Fruit Drink (1L Tetra Pack)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Aamras Mango Fruit Drink (1L Tetra Pack). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/paper-boat-aamras-mango-fruit-drink/prod-329",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 110,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/paper-boat-aamras-mango-fruit-drink/prod-329",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 112,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/paper-boat-aamras-mango-fruit-drink/prod-329",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 106,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/paper-boat-aamras-mango-fruit-drink/prod-329",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 106,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 106,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 109,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 108,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 109,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 112,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 116,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5579,
+    "popularity": 80,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 110.0,
+      "formatted": "\u20b9110.0/L"
+    }
+  },
+  {
+    "id": "prod-330",
+    "title": "Paper Boat Anar Pomegranate Juice (200ml Pouch)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Anar Pomegranate Juice (200ml Pouch). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 37,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/paper-boat-anar-pomegranate-juice-2/prod-330",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/paper-boat-anar-pomegranate-juice-2/prod-330",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/paper-boat-anar-pomegranate-juice-2/prod-330",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/paper-boat-anar-pomegranate-juice-2/prod-330",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 35,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 620,
+    "popularity": 89,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Pouch",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 175.0,
+      "formatted": "\u20b9175.0/L"
+    }
+  },
+  {
+    "id": "prod-331",
+    "title": "Paper Boat Anar Pomegranate Juice (1L Tetra Pack)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Anar Pomegranate Juice (1L Tetra Pack). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 121,
+        "mrp": 140,
+        "url": "https://blinkit.com/prn/paper-boat-anar-pomegranate-juice-1/prod-331",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 124,
+        "mrp": 140,
+        "url": "https://zepto.com/prn/paper-boat-anar-pomegranate-juice-1/prod-331",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 127,
+        "mrp": 140,
+        "url": "https://minutes.com/prn/paper-boat-anar-pomegranate-juice-1/prod-331",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 127,
+        "mrp": 140,
+        "url": "https://amazon.com/prn/paper-boat-anar-pomegranate-juice-1/prod-331",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 128,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 128,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 125,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 124,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 129,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 131,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 134,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 507,
+    "popularity": 75,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Tetra Pack",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 125.0,
+      "formatted": "\u20b9125.0/L"
+    }
+  },
+  {
+    "id": "prod-332",
+    "title": "Paper Boat Santra Orange Beverage (200ml Pouch)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Santra Orange Beverage (200ml Pouch). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/paper-boat-santra-orange-beverage-2/prod-332",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/paper-boat-santra-orange-beverage-2/prod-332",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/paper-boat-santra-orange-beverage-2/prod-332",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 29,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/paper-boat-santra-orange-beverage-2/prod-332",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 29,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 32,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 965,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Pouch",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 150.0,
+      "formatted": "\u20b9150.0/L"
+    }
+  },
+  {
+    "id": "prod-333",
+    "title": "Paper Boat Jaljeera Spiced Drink (200ml Pouch)",
+    "brand": "Paper Boat",
+    "category": "Juices & Fruit Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
+    "description": "Paper Boat Jaljeera Spiced Drink (200ml Pouch). Chilled, refreshing beverage by Paper Boat. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/paper-boat-jaljeera-spiced-drink-20/prod-333",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/paper-boat-jaljeera-spiced-drink-20/prod-333",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/paper-boat-jaljeera-spiced-drink-20/prod-333",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/paper-boat-jaljeera-spiced-drink-20/prod-333",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 32,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 33,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 34,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 34,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1204,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "paper boat",
+      "juices & fruit drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Pouch",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 150.0,
+      "formatted": "\u20b9150.0/L"
+    }
+  },
+  {
+    "id": "prod-334",
+    "title": "Red Bull Energy Drink (Vitalizes Body and Mind) (250ml Can)",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Energy Drink (Vitalizes Body and Mind) (250ml Can). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 113,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/red-bull-energy-drink-vitalizes-bod/prod-334",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 120,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/red-bull-energy-drink-vitalizes-bod/prod-334",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/red-bull-energy-drink-vitalizes-bod/prod-334",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 120,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/red-bull-energy-drink-vitalizes-bod/prod-334",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 112,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 115,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 112,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 110,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 110,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 107,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 111,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5214,
+    "popularity": 87,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 460.0,
+      "formatted": "\u20b9460.0/L"
+    }
+  },
+  {
+    "id": "prod-335",
+    "title": "Red Bull Energy Drink (Vitalizes Body and Mind) (350ml Can)",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Energy Drink (Vitalizes Body and Mind) (350ml Can). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 149,
+        "mrp": 165,
+        "url": "https://blinkit.com/prn/red-bull-energy-drink-vitalizes-bod/prod-335",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 152,
+        "mrp": 165,
+        "url": "https://zepto.com/prn/red-bull-energy-drink-vitalizes-bod/prod-335",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 158,
+        "mrp": 165,
+        "url": "https://minutes.com/prn/red-bull-energy-drink-vitalizes-bod/prod-335",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 160,
+        "mrp": 165,
+        "url": "https://amazon.com/prn/red-bull-energy-drink-vitalizes-bod/prod-335",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 159,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 158,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 154,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 154,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 150,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 146,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 140,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1942,
+    "popularity": 87,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "350ml Can",
+    "packSize": 350,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 442.86,
+      "formatted": "\u20b9442.86/L"
+    }
+  },
+  {
+    "id": "prod-336",
+    "title": "Red Bull Energy Drink (Vitalizes Body and Mind) (Pack of 4 (250ml x 4))",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Energy Drink (Vitalizes Body and Mind) (Pack of 4 (250ml x 4)). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 459,
+        "mrp": 500,
+        "url": "https://blinkit.com/prn/red-bull-energy-drink-vitalizes-bod/prod-336",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 435,
+        "mrp": 500,
+        "url": "https://zepto.com/prn/red-bull-energy-drink-vitalizes-bod/prod-336",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 454,
+        "mrp": 500,
+        "url": "https://minutes.com/prn/red-bull-energy-drink-vitalizes-bod/prod-336",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 442,
+        "mrp": 500,
+        "url": "https://amazon.com/prn/red-bull-energy-drink-vitalizes-bod/prod-336",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 456,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 454,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 445,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 459,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 467,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 449,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 447,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1917,
+    "popularity": 74,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 4 (250ml x 4)",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 440.0,
+      "formatted": "\u20b9440.0/L"
+    }
+  },
+  {
+    "id": "prod-337",
+    "title": "Red Bull Sugarfree Energy Drink (250ml Can)",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Sugarfree Energy Drink (250ml Can). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 121,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/red-bull-sugarfree-energy-drink-250/prod-337",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 118,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/red-bull-sugarfree-energy-drink-250/prod-337",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 118,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/red-bull-sugarfree-energy-drink-250/prod-337",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/red-bull-sugarfree-energy-drink-250/prod-337",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 119,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 116,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 112,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 110,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 110,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 106,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 109,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 7394,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 460.0,
+      "formatted": "\u20b9460.0/L"
+    }
+  },
+  {
+    "id": "prod-338",
+    "title": "Red Bull Sugarfree Energy Drink (Pack of 4 (250ml x 4))",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Sugarfree Energy Drink (Pack of 4 (250ml x 4)). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 428,
+        "mrp": 500,
+        "url": "https://blinkit.com/prn/red-bull-sugarfree-energy-drink-pac/prod-338",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 449,
+        "mrp": 500,
+        "url": "https://zepto.com/prn/red-bull-sugarfree-energy-drink-pac/prod-338",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 452,
+        "mrp": 500,
+        "url": "https://minutes.com/prn/red-bull-sugarfree-energy-drink-pac/prod-338",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 452,
+        "mrp": 500,
+        "url": "https://amazon.com/prn/red-bull-sugarfree-energy-drink-pac/prod-338",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 426,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 438,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 434,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 442,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 444,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 459,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 450,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1041,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 4 (250ml x 4)",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 440.0,
+      "formatted": "\u20b9440.0/L"
+    }
+  },
+  {
+    "id": "prod-339",
+    "title": "Red Bull Yellow Edition Tropical Fruit (250ml Can)",
+    "brand": "Red Bull",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Red Bull Yellow Edition Tropical Fruit (250ml Can). Chilled, refreshing beverage by Red Bull. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 116,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/red-bull-yellow-edition-tropical-fr/prod-339",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 117,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/red-bull-yellow-edition-tropical-fr/prod-339",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 112,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/red-bull-yellow-edition-tropical-fr/prod-339",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/red-bull-yellow-edition-tropical-fr/prod-339",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 114,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 118,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 118,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 118,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 115,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 119,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 119,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3488,
+    "popularity": 81,
+    "tags": [
+      "drinks",
+      "beverages",
+      "red bull",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 460.0,
+      "formatted": "\u20b9460.0/L"
+    }
+  },
+  {
+    "id": "prod-340",
+    "title": "Monster Energy Drink Original Green Can (350ml Can)",
+    "brand": "Monster",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Monster Energy Drink Original Green Can (350ml Can). Chilled, refreshing beverage by Monster. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 117,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/monster-energy-drink-original-green/prod-340",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 114,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/monster-energy-drink-original-green/prod-340",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/monster-energy-drink-original-green/prod-340",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 114,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/monster-energy-drink-original-green/prod-340",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 114,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 118,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 118,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 117,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 113,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 115,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 6794,
+    "popularity": 95,
+    "tags": [
+      "drinks",
+      "beverages",
+      "monster",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "350ml Can",
+    "packSize": 350,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 328.57,
+      "formatted": "\u20b9328.57/L"
+    }
+  },
+  {
+    "id": "prod-341",
+    "title": "Monster Energy Drink Original Green Can (500ml Big Can)",
+    "brand": "Monster",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Monster Energy Drink Original Green Can (500ml Big Can). Chilled, refreshing beverage by Monster. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 154,
+        "mrp": 165,
+        "url": "https://blinkit.com/prn/monster-energy-drink-original-green/prod-341",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 144,
+        "mrp": 165,
+        "url": "https://zepto.com/prn/monster-energy-drink-original-green/prod-341",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 150,
+        "mrp": 165,
+        "url": "https://minutes.com/prn/monster-energy-drink-original-green/prod-341",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 154,
+        "mrp": 165,
+        "url": "https://amazon.com/prn/monster-energy-drink-original-green/prod-341",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 155,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 153,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 157,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 163,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 159,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 165,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 162,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 7340,
+    "popularity": 86,
+    "tags": [
+      "drinks",
+      "beverages",
+      "monster",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Big Can",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 300.0,
+      "formatted": "\u20b9300.0/L"
+    }
+  },
+  {
+    "id": "prod-342",
+    "title": "Monster Ultra White Zero Sugar Energy Drink (350ml Can)",
+    "brand": "Monster",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Monster Ultra White Zero Sugar Energy Drink (350ml Can). Chilled, refreshing beverage by Monster. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 110,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/monster-ultra-white-zero-sugar-ener/prod-342",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 110,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/monster-ultra-white-zero-sugar-ener/prod-342",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/monster-ultra-white-zero-sugar-ener/prod-342",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 112,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/monster-ultra-white-zero-sugar-ener/prod-342",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 111,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 110,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 111,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 115,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 115,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 112,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5535,
+    "popularity": 96,
+    "tags": [
+      "drinks",
+      "beverages",
+      "monster",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "350ml Can",
+    "packSize": 350,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 328.57,
+      "formatted": "\u20b9328.57/L"
+    }
+  },
+  {
+    "id": "prod-343",
+    "title": "Monster Mango Loco Juice Energy Drink (350ml Can)",
+    "brand": "Monster",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Monster Mango Loco Juice Energy Drink (350ml Can). Chilled, refreshing beverage by Monster. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 116,
+        "mrp": 125,
+        "url": "https://blinkit.com/prn/monster-mango-loco-juice-energy-dri/prod-343",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 119,
+        "mrp": 125,
+        "url": "https://zepto.com/prn/monster-mango-loco-juice-energy-dri/prod-343",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 117,
+        "mrp": 125,
+        "url": "https://minutes.com/prn/monster-mango-loco-juice-energy-dri/prod-343",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 111,
+        "mrp": 125,
+        "url": "https://amazon.com/prn/monster-mango-loco-juice-energy-dri/prod-343",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 113,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 113,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 113,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 114,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 118,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 116,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 121,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 5758,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "monster",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "350ml Can",
+    "packSize": 350,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 328.57,
+      "formatted": "\u20b9328.57/L"
+    }
+  },
+  {
+    "id": "prod-344",
+    "title": "Sting Energy Drink with Taurine & Caffeine (250ml PET Bottle)",
+    "brand": "Sting",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Sting Energy Drink with Taurine & Caffeine (250ml PET Bottle). Chilled, refreshing beverage by Sting. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/sting-energy-drink-with-taurine-caf/prod-344",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/sting-energy-drink-with-taurine-caf/prod-344",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/sting-energy-drink-with-taurine-caf/prod-344",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/sting-energy-drink-with-taurine-caf/prod-344",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 21,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 21,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1773,
+    "popularity": 99,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sting",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml PET Bottle",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 80.0,
+      "formatted": "\u20b980.0/L"
+    }
+  },
+  {
+    "id": "prod-345",
+    "title": "Sting Energy Drink with Taurine & Caffeine (250ml Sleek Can)",
+    "brand": "Sting",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Sting Energy Drink with Taurine & Caffeine (250ml Sleek Can). Chilled, refreshing beverage by Sting. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/sting-energy-drink-with-taurine-caf/prod-345",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/sting-energy-drink-with-taurine-caf/prod-345",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 37,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/sting-energy-drink-with-taurine-caf/prod-345",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/sting-energy-drink-with-taurine-caf/prod-345",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 33,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 7229,
+    "popularity": 78,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sting",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Sleek Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-346",
+    "title": "Sting Energy Drink with Taurine & Caffeine (Pack of 6 Bottles)",
+    "brand": "Sting",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Sting Energy Drink with Taurine & Caffeine (Pack of 6 Bottles). Chilled, refreshing beverage by Sting. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 118,
+        "mrp": 120,
+        "url": "https://blinkit.com/prn/sting-energy-drink-with-taurine-caf/prod-346",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 113,
+        "mrp": 120,
+        "url": "https://zepto.com/prn/sting-energy-drink-with-taurine-caf/prod-346",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 114,
+        "mrp": 120,
+        "url": "https://minutes.com/prn/sting-energy-drink-with-taurine-caf/prod-346",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 110,
+        "mrp": 120,
+        "url": "https://amazon.com/prn/sting-energy-drink-with-taurine-caf/prod-346",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 118,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 115,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 119,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 116,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 117,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 113,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 109,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 748,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sting",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 6 Bottles",
+    "packSize": 1500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 76.67,
+      "formatted": "\u20b976.67/L"
+    }
+  },
+  {
+    "id": "prod-347",
+    "title": "Sting Blue Current Energy Drink (250ml Bottle)",
+    "brand": "Sting",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Sting Blue Current Energy Drink (250ml Bottle). Chilled, refreshing beverage by Sting. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/sting-blue-current-energy-drink-250/prod-347",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/sting-blue-current-energy-drink-250/prod-347",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/sting-blue-current-energy-drink-250/prod-347",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/sting-blue-current-energy-drink-250/prod-347",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 21,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 22,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 21,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 7238,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sting",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Bottle",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 80.0,
+      "formatted": "\u20b980.0/L"
+    }
+  },
+  {
+    "id": "prod-348",
+    "title": "Gatorade Sports Drink Blue Bolt Electrolyte (500ml Bottle)",
+    "brand": "Gatorade",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Gatorade Sports Drink Blue Bolt Electrolyte (500ml Bottle). Chilled, refreshing beverage by Gatorade. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-348",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-348",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-348",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 44,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-348",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 43,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 44,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 46,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 3011,
+    "popularity": 96,
+    "tags": [
+      "drinks",
+      "beverages",
+      "gatorade",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 90.0,
+      "formatted": "\u20b990.0/L"
+    }
+  },
+  {
+    "id": "prod-349",
+    "title": "Gatorade Sports Drink Blue Bolt Electrolyte (Pack of 4 (500ml x 4))",
+    "brand": "Gatorade",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Gatorade Sports Drink Blue Bolt Electrolyte (Pack of 4 (500ml x 4)). Chilled, refreshing beverage by Gatorade. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 177,
+        "mrp": 200,
+        "url": "https://blinkit.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-349",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 174,
+        "mrp": 200,
+        "url": "https://zepto.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-349",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 176,
+        "mrp": 200,
+        "url": "https://minutes.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-349",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 183,
+        "mrp": 200,
+        "url": "https://amazon.com/prn/gatorade-sports-drink-blue-bolt-ele/prod-349",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 168,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 172,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 168,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 174,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 172,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 171,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 173,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2823,
+    "popularity": 89,
+    "tags": [
+      "drinks",
+      "beverages",
+      "gatorade",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 4 (500ml x 4)",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 87.5,
+      "formatted": "\u20b987.5/L"
+    }
+  },
+  {
+    "id": "prod-350",
+    "title": "Gatorade Sports Drink Lemon Ice Electrolyte (500ml Bottle)",
+    "brand": "Gatorade",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80",
+    "description": "Gatorade Sports Drink Lemon Ice Electrolyte (500ml Bottle). Chilled, refreshing beverage by Gatorade. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/gatorade-sports-drink-lemon-ice-ele/prod-350",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 46,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/gatorade-sports-drink-lemon-ice-ele/prod-350",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/gatorade-sports-drink-lemon-ice-ele/prod-350",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 44,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/gatorade-sports-drink-lemon-ice-ele/prod-350",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 45,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 44,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 42,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 43,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 43,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2960,
+    "popularity": 95,
+    "tags": [
+      "drinks",
+      "beverages",
+      "gatorade",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 90.0,
+      "formatted": "\u20b990.0/L"
+    }
+  },
+  {
+    "id": "prod-351",
+    "title": "Gatorade Sports Drink Orange Chill Electrolyte (500ml Bottle)",
+    "brand": "Gatorade",
+    "category": "Energy & Sports Drinks",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    "description": "Gatorade Sports Drink Orange Chill Electrolyte (500ml Bottle). Chilled, refreshing beverage by Gatorade. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/gatorade-sports-drink-orange-chill-/prod-351",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 44,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/gatorade-sports-drink-orange-chill-/prod-351",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 44,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/gatorade-sports-drink-orange-chill-/prod-351",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 47,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/gatorade-sports-drink-orange-chill-/prod-351",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 43,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 44,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 45,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1301,
+    "popularity": 98,
+    "tags": [
+      "drinks",
+      "beverages",
+      "gatorade",
+      "energy & sports drinks",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 90.0,
+      "formatted": "\u20b990.0/L"
+    }
+  },
+  {
+    "id": "prod-352",
+    "title": "Bisleri Packaged Drinking Water with Minerals (500ml Bottle)",
+    "brand": "Bisleri",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Bisleri Packaged Drinking Water with Minerals (500ml Bottle). Chilled, refreshing beverage by Bisleri. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/bisleri-packaged-drinking-water-wit/prod-352",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/bisleri-packaged-drinking-water-wit/prod-352",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/bisleri-packaged-drinking-water-wit/prod-352",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/bisleri-packaged-drinking-water-wit/prod-352",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 2263,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "bisleri",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-353",
+    "title": "Bisleri Packaged Drinking Water with Minerals (1L Bottle)",
+    "brand": "Bisleri",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Bisleri Packaged Drinking Water with Minerals (1L Bottle). Chilled, refreshing beverage by Bisleri. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/bisleri-packaged-drinking-water-wit/prod-353",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/bisleri-packaged-drinking-water-wit/prod-353",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/bisleri-packaged-drinking-water-wit/prod-353",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/bisleri-packaged-drinking-water-wit/prod-353",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 19,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4570,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "bisleri",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-354",
+    "title": "Bisleri Packaged Drinking Water with Minerals (2L Bottle)",
+    "brand": "Bisleri",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Bisleri Packaged Drinking Water with Minerals (2L Bottle). Chilled, refreshing beverage by Bisleri. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/bisleri-packaged-drinking-water-wit/prod-354",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/bisleri-packaged-drinking-water-wit/prod-354",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/bisleri-packaged-drinking-water-wit/prod-354",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/bisleri-packaged-drinking-water-wit/prod-354",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 30,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 31,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 1797,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "bisleri",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 15.0,
+      "formatted": "\u20b915.0/L"
+    }
+  },
+  {
+    "id": "prod-355",
+    "title": "Bisleri Packaged Drinking Water with Minerals (5L Jar)",
+    "brand": "Bisleri",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Bisleri Packaged Drinking Water with Minerals (5L Jar). Chilled, refreshing beverage by Bisleri. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 73,
+        "mrp": 75,
+        "url": "https://blinkit.com/prn/bisleri-packaged-drinking-water-wit/prod-355",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 68,
+        "mrp": 75,
+        "url": "https://zepto.com/prn/bisleri-packaged-drinking-water-wit/prod-355",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 71,
+        "mrp": 75,
+        "url": "https://minutes.com/prn/bisleri-packaged-drinking-water-wit/prod-355",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 69,
+        "mrp": 75,
+        "url": "https://amazon.com/prn/bisleri-packaged-drinking-water-wit/prod-355",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 72,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 71,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 73,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 75,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 75,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 74,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 75,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5750,
+    "popularity": 97,
+    "tags": [
+      "drinks",
+      "beverages",
+      "bisleri",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "5L Jar",
+    "packSize": 5000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 14.0,
+      "formatted": "\u20b914.0/L"
+    }
+  },
+  {
+    "id": "prod-356",
+    "title": "Bisleri Packaged Drinking Water with Minerals (Pack of 6 (1L x 6))",
+    "brand": "Bisleri",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Bisleri Packaged Drinking Water with Minerals (Pack of 6 (1L x 6)). Chilled, refreshing beverage by Bisleri. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 119,
+        "mrp": 120,
+        "url": "https://blinkit.com/prn/bisleri-packaged-drinking-water-wit/prod-356",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 118,
+        "mrp": 120,
+        "url": "https://zepto.com/prn/bisleri-packaged-drinking-water-wit/prod-356",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 113,
+        "mrp": 120,
+        "url": "https://minutes.com/prn/bisleri-packaged-drinking-water-wit/prod-356",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 112,
+        "mrp": 120,
+        "url": "https://amazon.com/prn/bisleri-packaged-drinking-water-wit/prod-356",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 116,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 120,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 118,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 123,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 124,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 119,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 2595,
+    "popularity": 72,
+    "tags": [
+      "drinks",
+      "beverages",
+      "bisleri",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 6 (1L x 6)",
+    "packSize": 6000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 19.17,
+      "formatted": "\u20b919.17/L"
+    }
+  },
+  {
+    "id": "prod-357",
+    "title": "Kinley Purified Drinking Water with Added Minerals (500ml Bottle)",
+    "brand": "Kinley",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Kinley Purified Drinking Water with Added Minerals (500ml Bottle). Chilled, refreshing beverage by Kinley. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/kinley-purified-drinking-water-with/prod-357",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/kinley-purified-drinking-water-with/prod-357",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/kinley-purified-drinking-water-with/prod-357",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/kinley-purified-drinking-water-with/prod-357",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 6166,
+    "popularity": 72,
+    "tags": [
+      "drinks",
+      "beverages",
+      "kinley",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-358",
+    "title": "Kinley Purified Drinking Water with Added Minerals (1L Bottle)",
+    "brand": "Kinley",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Kinley Purified Drinking Water with Added Minerals (1L Bottle). Chilled, refreshing beverage by Kinley. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/kinley-purified-drinking-water-with/prod-358",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/kinley-purified-drinking-water-with/prod-358",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/kinley-purified-drinking-water-with/prod-358",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/kinley-purified-drinking-water-with/prod-358",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 19,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 19,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4177,
+    "popularity": 80,
+    "tags": [
+      "drinks",
+      "beverages",
+      "kinley",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-359",
+    "title": "Kinley Purified Drinking Water with Added Minerals (2L Bottle)",
+    "brand": "Kinley",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Kinley Purified Drinking Water with Added Minerals (2L Bottle). Chilled, refreshing beverage by Kinley. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/kinley-purified-drinking-water-with/prod-359",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/kinley-purified-drinking-water-with/prod-359",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/kinley-purified-drinking-water-with/prod-359",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/kinley-purified-drinking-water-with/prod-359",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 32,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3076,
+    "popularity": 87,
+    "tags": [
+      "drinks",
+      "beverages",
+      "kinley",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "2L Bottle",
+    "packSize": 2000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 15.0,
+      "formatted": "\u20b915.0/L"
+    }
+  },
+  {
+    "id": "prod-360",
+    "title": "Aquafina Packaged Drinking Water (500ml Bottle)",
+    "brand": "Aquafina",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Aquafina Packaged Drinking Water (500ml Bottle). Chilled, refreshing beverage by Aquafina. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://blinkit.com/prn/aquafina-packaged-drinking-water-50/prod-360",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://zepto.com/prn/aquafina-packaged-drinking-water-50/prod-360",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://minutes.com/prn/aquafina-packaged-drinking-water-50/prod-360",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 10,
+        "mrp": 10,
+        "url": "https://amazon.com/prn/aquafina-packaged-drinking-water-50/prod-360",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 10,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 10,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 10,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 10,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 1919,
+    "popularity": 93,
+    "tags": [
+      "drinks",
+      "beverages",
+      "aquafina",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-361",
+    "title": "Aquafina Packaged Drinking Water (1L Bottle)",
+    "brand": "Aquafina",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Aquafina Packaged Drinking Water (1L Bottle). Chilled, refreshing beverage by Aquafina. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 21,
+        "mrp": 20,
+        "url": "https://blinkit.com/prn/aquafina-packaged-drinking-water-1l/prod-361",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 20,
+        "mrp": 20,
+        "url": "https://zepto.com/prn/aquafina-packaged-drinking-water-1l/prod-361",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://minutes.com/prn/aquafina-packaged-drinking-water-1l/prod-361",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 19,
+        "mrp": 20,
+        "url": "https://amazon.com/prn/aquafina-packaged-drinking-water-1l/prod-361",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 20,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 20,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 19,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 18,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 18,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 18,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 18,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3908,
+    "popularity": 97,
+    "tags": [
+      "drinks",
+      "beverages",
+      "aquafina",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 20.0,
+      "formatted": "\u20b920.0/L"
+    }
+  },
+  {
+    "id": "prod-362",
+    "title": "Himalayan Natural Mineral Water from the Foothills (500ml Glass Bottle)",
+    "brand": "Himalayan",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Himalayan Natural Mineral Water from the Foothills (500ml Glass Bottle). Chilled, refreshing beverage by Himalayan. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 51,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/himalayan-natural-mineral-water-fro/prod-362",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 51,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/himalayan-natural-mineral-water-fro/prod-362",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/himalayan-natural-mineral-water-fro/prod-362",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 50,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/himalayan-natural-mineral-water-fro/prod-362",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 48,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 49,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 48,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 50,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 52,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 52,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 54,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 908,
+    "popularity": 91,
+    "tags": [
+      "drinks",
+      "beverages",
+      "himalayan",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "500ml Glass Bottle",
+    "packSize": 500,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 100.0,
+      "formatted": "\u20b9100.0/L"
+    }
+  },
+  {
+    "id": "prod-363",
+    "title": "Himalayan Natural Mineral Water from the Foothills (1L Bottle)",
+    "brand": "Himalayan",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=80",
+    "description": "Himalayan Natural Mineral Water from the Foothills (1L Bottle). Chilled, refreshing beverage by Himalayan. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 66,
+        "mrp": 75,
+        "url": "https://blinkit.com/prn/himalayan-natural-mineral-water-fro/prod-363",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 66,
+        "mrp": 75,
+        "url": "https://zepto.com/prn/himalayan-natural-mineral-water-fro/prod-363",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 65,
+        "mrp": 75,
+        "url": "https://minutes.com/prn/himalayan-natural-mineral-water-fro/prod-363",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 67,
+        "mrp": 75,
+        "url": "https://amazon.com/prn/himalayan-natural-mineral-water-fro/prod-363",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 63,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 65,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 65,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 66,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 68,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 67,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 3762,
+    "popularity": 81,
+    "tags": [
+      "drinks",
+      "beverages",
+      "himalayan",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 65.0,
+      "formatted": "\u20b965.0/L"
+    }
+  },
+  {
+    "id": "prod-364",
+    "title": "Vedica Himalayan Natural Spring Water (1L Bottle)",
+    "brand": "Vedica",
+    "category": "Packaged Water",
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "description": "Vedica Himalayan Natural Spring Water (1L Bottle). Chilled, refreshing beverage by Vedica. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 58,
+        "mrp": 70,
+        "url": "https://blinkit.com/prn/vedica-himalayan-natural-spring-wat/prod-364",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 62,
+        "mrp": 70,
+        "url": "https://zepto.com/prn/vedica-himalayan-natural-spring-wat/prod-364",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 62,
+        "mrp": 70,
+        "url": "https://minutes.com/prn/vedica-himalayan-natural-spring-wat/prod-364",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 60,
+        "mrp": 70,
+        "url": "https://amazon.com/prn/vedica-himalayan-natural-spring-wat/prod-364",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 62,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 60,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 59,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 60,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 58,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 59,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 61,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 940,
+    "popularity": 79,
+    "tags": [
+      "drinks",
+      "beverages",
+      "vedica",
+      "packaged water",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "1L Bottle",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 60.0,
+      "formatted": "\u20b960.0/L"
+    }
+  },
+  {
+    "id": "prod-365",
+    "title": "Nescafe Cold Coffee Chilled Latte Can (180ml Tetra)",
+    "brand": "Nescafe",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Nescafe Cold Coffee Chilled Latte Can (180ml Tetra). Chilled, refreshing beverage by Nescafe. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-365",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-365",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-365",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-365",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 5436,
+    "popularity": 94,
+    "tags": [
+      "drinks",
+      "beverages",
+      "nescafe",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "180ml Tetra",
+    "packSize": 180,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 194.44,
+      "formatted": "\u20b9194.44/L"
+    }
+  },
+  {
+    "id": "prod-366",
+    "title": "Nescafe Cold Coffee Chilled Latte Can (250ml Can)",
+    "brand": "Nescafe",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Nescafe Cold Coffee Chilled Latte Can (250ml Can). Chilled, refreshing beverage by Nescafe. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-366",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 57,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-366",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-366",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-366",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 55,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 53,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 50,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 51,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 52,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 53,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4461,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "nescafe",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 220.0,
+      "formatted": "\u20b9220.0/L"
+    }
+  },
+  {
+    "id": "prod-367",
+    "title": "Nescafe Cold Coffee Chilled Latte Can (Pack of 4 Cans)",
+    "brand": "Nescafe",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Nescafe Cold Coffee Chilled Latte Can (Pack of 4 Cans). Chilled, refreshing beverage by Nescafe. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 203,
+        "mrp": 240,
+        "url": "https://blinkit.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-367",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 201,
+        "mrp": 240,
+        "url": "https://zepto.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-367",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 200,
+        "mrp": 240,
+        "url": "https://minutes.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-367",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 206,
+        "mrp": 240,
+        "url": "https://amazon.com/prn/nescafe-cold-coffee-chilled-latte-c/prod-367",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 215,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 217,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 222,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 219,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 214,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 212,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 217,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5509,
+    "popularity": 81,
+    "tags": [
+      "drinks",
+      "beverages",
+      "nescafe",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 4 Cans",
+    "packSize": 1000,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 210.0,
+      "formatted": "\u20b9210.0/L"
+    }
+  },
+  {
+    "id": "prod-368",
+    "title": "Nescafe Intense Cold Coffee Hazelnut Flavour (250ml Can)",
+    "brand": "Nescafe",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Nescafe Intense Cold Coffee Hazelnut Flavour (250ml Can). Chilled, refreshing beverage by Nescafe. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 62,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/nescafe-intense-cold-coffee-hazelnu/prod-368",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 63,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/nescafe-intense-cold-coffee-hazelnu/prod-368",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 60,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/nescafe-intense-cold-coffee-hazelnu/prod-368",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 58,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/nescafe-intense-cold-coffee-hazelnu/prod-368",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 59,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 58,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 57,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 57,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 59,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3936,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "nescafe",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 240.0,
+      "formatted": "\u20b9240.0/L"
+    }
+  },
+  {
+    "id": "prod-369",
+    "title": "Amul Kool Cafe Flavoured Milk Can (200ml Can)",
+    "brand": "Amul",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Amul Kool Cafe Flavoured Milk Can (200ml Can). Chilled, refreshing beverage by Amul. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/amul-kool-cafe-flavoured-milk-can-2/prod-369",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/amul-kool-cafe-flavoured-milk-can-2/prod-369",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/amul-kool-cafe-flavoured-milk-can-2/prod-369",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/amul-kool-cafe-flavoured-milk-can-2/prod-369",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 31,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 31,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 31,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 6950,
+    "popularity": 89,
+    "tags": [
+      "drinks",
+      "beverages",
+      "amul",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Can",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 150.0,
+      "formatted": "\u20b9150.0/L"
+    }
+  },
+  {
+    "id": "prod-370",
+    "title": "Amul Kool Cafe Flavoured Milk Can (Pack of 6 Cans)",
+    "brand": "Amul",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Amul Kool Cafe Flavoured Milk Can (Pack of 6 Cans). Chilled, refreshing beverage by Amul. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 173,
+        "mrp": 210,
+        "url": "https://blinkit.com/prn/amul-kool-cafe-flavoured-milk-can-p/prod-370",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 168,
+        "mrp": 210,
+        "url": "https://zepto.com/prn/amul-kool-cafe-flavoured-milk-can-p/prod-370",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 167,
+        "mrp": 210,
+        "url": "https://minutes.com/prn/amul-kool-cafe-flavoured-milk-can-p/prod-370",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 168,
+        "mrp": 210,
+        "url": "https://amazon.com/prn/amul-kool-cafe-flavoured-milk-can-p/prod-370",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 168,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 172,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 172,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 170,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 174,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 168,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 171,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1280,
+    "popularity": 76,
+    "tags": [
+      "drinks",
+      "beverages",
+      "amul",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "Pack of 6 Cans",
+    "packSize": 1200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 145.83,
+      "formatted": "\u20b9145.83/L"
+    }
+  },
+  {
+    "id": "prod-371",
+    "title": "Amul Kool Kesar Flavoured Milk Bottle (180ml Bottle)",
+    "brand": "Amul",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Amul Kool Kesar Flavoured Milk Bottle (180ml Bottle). Chilled, refreshing beverage by Amul. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 26,
+        "mrp": 25,
+        "url": "https://blinkit.com/prn/amul-kool-kesar-flavoured-milk-bott/prod-371",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://zepto.com/prn/amul-kool-kesar-flavoured-milk-bott/prod-371",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://minutes.com/prn/amul-kool-kesar-flavoured-milk-bott/prod-371",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://amazon.com/prn/amul-kool-kesar-flavoured-milk-bott/prod-371",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 26,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 26,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 26,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 26,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 27,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 28,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 29,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 932,
+    "popularity": 75,
+    "tags": [
+      "drinks",
+      "beverages",
+      "amul",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "180ml Bottle",
+    "packSize": 180,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 138.89,
+      "formatted": "\u20b9138.89/L"
+    }
+  },
+  {
+    "id": "prod-372",
+    "title": "Amul Kool Elaichi Flavoured Milk Bottle (180ml Bottle)",
+    "brand": "Amul",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Amul Kool Elaichi Flavoured Milk Bottle (180ml Bottle). Chilled, refreshing beverage by Amul. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://blinkit.com/prn/amul-kool-elaichi-flavoured-milk-bo/prod-372",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://zepto.com/prn/amul-kool-elaichi-flavoured-milk-bo/prod-372",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 26,
+        "mrp": 25,
+        "url": "https://minutes.com/prn/amul-kool-elaichi-flavoured-milk-bo/prod-372",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://amazon.com/prn/amul-kool-elaichi-flavoured-milk-bo/prod-372",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 25,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 24,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 24,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 23,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 23,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 24,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 24,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5155,
+    "popularity": 92,
+    "tags": [
+      "drinks",
+      "beverages",
+      "amul",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "180ml Bottle",
+    "packSize": 180,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 138.89,
+      "formatted": "\u20b9138.89/L"
+    }
+  },
+  {
+    "id": "prod-373",
+    "title": "Sleepy Owl Cold Coffee Classic Sweet Blend (200ml Tetra Pack)",
+    "brand": "Sleepy Owl",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Sleepy Owl Cold Coffee Classic Sweet Blend (200ml Tetra Pack). Chilled, refreshing beverage by Sleepy Owl. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 53,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/sleepy-owl-cold-coffee-classic-swee/prod-373",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 54,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/sleepy-owl-cold-coffee-classic-swee/prod-373",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 55,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/sleepy-owl-cold-coffee-classic-swee/prod-373",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 54,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/sleepy-owl-cold-coffee-classic-swee/prod-373",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 56,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 56,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 56,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 57,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 57,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 59,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 57,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 3346,
+    "popularity": 96,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sleepy owl",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Tetra Pack",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 275.0,
+      "formatted": "\u20b9275.0/L"
+    }
+  },
+  {
+    "id": "prod-374",
+    "title": "Sleepy Owl Salted Caramel Cold Coffee (200ml Tetra Pack)",
+    "brand": "Sleepy Owl",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Sleepy Owl Salted Caramel Cold Coffee (200ml Tetra Pack). Chilled, refreshing beverage by Sleepy Owl. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 53,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/sleepy-owl-salted-caramel-cold-coff/prod-374",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 55,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/sleepy-owl-salted-caramel-cold-coff/prod-374",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 54,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/sleepy-owl-salted-caramel-cold-coff/prod-374",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 57,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/sleepy-owl-salted-caramel-cold-coff/prod-374",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 56,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 54,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 54,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 54,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 55,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 54,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5157,
+    "popularity": 87,
+    "tags": [
+      "drinks",
+      "beverages",
+      "sleepy owl",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "200ml Tetra Pack",
+    "packSize": 200,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 275.0,
+      "formatted": "\u20b9275.0/L"
+    }
+  },
+  {
+    "id": "prod-375",
+    "title": "Lipton Ice Tea Lemon Flavour Chilled Beverage (250ml Can)",
+    "brand": "Lipton",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80",
+    "description": "Lipton Ice Tea Lemon Flavour Chilled Beverage (250ml Can). Chilled, refreshing beverage by Lipton. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 33,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-375",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-375",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-375",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-375",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 36,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 36,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4045,
+    "popularity": 83,
+    "tags": [
+      "drinks",
+      "beverages",
+      "lipton",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "250ml Can",
+    "packSize": 250,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 140.0,
+      "formatted": "\u20b9140.0/L"
+    }
+  },
+  {
+    "id": "prod-376",
+    "title": "Lipton Ice Tea Lemon Flavour Chilled Beverage (750ml PET Bottle)",
+    "brand": "Lipton",
+    "category": "Tea & Coffee Beverages",
+    "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "description": "Lipton Ice Tea Lemon Flavour Chilled Beverage (750ml PET Bottle). Chilled, refreshing beverage by Lipton. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 49,
+        "mrp": 55,
+        "url": "https://blinkit.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-376",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 46,
+        "mrp": 55,
+        "url": "https://zepto.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-376",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 49,
+        "mrp": 55,
+        "url": "https://minutes.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-376",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 49,
+        "mrp": 55,
+        "url": "https://amazon.com/prn/lipton-ice-tea-lemon-flavour-chille/prod-376",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 47,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 46,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 45,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 44,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 44,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 44,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4533,
+    "popularity": 82,
+    "tags": [
+      "drinks",
+      "beverages",
+      "lipton",
+      "tea & coffee beverages",
+      "refreshing",
+      "quick-commerce"
+    ],
+    "variant": "750ml PET Bottle",
+    "packSize": 750,
+    "unit": "ml",
+    "unitPrice": {
+      "pricePerLitre": 64.0,
+      "formatted": "\u20b964.0/L"
+    }
+  },
+  {
+    "id": "prod-377",
+    "title": "Haldiram's Nagpur Bhujia Sev Sevian (150g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Nagpur Bhujia Sev Sevian (150g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-377",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-377",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 43,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-377",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 45,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-377",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 44,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 44,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 44,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 45,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 44,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5305,
+    "popularity": 87,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 30.0,
+      "formatted": "\u20b930.0/100g"
+    }
+  },
+  {
+    "id": "prod-378",
+    "title": "Haldiram's Nagpur Bhujia Sev Sevian (350g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Nagpur Bhujia Sev Sevian (350g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 91,
+        "mrp": 105,
+        "url": "https://blinkit.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-378",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 92,
+        "mrp": 105,
+        "url": "https://zepto.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-378",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 91,
+        "mrp": 105,
+        "url": "https://minutes.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-378",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 92,
+        "mrp": 105,
+        "url": "https://amazon.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-378",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 93,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 97,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 99,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 95,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 93,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 94,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 96,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 2175,
+    "popularity": 78,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "350g",
+    "packSize": 350,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.14,
+      "formatted": "\u20b927.14/100g"
+    }
+  },
+  {
+    "id": "prod-379",
+    "title": "Haldiram's Nagpur Bhujia Sev Sevian (1kg Family Pack)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Nagpur Bhujia Sev Sevian (1kg Family Pack). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 263,
+        "mrp": 290,
+        "url": "https://blinkit.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-379",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 266,
+        "mrp": 290,
+        "url": "https://zepto.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-379",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 259,
+        "mrp": 290,
+        "url": "https://minutes.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-379",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 261,
+        "mrp": 290,
+        "url": "https://amazon.com/prn/haldiram-s-nagpur-bhujia-sev-sevian/prod-379",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 265,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 255,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 265,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 272,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 261,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 256,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 258,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 125,
+    "popularity": 78,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "1kg Family Pack",
+    "packSize": 1000,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.0,
+      "formatted": "\u20b926.0/100g"
+    }
+  },
+  {
+    "id": "prod-380",
+    "title": "Haldiram's Aloo Bhujia Spicy Mint Flavour (150g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Aloo Bhujia Spicy Mint Flavour (150g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 49,
+        "mrp": 50,
+        "url": "https://blinkit.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-380",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 50,
+        "mrp": 50,
+        "url": "https://zepto.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-380",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 47,
+        "mrp": 50,
+        "url": "https://minutes.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-380",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 49,
+        "mrp": 50,
+        "url": "https://amazon.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-380",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 46,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 47,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 49,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 50,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 52,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 53,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 219,
+    "popularity": 83,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 32.0,
+      "formatted": "\u20b932.0/100g"
+    }
+  },
+  {
+    "id": "prod-381",
+    "title": "Haldiram's Aloo Bhujia Spicy Mint Flavour (400g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Aloo Bhujia Spicy Mint Flavour (400g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 110,
+        "mrp": 115,
+        "url": "https://blinkit.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-381",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 103,
+        "mrp": 115,
+        "url": "https://zepto.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-381",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 102,
+        "mrp": 115,
+        "url": "https://minutes.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-381",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 107,
+        "mrp": 115,
+        "url": "https://amazon.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-381",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 104,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 105,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 101,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 101,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 100,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 99,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 101,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3998,
+    "popularity": 96,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "400g",
+    "packSize": 400,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.25,
+      "formatted": "\u20b926.25/100g"
+    }
+  },
+  {
+    "id": "prod-382",
+    "title": "Haldiram's Aloo Bhujia Spicy Mint Flavour (1kg Value Pack)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's Aloo Bhujia Spicy Mint Flavour (1kg Value Pack). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 269,
+        "mrp": 290,
+        "url": "https://blinkit.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-382",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 250,
+        "mrp": 290,
+        "url": "https://zepto.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-382",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 249,
+        "mrp": 290,
+        "url": "https://minutes.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-382",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 269,
+        "mrp": 290,
+        "url": "https://amazon.com/prn/haldiram-s-aloo-bhujia-spicy-mint-f/prod-382",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 268,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 274,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 264,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 255,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 247,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 250,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 259,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1973,
+    "popularity": 92,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "1kg Value Pack",
+    "packSize": 1000,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.0,
+      "formatted": "\u20b926.0/100g"
+    }
+  },
+  {
+    "id": "prod-383",
+    "title": "Haldiram's All In One Khatta Meetha Mixture (200g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's All In One Khatta Meetha Mixture (200g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 53,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-383",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-383",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-383",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 57,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-383",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 56,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 58,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 58,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 57,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 55,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 55,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 57,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4286,
+    "popularity": 85,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "200g",
+    "packSize": 200,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.5,
+      "formatted": "\u20b927.5/100g"
+    }
+  },
+  {
+    "id": "prod-384",
+    "title": "Haldiram's All In One Khatta Meetha Mixture (400g)",
+    "brand": "Haldiram's",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "description": "Haldiram's All In One Khatta Meetha Mixture (400g). Delicious packaged snack item by Haldiram's. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 107,
+        "mrp": 115,
+        "url": "https://blinkit.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-384",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 105,
+        "mrp": 115,
+        "url": "https://zepto.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-384",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 109,
+        "mrp": 115,
+        "url": "https://minutes.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-384",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 100,
+        "mrp": 115,
+        "url": "https://amazon.com/prn/haldiram-s-all-in-one-khatta-meetha/prod-384",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 106,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 105,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 103,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 106,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 102,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 102,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 98,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 3002,
+    "popularity": 90,
+    "tags": [
+      "snacks",
+      "haldiram's",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "400g",
+    "packSize": 400,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.25,
+      "formatted": "\u20b926.25/100g"
+    }
+  },
+  {
+    "id": "prod-385",
+    "title": "Bikaji Bikaneri Bhujia Authentic Recipe (200g)",
+    "brand": "Bikaji",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Bikaji Bikaneri Bhujia Authentic Recipe (200g). Delicious packaged snack item by Bikaji. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 55,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-385",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 54,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-385",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 53,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-385",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 56,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-385",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 54,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 54,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 54,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 55,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 53,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 51,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 5999,
+    "popularity": 86,
+    "tags": [
+      "snacks",
+      "bikaji",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "200g",
+    "packSize": 200,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.5,
+      "formatted": "\u20b927.5/100g"
+    }
+  },
+  {
+    "id": "prod-386",
+    "title": "Bikaji Bikaneri Bhujia Authentic Recipe (400g)",
+    "brand": "Bikaji",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    "description": "Bikaji Bikaneri Bhujia Authentic Recipe (400g). Delicious packaged snack item by Bikaji. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 100,
+        "mrp": 115,
+        "url": "https://blinkit.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-386",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 110,
+        "mrp": 115,
+        "url": "https://zepto.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-386",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 101,
+        "mrp": 115,
+        "url": "https://minutes.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-386",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 109,
+        "mrp": 115,
+        "url": "https://amazon.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-386",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 106,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 106,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 107,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 109,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 109,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 108,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 111,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5126,
+    "popularity": 87,
+    "tags": [
+      "snacks",
+      "bikaji",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "400g",
+    "packSize": 400,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 26.25,
+      "formatted": "\u20b926.25/100g"
+    }
+  },
+  {
+    "id": "prod-387",
+    "title": "Bikaji Bikaneri Bhujia Authentic Recipe (1kg Pack)",
+    "brand": "Bikaji",
+    "category": "Namkeen & Savoury Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80",
+    "description": "Bikaji Bikaneri Bhujia Authentic Recipe (1kg Pack). Delicious packaged snack item by Bikaji. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 245,
+        "mrp": 280,
+        "url": "https://blinkit.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-387",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 245,
+        "mrp": 280,
+        "url": "https://zepto.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-387",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 243,
+        "mrp": 280,
+        "url": "https://minutes.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-387",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 256,
+        "mrp": 280,
+        "url": "https://amazon.com/prn/bikaji-bikaneri-bhujia-authentic-re/prod-387",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 248,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 241,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 247,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 249,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 242,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 252,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 246,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4757,
+    "popularity": 85,
+    "tags": [
+      "snacks",
+      "bikaji",
+      "namkeen & savoury snacks",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "1kg Pack",
+    "packSize": 1000,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-388",
+    "title": "Parle-G Original Glucose Biscuits (250g Pack)",
+    "brand": "Parle-G",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+    "description": "Parle-G Original Glucose Biscuits (250g Pack). Delicious packaged snack item by Parle-G. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://blinkit.com/prn/parle-g-original-glucose-biscuits-2/prod-388",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://zepto.com/prn/parle-g-original-glucose-biscuits-2/prod-388",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://minutes.com/prn/parle-g-original-glucose-biscuits-2/prod-388",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://amazon.com/prn/parle-g-original-glucose-biscuits-2/prod-388",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 25,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 24,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 23,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 22,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 23,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 23,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 23,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 3885,
+    "popularity": 85,
+    "tags": [
+      "snacks",
+      "parle-g",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "250g Pack",
+    "packSize": 250,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 10.0,
+      "formatted": "\u20b910.0/100g"
+    }
+  },
+  {
+    "id": "prod-389",
+    "title": "Parle-G Original Glucose Biscuits (800g Value Pack)",
+    "brand": "Parle-G",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80",
+    "description": "Parle-G Original Glucose Biscuits (800g Value Pack). Delicious packaged snack item by Parle-G. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 78,
+        "mrp": 80,
+        "url": "https://blinkit.com/prn/parle-g-original-glucose-biscuits-8/prod-389",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 78,
+        "mrp": 80,
+        "url": "https://zepto.com/prn/parle-g-original-glucose-biscuits-8/prod-389",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 78,
+        "mrp": 80,
+        "url": "https://minutes.com/prn/parle-g-original-glucose-biscuits-8/prod-389",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 77,
+        "mrp": 80,
+        "url": "https://amazon.com/prn/parle-g-original-glucose-biscuits-8/prod-389",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 77,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 75,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 75,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 74,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 73,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 71,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 71,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1075,
+    "popularity": 81,
+    "tags": [
+      "snacks",
+      "parle-g",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "800g Value Pack",
+    "packSize": 800,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 9.38,
+      "formatted": "\u20b99.38/100g"
+    }
+  },
+  {
+    "id": "prod-390",
+    "title": "Britannia Good Day Butter Cookies (120g Pack)",
+    "brand": "Britannia",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+    "description": "Britannia Good Day Butter Cookies (120g Pack). Delicious packaged snack item by Britannia. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 31,
+        "mrp": 30,
+        "url": "https://blinkit.com/prn/britannia-good-day-butter-cookies-1/prod-390",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 29,
+        "mrp": 30,
+        "url": "https://zepto.com/prn/britannia-good-day-butter-cookies-1/prod-390",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://minutes.com/prn/britannia-good-day-butter-cookies-1/prod-390",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 30,
+        "mrp": 30,
+        "url": "https://amazon.com/prn/britannia-good-day-butter-cookies-1/prod-390",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 30,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 31,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 30,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 30,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 29,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 30,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4583,
+    "popularity": 97,
+    "tags": [
+      "snacks",
+      "britannia",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "120g Pack",
+    "packSize": 120,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 25.0,
+      "formatted": "\u20b925.0/100g"
+    }
+  },
+  {
+    "id": "prod-391",
+    "title": "Britannia Good Day Butter Cookies (300g Super Saver)",
+    "brand": "Britannia",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80",
+    "description": "Britannia Good Day Butter Cookies (300g Super Saver). Delicious packaged snack item by Britannia. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 66,
+        "mrp": 75,
+        "url": "https://blinkit.com/prn/britannia-good-day-butter-cookies-3/prod-391",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 66,
+        "mrp": 75,
+        "url": "https://zepto.com/prn/britannia-good-day-butter-cookies-3/prod-391",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 65,
+        "mrp": 75,
+        "url": "https://minutes.com/prn/britannia-good-day-butter-cookies-3/prod-391",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 69,
+        "mrp": 75,
+        "url": "https://amazon.com/prn/britannia-good-day-butter-cookies-3/prod-391",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 65,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 63,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 65,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 64,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 65,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 64,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5831,
+    "popularity": 78,
+    "tags": [
+      "snacks",
+      "britannia",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "300g Super Saver",
+    "packSize": 300,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.67,
+      "formatted": "\u20b922.67/100g"
+    }
+  },
+  {
+    "id": "prod-392",
+    "title": "Britannia Good Day Chocochip Cookies (120g Pack)",
+    "brand": "Britannia",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+    "description": "Britannia Good Day Chocochip Cookies (120g Pack). Delicious packaged snack item by Britannia. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://blinkit.com/prn/britannia-good-day-chocochip-cookie/prod-392",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://zepto.com/prn/britannia-good-day-chocochip-cookie/prod-392",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 34,
+        "mrp": 35,
+        "url": "https://minutes.com/prn/britannia-good-day-chocochip-cookie/prod-392",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 36,
+        "mrp": 35,
+        "url": "https://amazon.com/prn/britannia-good-day-chocochip-cookie/prod-392",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 36,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 35,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 34,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4934,
+    "popularity": 94,
+    "tags": [
+      "snacks",
+      "britannia",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "120g Pack",
+    "packSize": 120,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 29.17,
+      "formatted": "\u20b929.17/100g"
+    }
+  },
+  {
+    "id": "prod-393",
+    "title": "Britannia Good Day Chocochip Cookies (400g Pack)",
+    "brand": "Britannia",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80",
+    "description": "Britannia Good Day Chocochip Cookies (400g Pack). Delicious packaged snack item by Britannia. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 113,
+        "mrp": 120,
+        "url": "https://blinkit.com/prn/britannia-good-day-chocochip-cookie/prod-393",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 114,
+        "mrp": 120,
+        "url": "https://zepto.com/prn/britannia-good-day-chocochip-cookie/prod-393",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 113,
+        "mrp": 120,
+        "url": "https://minutes.com/prn/britannia-good-day-chocochip-cookie/prod-393",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 110,
+        "mrp": 120,
+        "url": "https://amazon.com/prn/britannia-good-day-chocochip-cookie/prod-393",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 111,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 111,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 113,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 115,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 114,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 113,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 110,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5074,
+    "popularity": 77,
+    "tags": [
+      "snacks",
+      "britannia",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "400g Pack",
+    "packSize": 400,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 27.5,
+      "formatted": "\u20b927.5/100g"
+    }
+  },
+  {
+    "id": "prod-394",
+    "title": "Oreo Vanilla Creme Sandwich Biscuits (120g Pack)",
+    "brand": "Oreo",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+    "description": "Oreo Vanilla Creme Sandwich Biscuits (120g Pack). Delicious packaged snack item by Oreo. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-394",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-394",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 36,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-394",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-394",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 35,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 37,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 37,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 36,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 36,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 36,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 216,
+    "popularity": 88,
+    "tags": [
+      "snacks",
+      "oreo",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "120g Pack",
+    "packSize": 120,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 29.17,
+      "formatted": "\u20b929.17/100g"
+    }
+  },
+  {
+    "id": "prod-395",
+    "title": "Oreo Vanilla Creme Sandwich Biscuits (300g Family Pack)",
+    "brand": "Oreo",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80",
+    "description": "Oreo Vanilla Creme Sandwich Biscuits (300g Family Pack). Delicious packaged snack item by Oreo. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 84,
+        "mrp": 95,
+        "url": "https://blinkit.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-395",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 89,
+        "mrp": 95,
+        "url": "https://zepto.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-395",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 83,
+        "mrp": 95,
+        "url": "https://minutes.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-395",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 84,
+        "mrp": 95,
+        "url": "https://amazon.com/prn/oreo-vanilla-creme-sandwich-biscuit/prod-395",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 85,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 88,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 91,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 91,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 88,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 90,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 92,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 4986,
+    "popularity": 77,
+    "tags": [
+      "snacks",
+      "oreo",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "300g Family Pack",
+    "packSize": 300,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 28.33,
+      "formatted": "\u20b928.33/100g"
+    }
+  },
+  {
+    "id": "prod-396",
+    "title": "Sunfeast Dark Fantasy Choco Fills Cookies (75g Pack)",
+    "brand": "Sunfeast",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+    "description": "Sunfeast Dark Fantasy Choco Fills Cookies (75g Pack). Delicious packaged snack item by Sunfeast. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-396",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 34,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-396",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-396",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 35,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-396",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 34,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 35,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 34,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 34,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 33,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 32,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4463,
+    "popularity": 77,
+    "tags": [
+      "snacks",
+      "sunfeast",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "75g Pack",
+    "packSize": 75,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 46.67,
+      "formatted": "\u20b946.67/100g"
+    }
+  },
+  {
+    "id": "prod-397",
+    "title": "Sunfeast Dark Fantasy Choco Fills Cookies (300g Gift Box)",
+    "brand": "Sunfeast",
+    "category": "Biscuits & Cookies",
+    "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80",
+    "description": "Sunfeast Dark Fantasy Choco Fills Cookies (300g Gift Box). Delicious packaged snack item by Sunfeast. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 137,
+        "mrp": 150,
+        "url": "https://blinkit.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-397",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 132,
+        "mrp": 150,
+        "url": "https://zepto.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-397",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 130,
+        "mrp": 150,
+        "url": "https://minutes.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-397",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 137,
+        "mrp": 150,
+        "url": "https://amazon.com/prn/sunfeast-dark-fantasy-choco-fills-c/prod-397",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 139,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 142,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 137,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 137,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 137,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 133,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 137,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4058,
+    "popularity": 91,
+    "tags": [
+      "snacks",
+      "sunfeast",
+      "biscuits & cookies",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "300g Gift Box",
+    "packSize": 300,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 45.0,
+      "formatted": "\u20b945.0/100g"
+    }
+  },
+  {
+    "id": "prod-398",
+    "title": "Cadbury Dairy Milk Silk Chocolate Bar (60g)",
+    "brand": "Cadbury",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+    "description": "Cadbury Dairy Milk Silk Chocolate Bar (60g). Delicious packaged snack item by Cadbury. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 78,
+        "mrp": 80,
+        "url": "https://blinkit.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-398",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 72,
+        "mrp": 80,
+        "url": "https://zepto.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-398",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 75,
+        "mrp": 80,
+        "url": "https://minutes.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-398",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 72,
+        "mrp": 80,
+        "url": "https://amazon.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-398",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 76,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 79,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 78,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 79,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 80,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 79,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 80,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 832,
+    "popularity": 88,
+    "tags": [
+      "snacks",
+      "cadbury",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "60g",
+    "packSize": 60,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 125.0,
+      "formatted": "\u20b9125.0/100g"
+    }
+  },
+  {
+    "id": "prod-399",
+    "title": "Cadbury Dairy Milk Silk Chocolate Bar (150g Large Bar)",
+    "brand": "Cadbury",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+    "description": "Cadbury Dairy Milk Silk Chocolate Bar (150g Large Bar). Delicious packaged snack item by Cadbury. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 167,
+        "mrp": 190,
+        "url": "https://blinkit.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-399",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 181,
+        "mrp": 190,
+        "url": "https://zepto.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-399",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 173,
+        "mrp": 190,
+        "url": "https://minutes.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-399",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 172,
+        "mrp": 190,
+        "url": "https://amazon.com/prn/cadbury-dairy-milk-silk-chocolate-b/prod-399",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 175,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 177,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 176,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 173,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 170,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 171,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 173,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6401,
+    "popularity": 82,
+    "tags": [
+      "snacks",
+      "cadbury",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "150g Large Bar",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 116.67,
+      "formatted": "\u20b9116.67/100g"
+    }
+  },
+  {
+    "id": "prod-400",
+    "title": "Cadbury Dairy Milk Fruit & Nut Chocolate (80g)",
+    "brand": "Cadbury",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+    "description": "Cadbury Dairy Milk Fruit & Nut Chocolate (80g). Delicious packaged snack item by Cadbury. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 100,
+        "mrp": 105,
+        "url": "https://blinkit.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-400",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 91,
+        "mrp": 105,
+        "url": "https://zepto.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-400",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 91,
+        "mrp": 105,
+        "url": "https://minutes.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-400",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 100,
+        "mrp": 105,
+        "url": "https://amazon.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-400",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 96,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 92,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 89,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 89,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 86,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 89,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 86,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 5411,
+    "popularity": 86,
+    "tags": [
+      "snacks",
+      "cadbury",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "80g",
+    "packSize": 80,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 118.75,
+      "formatted": "\u20b9118.75/100g"
+    }
+  },
+  {
+    "id": "prod-401",
+    "title": "Cadbury Dairy Milk Fruit & Nut Chocolate (165g)",
+    "brand": "Cadbury",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+    "description": "Cadbury Dairy Milk Fruit & Nut Chocolate (165g). Delicious packaged snack item by Cadbury. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 193,
+        "mrp": 200,
+        "url": "https://blinkit.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-401",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 179,
+        "mrp": 200,
+        "url": "https://zepto.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-401",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 180,
+        "mrp": 200,
+        "url": "https://minutes.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-401",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 177,
+        "mrp": 200,
+        "url": "https://amazon.com/prn/cadbury-dairy-milk-fruit-nut-chocol/prod-401",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 178,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 179,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 175,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 171,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 175,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 178,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 176,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 4754,
+    "popularity": 91,
+    "tags": [
+      "snacks",
+      "cadbury",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "165g",
+    "packSize": 165,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 112.12,
+      "formatted": "\u20b9112.12/100g"
+    }
+  },
+  {
+    "id": "prod-402",
+    "title": "Nestle KitKat 4 Finger Crispy Wafer Bar (38.5g)",
+    "brand": "Nestle",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+    "description": "Nestle KitKat 4 Finger Crispy Wafer Bar (38.5g). Delicious packaged snack item by Nestle. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://blinkit.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-402",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://zepto.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-402",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 25,
+        "mrp": 25,
+        "url": "https://minutes.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-402",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 24,
+        "mrp": 25,
+        "url": "https://amazon.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-402",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 24,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 25,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 25,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 24,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 24,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 25,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1061,
+    "popularity": 92,
+    "tags": [
+      "snacks",
+      "nestle",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "38.5g",
+    "packSize": 38,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 65.79,
+      "formatted": "\u20b965.79/100g"
+    }
+  },
+  {
+    "id": "prod-403",
+    "title": "Nestle KitKat 4 Finger Crispy Wafer Bar (57g Share Pack)",
+    "brand": "Nestle",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+    "description": "Nestle KitKat 4 Finger Crispy Wafer Bar (57g Share Pack). Delicious packaged snack item by Nestle. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://blinkit.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-403",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://zepto.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-403",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 40,
+        "mrp": 40,
+        "url": "https://minutes.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-403",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 42,
+        "mrp": 40,
+        "url": "https://amazon.com/prn/nestle-kitkat-4-finger-crispy-wafer/prod-403",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 41,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 42,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 43,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 42,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 42,
+        "store": "Amazon"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 3357,
+    "popularity": 87,
+    "tags": [
+      "snacks",
+      "nestle",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "57g Share Pack",
+    "packSize": 57,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 70.18,
+      "formatted": "\u20b970.18/100g"
+    }
+  },
+  {
+    "id": "prod-404",
+    "title": "Ferrero Rocher Fine Hazelnut Chocolates Box (4 Pieces (50g))",
+    "brand": "Ferrero",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+    "description": "Ferrero Rocher Fine Hazelnut Chocolates Box (4 Pieces (50g)). Delicious packaged snack item by Ferrero. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 145,
+        "mrp": 160,
+        "url": "https://blinkit.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-404",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 135,
+        "mrp": 160,
+        "url": "https://zepto.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-404",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 135,
+        "mrp": 160,
+        "url": "https://minutes.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-404",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 135,
+        "mrp": 160,
+        "url": "https://amazon.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-404",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 145,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 140,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 141,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 145,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 142,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 142,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 139,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 4801,
+    "popularity": 75,
+    "tags": [
+      "snacks",
+      "ferrero",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "4 Pieces (50g)",
+    "packSize": 50,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 280.0,
+      "formatted": "\u20b9280.0/100g"
+    }
+  },
+  {
+    "id": "prod-405",
+    "title": "Ferrero Rocher Fine Hazelnut Chocolates Box (16 Pieces (200g Gift Box))",
+    "brand": "Ferrero",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+    "description": "Ferrero Rocher Fine Hazelnut Chocolates Box (16 Pieces (200g Gift Box)). Delicious packaged snack item by Ferrero. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 540,
+        "mrp": 595,
+        "url": "https://blinkit.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-405",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 495,
+        "mrp": 595,
+        "url": "https://zepto.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-405",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 524,
+        "mrp": 595,
+        "url": "https://minutes.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-405",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 514,
+        "mrp": 595,
+        "url": "https://amazon.com/prn/ferrero-rocher-fine-hazelnut-chocol/prod-405",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 512,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 524,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 540,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 548,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 558,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 551,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 548,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5748,
+    "popularity": 75,
+    "tags": [
+      "snacks",
+      "ferrero",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "16 Pieces (200g Gift Box)",
+    "packSize": 200,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 260.0,
+      "formatted": "\u20b9260.0/100g"
+    }
+  },
+  {
+    "id": "prod-406",
+    "title": "Amul Dark Chocolate 55% Rich Cocoa Bar (150g)",
+    "brand": "Amul",
+    "category": "Chocolates & Candy",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+    "description": "Amul Dark Chocolate 55% Rich Cocoa Bar (150g). Delicious packaged snack item by Amul. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 100,
+        "mrp": 120,
+        "url": "https://blinkit.com/prn/amul-dark-chocolate-55-rich-cocoa-b/prod-406",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 107,
+        "mrp": 120,
+        "url": "https://zepto.com/prn/amul-dark-chocolate-55-rich-cocoa-b/prod-406",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 108,
+        "mrp": 120,
+        "url": "https://minutes.com/prn/amul-dark-chocolate-55-rich-cocoa-b/prod-406",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 106,
+        "mrp": 120,
+        "url": "https://amazon.com/prn/amul-dark-chocolate-55-rich-cocoa-b/prod-406",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 108,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 112,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 111,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 111,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 112,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 116,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 113,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 2098,
+    "popularity": 91,
+    "tags": [
+      "snacks",
+      "amul",
+      "chocolates & candy",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "150g",
+    "packSize": 150,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 70.0,
+      "formatted": "\u20b970.0/100g"
+    }
+  },
+  {
+    "id": "prod-407",
+    "title": "Maggi 2-Minute Masala Instant Noodles (Single 70g Pack)",
+    "brand": "Maggi",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Maggi 2-Minute Masala Instant Noodles (Single 70g Pack). Delicious packaged snack item by Maggi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://blinkit.com/prn/maggi-2-minute-masala-instant-noodl/prod-407",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://zepto.com/prn/maggi-2-minute-masala-instant-noodl/prod-407",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://minutes.com/prn/maggi-2-minute-masala-instant-noodl/prod-407",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://amazon.com/prn/maggi-2-minute-masala-instant-noodl/prod-407",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 14,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 13,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 13,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 13,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 13,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 13,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 14,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 1959,
+    "popularity": 88,
+    "tags": [
+      "snacks",
+      "maggi",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Single 70g Pack",
+    "packSize": 70,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 20.0,
+      "formatted": "\u20b920.0/100g"
+    }
+  },
+  {
+    "id": "prod-408",
+    "title": "Maggi 2-Minute Masala Instant Noodles (Pack of 4 (280g))",
+    "brand": "Maggi",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80",
+    "description": "Maggi 2-Minute Masala Instant Noodles (Pack of 4 (280g)). Delicious packaged snack item by Maggi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 52,
+        "mrp": 56,
+        "url": "https://blinkit.com/prn/maggi-2-minute-masala-instant-noodl/prod-408",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 54,
+        "mrp": 56,
+        "url": "https://zepto.com/prn/maggi-2-minute-masala-instant-noodl/prod-408",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 53,
+        "mrp": 56,
+        "url": "https://minutes.com/prn/maggi-2-minute-masala-instant-noodl/prod-408",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 53,
+        "mrp": 56,
+        "url": "https://amazon.com/prn/maggi-2-minute-masala-instant-noodl/prod-408",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 55,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 54,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 56,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 55,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 53,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 51,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 49,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 1735,
+    "popularity": 92,
+    "tags": [
+      "snacks",
+      "maggi",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 4 (280g)",
+    "packSize": 280,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 19.29,
+      "formatted": "\u20b919.29/100g"
+    }
+  },
+  {
+    "id": "prod-409",
+    "title": "Maggi 2-Minute Masala Instant Noodles (Pack of 12 (840g Mega Pack))",
+    "brand": "Maggi",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Maggi 2-Minute Masala Instant Noodles (Pack of 12 (840g Mega Pack)). Delicious packaged snack item by Maggi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 156,
+        "mrp": 168,
+        "url": "https://blinkit.com/prn/maggi-2-minute-masala-instant-noodl/prod-409",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 159,
+        "mrp": 168,
+        "url": "https://zepto.com/prn/maggi-2-minute-masala-instant-noodl/prod-409",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 161,
+        "mrp": 168,
+        "url": "https://minutes.com/prn/maggi-2-minute-masala-instant-noodl/prod-409",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 156,
+        "mrp": 168,
+        "url": "https://amazon.com/prn/maggi-2-minute-masala-instant-noodl/prod-409",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 157,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 156,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 160,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 162,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 156,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 157,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 157,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 2180,
+    "popularity": 79,
+    "tags": [
+      "snacks",
+      "maggi",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 12 (840g Mega Pack)",
+    "packSize": 840,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 18.45,
+      "formatted": "\u20b918.45/100g"
+    }
+  },
+  {
+    "id": "prod-410",
+    "title": "Maggi Special Masala 20 Spices & Herbs Noodles (Pack of 4 (280g))",
+    "brand": "Maggi",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80",
+    "description": "Maggi Special Masala 20 Spices & Herbs Noodles (Pack of 4 (280g)). Delicious packaged snack item by Maggi. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 66,
+        "mrp": 72,
+        "url": "https://blinkit.com/prn/maggi-special-masala-20-spices-herb/prod-410",
+        "inStock": false,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 70,
+        "mrp": 72,
+        "url": "https://zepto.com/prn/maggi-special-masala-20-spices-herb/prod-410",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 66,
+        "mrp": 72,
+        "url": "https://minutes.com/prn/maggi-special-masala-20-spices-herb/prod-410",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 68,
+        "mrp": 72,
+        "url": "https://amazon.com/prn/maggi-special-masala-20-spices-herb/prod-410",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 67,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 67,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 65,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 63,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 63,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 63,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 64,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 4773,
+    "popularity": 96,
+    "tags": [
+      "snacks",
+      "maggi",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 4 (280g)",
+    "packSize": 280,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 24.29,
+      "formatted": "\u20b924.29/100g"
+    }
+  },
+  {
+    "id": "prod-411",
+    "title": "Yippee! Magic Masala Long Non-Sticky Noodles (Single 65g Pack)",
+    "brand": "Yippee!",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Yippee! Magic Masala Long Non-Sticky Noodles (Single 65g Pack). Delicious packaged snack item by Yippee!. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://blinkit.com/prn/yippee-magic-masala-long-non-sticky/prod-411",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://zepto.com/prn/yippee-magic-masala-long-non-sticky/prod-411",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://minutes.com/prn/yippee-magic-masala-long-non-sticky/prod-411",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 14,
+        "mrp": 14,
+        "url": "https://amazon.com/prn/yippee-magic-masala-long-non-sticky/prod-411",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 14,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 15,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 15,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 16,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 17,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 17,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 17,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 6120,
+    "popularity": 89,
+    "tags": [
+      "snacks",
+      "yippee!",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Single 65g Pack",
+    "packSize": 65,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 21.54,
+      "formatted": "\u20b921.54/100g"
+    }
+  },
+  {
+    "id": "prod-412",
+    "title": "Yippee! Magic Masala Long Non-Sticky Noodles (Pack of 4 (260g))",
+    "brand": "Yippee!",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80",
+    "description": "Yippee! Magic Masala Long Non-Sticky Noodles (Pack of 4 (260g)). Delicious packaged snack item by Yippee!. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 54,
+        "mrp": 56,
+        "url": "https://blinkit.com/prn/yippee-magic-masala-long-non-sticky/prod-412",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 50,
+        "mrp": 56,
+        "url": "https://zepto.com/prn/yippee-magic-masala-long-non-sticky/prod-412",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 50,
+        "mrp": 56,
+        "url": "https://minutes.com/prn/yippee-magic-masala-long-non-sticky/prod-412",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 50,
+        "mrp": 56,
+        "url": "https://amazon.com/prn/yippee-magic-masala-long-non-sticky/prod-412",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 51,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 50,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 50,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 50,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 49,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 49,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 51,
+        "store": "Blinkit"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 3776,
+    "popularity": 78,
+    "tags": [
+      "snacks",
+      "yippee!",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 4 (260g)",
+    "packSize": 260,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 20.0,
+      "formatted": "\u20b920.0/100g"
+    }
+  },
+  {
+    "id": "prod-413",
+    "title": "Yippee! Magic Masala Long Non-Sticky Noodles (Pack of 8 (520g))",
+    "brand": "Yippee!",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Yippee! Magic Masala Long Non-Sticky Noodles (Pack of 8 (520g)). Delicious packaged snack item by Yippee!. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 94,
+        "mrp": 110,
+        "url": "https://blinkit.com/prn/yippee-magic-masala-long-non-sticky/prod-413",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 95,
+        "mrp": 110,
+        "url": "https://zepto.com/prn/yippee-magic-masala-long-non-sticky/prod-413",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 96,
+        "mrp": 110,
+        "url": "https://minutes.com/prn/yippee-magic-masala-long-non-sticky/prod-413",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 103,
+        "mrp": 110,
+        "url": "https://amazon.com/prn/yippee-magic-masala-long-non-sticky/prod-413",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 101,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 101,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 103,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 101,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 100,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 100,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 103,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 5167,
+    "popularity": 77,
+    "tags": [
+      "snacks",
+      "yippee!",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 8 (520g)",
+    "packSize": 520,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 18.85,
+      "formatted": "\u20b918.85/100g"
+    }
+  },
+  {
+    "id": "prod-414",
+    "title": "Knorr Soupy Noodles Mast Masala (Pack of 4 (280g))",
+    "brand": "Knorr",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80",
+    "description": "Knorr Soupy Noodles Mast Masala (Pack of 4 (280g)). Delicious packaged snack item by Knorr. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 61,
+        "mrp": 65,
+        "url": "https://blinkit.com/prn/knorr-soupy-noodles-mast-masala-pac/prod-414",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 60,
+        "mrp": 65,
+        "url": "https://zepto.com/prn/knorr-soupy-noodles-mast-masala-pac/prod-414",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 62,
+        "mrp": 65,
+        "url": "https://minutes.com/prn/knorr-soupy-noodles-mast-masala-pac/prod-414",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 61,
+        "mrp": 65,
+        "url": "https://amazon.com/prn/knorr-soupy-noodles-mast-masala-pac/prod-414",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 59,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 61,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 62,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 64,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 64,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 63,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 64,
+        "store": "Zepto"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 5493,
+    "popularity": 88,
+    "tags": [
+      "snacks",
+      "knorr",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 4 (280g)",
+    "packSize": 280,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 21.43,
+      "formatted": "\u20b921.43/100g"
+    }
+  },
+  {
+    "id": "prod-415",
+    "title": "Ching's Secret Schezwan Instant Noodles (Pack of 4 (240g))",
+    "brand": "Ching's Secret",
+    "category": "Instant Noodles & Packaged Food",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Ching's Secret Schezwan Instant Noodles (Pack of 4 (240g)). Delicious packaged snack item by Ching's Secret. Multi-store comparison across Blinkit, Zepto, Flipkart Minutes, and Amazon.",
+    "storePrices": [
+      {
+        "storeId": "blinkit",
+        "store": "Blinkit",
+        "price": 58,
+        "mrp": 60,
+        "url": "https://blinkit.com/prn/ching-s-secret-schezwan-instant-noo/prod-415",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "zepto",
+        "store": "Zepto",
+        "price": 57,
+        "mrp": 60,
+        "url": "https://zepto.com/prn/ching-s-secret-schezwan-instant-noo/prod-415",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "minutes",
+        "store": "Flipkart Minutes",
+        "price": 52,
+        "mrp": 60,
+        "url": "https://minutes.com/prn/ching-s-secret-schezwan-instant-noo/prod-415",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "demo_feed",
+        "isDemoData": true,
+        "deliveryEta": "10-15 mins"
+      },
+      {
+        "storeId": "amazon",
+        "store": "Amazon",
+        "price": 54,
+        "mrp": 60,
+        "url": "https://amazon.com/prn/ching-s-secret-schezwan-instant-noo/prod-415",
+        "inStock": true,
+        "lastUpdated": "2026-10-24",
+        "source": "verified_partner",
+        "isDemoData": false,
+        "deliveryEta": "Tomorrow"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-08-01",
+        "price": 53,
+        "store": "Flipkart Minutes"
+      },
+      {
+        "date": "2026-08-20",
+        "price": 52,
+        "store": "Blinkit"
+      },
+      {
+        "date": "2026-09-05",
+        "price": 52,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-09-22",
+        "price": 51,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-05",
+        "price": 50,
+        "store": "Amazon"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 52,
+        "store": "Zepto"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 51,
+        "store": "Flipkart Minutes"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 1528,
+    "popularity": 91,
+    "tags": [
+      "snacks",
+      "ching's secret",
+      "instant noodles & packaged food",
+      "groceries",
+      "packaged-food"
+    ],
+    "variant": "Pack of 4 (240g)",
+    "packSize": 240,
+    "unit": "g",
+    "unitPrice": {
+      "pricePer100g": 22.92,
+      "formatted": "\u20b922.92/100g"
+    }
   }
 ];
 

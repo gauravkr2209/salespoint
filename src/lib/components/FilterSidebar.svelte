@@ -13,20 +13,33 @@
 		onFilterChange?: (filters: SearchFilters) => void;
 	} = $props();
 
-	const allStores: StoreName[] = ['Amazon', 'Flipkart', 'Myntra', 'Croma', 'Ajio'];
+	const allStores: StoreName[] = [
+		'Amazon',
+		'Flipkart',
+		'Blinkit',
+		'Zepto',
+		'Flipkart Minutes',
+		'Myntra',
+		'Croma',
+		'Ajio'
+	];
 
 	const storeEmoji: Record<StoreName, string> = {
-		Amazon: '📦',
-		Flipkart: '🛒',
+		Amazon: '🛒',
+		Flipkart: '🛍️',
+		Blinkit: '⚡',
+		Zepto: '🚀',
+		'Flipkart Minutes': '⏱️',
 		Myntra: '👗',
-		Croma: '🖥️',
-		Ajio: '👟'
+		Croma: '🔌',
+		Ajio: '✨'
 	};
 
 	const discountOptions = [
+		{ label: '10%+', value: 10 },
 		{ label: '20%+', value: 20 },
-		{ label: '50%+', value: 50 },
-		{ label: '70%+', value: 70 }
+		{ label: '30%+', value: 30 },
+		{ label: '50%+', value: 50 }
 	];
 
 	function notifyChange() {
@@ -74,14 +87,16 @@
 	);
 </script>
 
-<aside class="bg-surface rounded-xl border border-border p-5 space-y-6">
+<aside class="bg-white dark:bg-slate-800 rounded-2xl border border-border/80 dark:border-slate-700 p-5 space-y-6 shadow-sm">
 	<!-- Header -->
 	<div class="flex items-center justify-between">
-		<h3 class="text-sm font-semibold text-text-primary uppercase tracking-wide">Filters</h3>
+		<h3 class="text-xs font-black text-text-primary dark:text-slate-100 uppercase tracking-wider">
+			Filters
+		</h3>
 		{#if hasActiveFilters}
 			<button
 				onclick={clearAll}
-				class="text-xs text-danger font-medium hover:underline cursor-pointer"
+				class="text-xs text-danger font-bold hover:underline cursor-pointer"
 			>
 				Clear All
 			</button>
@@ -91,20 +106,22 @@
 	<!-- Categories -->
 	{#if categories.length > 0}
 		<div class="space-y-3">
-			<h4 class="text-xs font-semibold text-text-secondary uppercase tracking-wide">Category</h4>
-			<div class="space-y-2">
+			<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+				Categories ({categories.length})
+			</h4>
+			<div class="space-y-1.5 max-h-56 overflow-y-auto pr-1">
 				{#each categories as cat}
-					<label class="flex items-center gap-2.5 cursor-pointer group">
+					<label class="flex items-center gap-2.5 cursor-pointer group py-1">
 						<input
 							type="checkbox"
 							checked={filters.categories.includes(cat.name)}
 							onchange={() => toggleCategory(cat.name)}
 							class="w-4 h-4 rounded border-border text-primary focus:ring-primary/30 accent-primary"
 						/>
-						<span class="flex-1 text-sm text-text-primary group-hover:text-primary transition-colors">
+						<span class="flex-1 text-xs font-medium text-text-primary dark:text-slate-300 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors truncate">
 							{cat.name}
 						</span>
-						<span class="text-xs text-text-secondary bg-slate-100 px-1.5 py-0.5 rounded-full">
+						<span class="text-[10px] text-text-secondary dark:text-slate-400 bg-slate-100 dark:bg-slate-700/60 px-1.5 py-0.5 rounded-full font-bold">
 							{cat.count}
 						</span>
 					</label>
@@ -115,18 +132,20 @@
 
 	<!-- Stores -->
 	<div class="space-y-3">
-		<h4 class="text-xs font-semibold text-text-secondary uppercase tracking-wide">Stores</h4>
-		<div class="space-y-2">
+		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+			Sellers & Quick Commerce
+		</h4>
+		<div class="space-y-1.5 max-h-48 overflow-y-auto pr-1">
 			{#each allStores as store}
-				<label class="flex items-center gap-2.5 cursor-pointer group">
+				<label class="flex items-center gap-2.5 cursor-pointer group py-1">
 					<input
 						type="checkbox"
 						checked={filters.stores.includes(store)}
 						onchange={() => toggleStore(store)}
 						class="w-4 h-4 rounded border-border text-primary focus:ring-primary/30 accent-primary"
 					/>
-					<span class="text-base">{storeEmoji[store]}</span>
-					<span class="text-sm text-text-primary group-hover:text-primary transition-colors">
+					<span class="text-sm">{storeEmoji[store]}</span>
+					<span class="flex-1 text-xs font-medium text-text-primary dark:text-slate-300 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors">
 						{store}
 					</span>
 				</label>
@@ -136,7 +155,9 @@
 
 	<!-- Price Range -->
 	<div class="space-y-3">
-		<h4 class="text-xs font-semibold text-text-secondary uppercase tracking-wide">Price Range</h4>
+		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+			Price Range
+		</h4>
 		<div class="flex items-center gap-2">
 			<div class="relative flex-1">
 				<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-text-secondary">₹</span>
@@ -149,7 +170,7 @@
 						filters.priceMin = val ? Number(val) : null;
 						notifyChange();
 					}}
-					class="w-full pl-7 pr-2 py-2 text-sm border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 bg-surface text-text-primary"
+					class="w-full pl-6 pr-2 py-2 text-xs border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary dark:bg-slate-900 text-text-primary dark:text-white"
 					min="0"
 				/>
 			</div>
@@ -165,7 +186,7 @@
 						filters.priceMax = val ? Number(val) : null;
 						notifyChange();
 					}}
-					class="w-full pl-7 pr-2 py-2 text-sm border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 bg-surface text-text-primary"
+					class="w-full pl-6 pr-2 py-2 text-xs border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary dark:bg-slate-900 text-text-primary dark:text-white"
 					min="0"
 				/>
 			</div>
@@ -174,15 +195,18 @@
 
 	<!-- Discount Quick Filters -->
 	<div class="space-y-3">
-		<h4 class="text-xs font-semibold text-text-secondary uppercase tracking-wide">Min Discount</h4>
-		<div class="flex gap-2">
+		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+			Min Discount
+		</h4>
+		<div class="grid grid-cols-2 gap-1.5">
 			{#each discountOptions as opt}
 				<button
+					type="button"
 					onclick={() => setDiscount(opt.value)}
-					class="flex-1 py-2 text-sm font-medium rounded-lg border transition-colors cursor-pointer
+					class="py-1.5 text-xs font-bold rounded-lg border transition-colors cursor-pointer
 						{filters.minDiscount === opt.value
-						? 'bg-primary text-white border-primary'
-						: 'bg-surface text-text-primary border-border hover:border-primary/50'}"
+						? 'bg-primary text-white border-primary shadow-xs'
+						: 'bg-white dark:bg-slate-900 text-text-primary dark:text-slate-300 border-border dark:border-slate-700 hover:border-primary/50'}"
 				>
 					{opt.label}
 				</button>

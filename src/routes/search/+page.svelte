@@ -8,16 +8,25 @@
   import { goto } from '$app/navigation';
 
   let query = $derived(page.url.searchParams.get('q') ?? '');
+  let categoryParam = $derived(page.url.searchParams.get('category'));
   let currentSort: SortOption = $state('relevance');
   let currentPage = $state(1);
 
-  // Sidebar filters (component's own type)
+  // Sidebar filters
   let sidebarFilters: SidebarFilters = $state({
     categories: [],
     stores: [],
     priceMin: null,
     priceMax: null,
     minDiscount: null
+  });
+
+  // Keep categoryParam in sync with filters if provided in URL
+  $effect(() => {
+    if (categoryParam && (!sidebarFilters.categories.length || sidebarFilters.categories[0] !== categoryParam)) {
+      sidebarFilters.categories = [categoryParam];
+      currentPage = 1;
+    }
   });
 
   // Convert sidebar filters to search engine filters
@@ -52,6 +61,18 @@
 
   let totalPages = $derived(Math.ceil(results.total / 12));
   let showFilters = $state(false);
+
+  // Smart pagination numbers
+  let visiblePages = $derived.by(() => {
+    if (totalPages <= 7) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+    const pages = new Set<number>([1, totalPages]);
+    for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) {
+      pages.add(i);
+    }
+    return Array.from(pages).sort((a, b) => a - b);
+  });
 </script>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -61,19 +82,23 @@
 
   <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
     <div>
-      <h1 class="text-xl font-bold text-text-primary">
-        {#if query}
-          Results for "<span class="text-primary">{query}</span>"
+      <h1 class="text-xl sm:text-2xl font-black text-text-primary dark:text-white">
+        {#if categoryParam}
+          Browsing Category: <span class="text-primary dark:text-primary-light">{categoryParam}</span>
+        {:else if query}
+          Results for "<span class="text-primary dark:text-primary-light">{query}</span>"
         {:else}
-          All Products
+          All Verified Products
         {/if}
       </h1>
-      <p class="text-sm text-text-secondary mt-1">{results.total} products found</p>
+      <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 mt-1">
+        Showing {results.products.length} of {results.total} verified items across 8 stores
+      </p>
     </div>
 
     <div class="flex items-center gap-3">
       <button
-        class="lg:hidden flex items-center gap-2 px-4 py-2 border border-border rounded-lg text-sm text-text-secondary hover:bg-gray-50 cursor-pointer"
+        class="lg:hidden flex items-center gap-2 px-4 py-2 border border-border dark:border-slate-700 rounded-lg text-sm text-text-secondary dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 cursor-pointer"
         onclick={() => showFilters = !showFilters}
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,7 +108,7 @@
       </button>
 
       <select
-        class="px-4 py-2 border border-border rounded-lg text-sm text-text-secondary bg-white cursor-pointer"
+        class="px-4 py-2 border border-border dark:border-slate-700 rounded-lg text-xs sm:text-sm text-text-primary dark:text-slate-200 bg-white dark:bg-slate-800 cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-primary shadow-xs"
         onchange={handleSortChange}
         value={currentSort}
       >
@@ -91,12 +116,14 @@
         <option value="price_asc">Price: Low → High</option>
         <option value="price_desc">Price: High → Low</option>
         <option value="discount_desc">Discount: High → Low</option>
+        <option value="unit_price_asc">Unit Price: Low → High (₹/100g, ₹/L)</option>
+        <option value="unit_price_desc">Unit Price: High → Low</option>
       </select>
     </div>
   </div>
 
-  <div class="flex gap-8">
-    <aside class="w-64 shrink-0 {showFilters ? 'block' : 'hidden lg:block'}">
+  <div class="flex flex-col lg:flex-row gap-8">
+    <aside class="w-full lg:w-64 shrink-0 {showFilters ? 'block' : 'hidden lg:block'}">
       <FilterSidebar
         filters={sidebarFilters}
         categories={results.categories}
@@ -105,7 +132,7 @@
       />
     </aside>
 
-    <div class="flex-1">
+    <div class="flex-1 min-w-0">
       {#if results.products.length > 0}
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {#each results.products as product (product.id)}
@@ -114,24 +141,27 @@
         </div>
 
         {#if totalPages > 1}
-          <div class="flex justify-center items-center gap-2 mt-10">
+          <div class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 mt-12 pb-8">
             <button
-              class="px-3 py-2 border border-border rounded-lg text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 cursor-pointer"
+              class="px-3 py-2 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-text-secondary dark:text-slate-300 rounded-lg text-xs sm:text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer shadow-xs"
               disabled={currentPage === 1}
               onclick={() => handlePageChange(currentPage - 1)}
             >
               ← Prev
             </button>
-            {#each Array.from({ length: totalPages }, (_, i) => i + 1) as p}
+            {#each visiblePages as p, idx}
+              {#if idx > 0 && p - visiblePages[idx - 1] > 1}
+                <span class="px-2 text-text-secondary dark:text-slate-500">...</span>
+              {/if}
               <button
-                class="w-10 h-10 rounded-lg text-sm font-medium transition-colors cursor-pointer {p === currentPage ? 'bg-primary text-white' : 'border border-border hover:bg-gray-50 text-text-secondary'}"
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs {p === currentPage ? 'bg-primary text-white shadow-md shadow-primary/20' : 'border border-border dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-text-secondary dark:text-slate-300'}"
                 onclick={() => handlePageChange(p)}
               >
                 {p}
               </button>
             {/each}
             <button
-              class="px-3 py-2 border border-border rounded-lg text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 cursor-pointer"
+              class="px-3 py-2 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-text-secondary dark:text-slate-300 rounded-lg text-xs sm:text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer shadow-xs"
               disabled={currentPage === totalPages}
               onclick={() => handlePageChange(currentPage + 1)}
             >
@@ -140,10 +170,21 @@
           </div>
         {/if}
       {:else}
-        <div class="text-center py-20">
+        <div class="text-center py-20 bg-white dark:bg-slate-800/50 rounded-3xl border border-dashed border-border dark:border-slate-700 p-8">
           <div class="text-6xl mb-4">🔍</div>
-          <h3 class="text-lg font-semibold text-text-primary mb-2">No products found</h3>
-          <p class="text-text-secondary">Try a different search term or adjust your filters</p>
+          <h3 class="text-lg font-bold text-text-primary dark:text-white mb-2">No matching products found</h3>
+          <p class="text-sm text-text-secondary dark:text-slate-400 max-w-md mx-auto mb-6">
+            We couldn't find any items matching your exact query or selected filters. Try searching for "Chips", "Coca-Cola", "Lay's", or clear some filters.
+          </p>
+          <button
+            onclick={() => {
+              sidebarFilters = { categories: [], stores: [], priceMin: null, priceMax: null, minDiscount: null };
+              goto('/search?q=');
+            }}
+            class="px-5 py-2.5 bg-primary hover:bg-primary-dark text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all"
+          >
+            Reset All Filters
+          </button>
         </div>
       {/if}
     </div>

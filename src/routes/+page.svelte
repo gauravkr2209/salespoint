@@ -9,24 +9,29 @@
   const trendingProducts = getTrendingProducts(8);
 
   const heroTexts = [
-    'iPhone 16 Pro Max',
-    'Sony WH-1000XM5',
-    'MacBook Air M3',
-    'Samsung Galaxy S24 Ultra',
-    'AirPods Pro 2nd Gen',
-    'Nike Air Jordan 1',
-    'LG 55-inch OLED C3',
-    'Dyson V15 Detect'
+    'Lay\'s India\'s Magic Masala',
+    'Coca-Cola Original 750ml',
+    'Pringles Sour Cream 107g',
+    'Red Bull Energy Drink 250ml',
+    'Kurkure Masala Munch 82g',
+    'iPhone 16 Pro Max 256GB',
+    'Sony WH-1000XM5 ANC',
+    'Doritos Sweet Chilli Nachos',
+    'Bisleri 1L Mineral Water',
+    'MacBook Air M3 16GB'
   ];
 
   const quickCategories = [
+    { label: 'Chips & Crisps', emoji: '🥔', query: 'Chips' },
+    { label: 'Soft Drinks', emoji: '🥤', query: 'Soft Drinks & Sodas' },
+    { label: 'Juices', emoji: '🧃', query: 'Juices & Fruit Drinks' },
+    { label: 'Energy Drinks', emoji: '⚡', query: 'Energy & Sports Drinks' },
+    { label: 'Namkeen', emoji: '🍿', query: 'Namkeen & Savoury Snacks' },
+    { label: 'Chocolates', emoji: '🍫', query: 'Chocolates & Candy' },
     { label: 'Smartphones', emoji: '📱', query: 'Smartphones' },
     { label: 'Laptops', emoji: '💻', query: 'Laptops' },
     { label: 'Headphones', emoji: '🎧', query: 'Headphones' },
-    { label: 'Smartwatches', emoji: '⌚', query: 'Smartwatches' },
-    { label: '4K TVs', emoji: '📺', query: 'Televisions' },
-    { label: 'Footwear', emoji: '👟', query: 'Footwear' },
-    { label: 'Appliances', emoji: '🏠', query: 'Home Appliances' }
+    { label: 'Smartwatches', emoji: '⌚', query: 'Smartwatches' }
   ];
 
   function handleSearch(query: string) {
@@ -43,18 +48,18 @@
 
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
     <!-- Trust Badge Pill -->
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-primary/20 shadow-xs mb-6 backdrop-blur-md animate-in fade-in zoom-in-95">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 dark:bg-slate-800/90 border border-primary/20 shadow-xs mb-6 backdrop-blur-md animate-in fade-in zoom-in-95">
       <span class="flex h-2 w-2 relative">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
       </span>
-      <span class="text-xs font-bold text-text-primary tracking-wide">
-        Scanning 150+ Verified Products Across 5 Stores
+      <span class="text-xs font-bold text-text-primary dark:text-slate-200 tracking-wide">
+        Scanning 400+ Verified SKUs Across 8 Quick-Commerce & E-Commerce Stores
       </span>
     </div>
 
     <!-- Main Title -->
-    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-text-primary mb-4 tracking-tight leading-[1.1]">
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-text-primary dark:text-white mb-4 tracking-tight leading-[1.1]">
       Stop Overpaying for
     </h1>
     <div class="text-3xl sm:text-5xl lg:text-6xl font-black mb-8 h-16 sm:h-20 flex items-center justify-center">
@@ -63,8 +68,8 @@
       </span>
     </div>
 
-    <p class="text-sm sm:text-lg text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
-      Search any product or paste direct product URLs from Amazon, Flipkart, Myntra, Croma or Ajio. Uncover fake discounts with real 90-day price history graphs.
+    <p class="text-sm sm:text-lg text-text-secondary dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Compare prices and unit rates (₹/100g & ₹/L) across Blinkit, Zepto, Flipkart Minutes, Amazon, Croma & Myntra. Uncover fake markups with live price history graphs.
     </p>
 
     <!-- Omnibox Search Bar with Glowing Ambient Shadow -->
@@ -80,7 +85,7 @@
       {#each quickCategories as cat}
         <button
           onclick={() => handleSearch(cat.query)}
-          class="flex items-center gap-1.5 px-3.5 py-1.5 bg-white/80 hover:bg-primary hover:text-white border border-border/80 rounded-full text-xs font-semibold text-text-secondary hover:border-primary shadow-2xs hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer backdrop-blur-xs"
+          class="flex items-center gap-1.5 px-3.5 py-1.5 bg-white/80 dark:bg-slate-800/80 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white border border-border/80 dark:border-slate-700 rounded-full text-xs font-semibold text-text-secondary dark:text-slate-300 hover:border-primary shadow-2xs hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer backdrop-blur-xs"
         >
           <span>{cat.emoji}</span>
           <span>{cat.label}</span>
@@ -92,23 +97,23 @@
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
       <div class="glass-card p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-200">
         <div class="text-2xl mb-1">📦</div>
-        <div class="text-2xl font-black text-text-primary">150+</div>
-        <div class="text-xs font-semibold text-text-secondary">Indexed Products</div>
+        <div class="text-2xl font-black text-text-primary dark:text-white">415+</div>
+        <div class="text-xs font-semibold text-text-secondary dark:text-slate-400">Indexed Products</div>
       </div>
       <div class="glass-card p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-200">
-        <div class="text-2xl mb-1">🏪</div>
-        <div class="text-2xl font-black text-text-primary">5 Stores</div>
-        <div class="text-xs font-semibold text-text-secondary">Amazon, Flipkart & more</div>
+        <div class="text-2xl mb-1">⚡</div>
+        <div class="text-2xl font-black text-text-primary dark:text-white">10-Min</div>
+        <div class="text-xs font-semibold text-text-secondary dark:text-slate-400">Blinkit, Zepto, Minutes</div>
       </div>
       <div class="glass-card p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-200">
-        <div class="text-2xl mb-1">📈</div>
-        <div class="text-2xl font-black text-text-primary">90 Days</div>
-        <div class="text-xs font-semibold text-text-secondary">Historical Price Audits</div>
+        <div class="text-2xl mb-1">⚖️</div>
+        <div class="text-2xl font-black text-text-primary dark:text-white">Unit Price</div>
+        <div class="text-xs font-semibold text-text-secondary dark:text-slate-400">₹/100g & ₹/L Normalized</div>
       </div>
       <div class="glass-card p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-200">
         <div class="text-2xl mb-1">🤖</div>
-        <div class="text-2xl font-black text-text-primary">AI Chatbot</div>
-        <div class="text-xs font-semibold text-text-secondary">Instant Deal Finder</div>
+        <div class="text-2xl font-black text-text-primary dark:text-white">AI Chatbot</div>
+        <div class="text-xs font-semibold text-text-secondary dark:text-slate-400">Under ₹50 & Pack Finder</div>
       </div>
     </div>
   </div>
@@ -119,24 +124,24 @@
   <LiveDealTicker />
 </section>
 
-<!-- Trending Deals Grid (From our 150 items catalog) -->
+<!-- Trending Deals Grid -->
 <section class="py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
       <div>
         <div class="flex items-center gap-2">
           <span class="text-2xl">🔥</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-text-primary">Trending Hot Deals</h2>
+          <h2 class="text-2xl sm:text-3xl font-black text-text-primary dark:text-white">Trending Hot Deals</h2>
         </div>
-        <p class="text-xs sm:text-sm text-text-secondary mt-1">
-          Top price drops detected across India's largest e-commerce retailers right now.
+        <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 mt-1">
+          Top price drops detected across quick commerce and major online retailers right now.
         </p>
       </div>
       <a
         href="/search?q="
-        class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2.5 rounded-xl transition-all hover:gap-3"
+        class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-primary dark:text-primary-light bg-primary/10 dark:bg-primary/20 hover:bg-primary/20 px-4 py-2.5 rounded-xl transition-all hover:gap-3"
       >
-        Explore All 150 Products →
+        Explore All 415 Products →
       </a>
     </div>
 
@@ -150,49 +155,49 @@
 </section>
 
 <!-- How It Works Animated Visual Cards -->
-<section class="py-20 bg-gradient-to-b from-white via-slate-50 to-white border-y border-border/60">
+<section class="py-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-y border-border/60 dark:border-slate-800 transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <span class="text-xs font-extrabold text-primary uppercase tracking-wider bg-primary/10 px-3.5 py-1 rounded-full">
+    <span class="text-xs font-extrabold text-primary uppercase tracking-wider bg-primary/10 dark:bg-primary/20 px-3.5 py-1 rounded-full">
       Streamlined 3-Step Savings
     </span>
-    <h2 class="text-3xl sm:text-4xl font-black text-text-primary mt-3 mb-12">
-      How CopyWeb Beats Regular Shopping
+    <h2 class="text-3xl sm:text-4xl font-black text-text-primary dark:text-white mt-3 mb-12">
+      How SalesPoint Beats Regular Shopping
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Step 1 -->
-      <div class="bg-white p-8 rounded-3xl border border-border/80 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
-        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
+      <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-border/80 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
+        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
           🔍
         </div>
-        <div class="text-xs font-bold text-primary mb-1">STEP 01</div>
-        <h3 class="text-lg font-bold text-text-primary mb-2">Search or Paste Link</h3>
-        <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
-          Type any product keyword or paste a product link from Amazon, Flipkart, Myntra, Croma or Ajio.
+        <div class="text-xs font-bold text-primary dark:text-primary-light mb-1">STEP 01</div>
+        <h3 class="text-lg font-bold text-text-primary dark:text-white mb-2">Search Snacks or Gadgets</h3>
+        <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 leading-relaxed">
+          Search by brand, flavour, packet weight, or bottle size across chips, sodas, smartphones, and fashion.
         </p>
       </div>
 
       <!-- Step 2 -->
-      <div class="bg-white p-8 rounded-3xl border border-border/80 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
-        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
-          📊
+      <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-border/80 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
+        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
+          ⚖️
         </div>
-        <div class="text-xs font-bold text-primary mb-1">STEP 02</div>
-        <h3 class="text-lg font-bold text-text-primary mb-2">Compare & Audit Graph</h3>
-        <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
-          View all competitor stores side-by-side with stock status and check the 90-day chart for fake markups.
+        <div class="text-xs font-bold text-primary dark:text-primary-light mb-1">STEP 02</div>
+        <h3 class="text-lg font-bold text-text-primary dark:text-white mb-2">Compare Unit Prices & Speed</h3>
+        <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 leading-relaxed">
+          Compare Blinkit, Zepto, and Flipkart Minutes side-by-side with ₹/100g or ₹/L metrics and 90-day history.
         </p>
       </div>
 
       <!-- Step 3 -->
-      <div class="bg-white p-8 rounded-3xl border border-border/80 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
-        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
+      <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-border/80 dark:border-slate-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-left">
+        <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">
           💰
         </div>
-        <div class="text-xs font-bold text-primary mb-1">STEP 03</div>
-        <h3 class="text-lg font-bold text-text-primary mb-2">Buy at the True Lowest</h3>
-        <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
-          Visit the store with the real lowest price, set target price drop alerts, or ask our AI Shopping Bot!
+        <div class="text-xs font-bold text-primary dark:text-primary-light mb-1">STEP 03</div>
+        <h3 class="text-lg font-bold text-text-primary dark:text-white mb-2">Buy at the True Lowest</h3>
+        <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 leading-relaxed">
+          Order in 10 minutes or choose e-commerce delivery with guaranteed verified seller stock.
         </p>
       </div>
     </div>
@@ -207,14 +212,14 @@
         <span>⚡</span> Omnibox Power Trick
       </div>
       <h3 class="text-2xl sm:text-3xl font-black mb-3">
-        Prepend <span class="bg-black/30 px-2 py-0.5 rounded font-mono">copyweb.com/</span> before any URL
+        Prepend <span class="bg-black/30 px-2 py-0.5 rounded font-mono">salespoint.in/</span> before any URL
       </h3>
       <p class="text-xs sm:text-sm text-white/90 leading-relaxed mb-6">
-        When browsing Amazon, Flipkart, Myntra, or Croma in any browser, just type <strong class="underline">copyweb.com/</strong> right in front of the URL in your address bar to jump straight to our multi-store price intelligence page!
+        When browsing Amazon, Flipkart, Blinkit, or Zepto in your browser, just prepend <strong class="underline">salespoint.in/</strong> to your browser address bar to view multi-store price comparisons and unit rate audits instantly!
       </p>
       <div class="p-3.5 bg-black/40 rounded-xl font-mono text-xs sm:text-sm text-emerald-300 flex items-center gap-2 overflow-x-auto">
         <span class="text-white/60 select-none">👉</span>
-        <span>copyweb.com/https://amazon.in/dp/B0CS5JLKX7</span>
+        <span>salespoint.in/https://blinkit.com/prn/lays-magic-masala/prid/12345</span>
       </div>
     </div>
   </div>

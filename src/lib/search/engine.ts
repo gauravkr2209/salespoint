@@ -11,14 +11,23 @@ export interface SearchFilters {
 	minPrice?: number;
 	maxPrice?: number;
 	minDiscount?: number;
+	brand?: string;
 }
 
-export type SortOption = 'relevance' | 'price_asc' | 'price_desc' | 'discount_desc' | 'popularity';
+export type SortOption =
+	| 'relevance'
+	| 'price_asc'
+	| 'price_desc'
+	| 'discount_desc'
+	| 'popularity'
+	| 'unit_price_asc'
+	| 'unit_price_desc';
 
 export interface SearchResult {
 	products: Product[];
 	total: number;
 	categories: { name: string; count: number }[];
+	brands: { name: string; count: number }[];
 	priceRange: { min: number; max: number };
 }
 
@@ -43,6 +52,7 @@ function scoreProduct(product: Product, tokens: string[]): number {
 	const brandLower = normalise(product.brand);
 	const categoryLower = normalise(product.category);
 	const tagsJoined = product.tags.join(' ').toLowerCase();
+	const variantLower = normalise(product.variant ?? '');
 
 	let score = 0;
 	let allMatch = true;
@@ -50,10 +60,26 @@ function scoreProduct(product: Product, tokens: string[]): number {
 	for (const token of tokens) {
 		let tokenMatched = false;
 
-		if (titleLower.includes(token)) { score += 3; tokenMatched = true; }
-		if (brandLower.includes(token)) { score += 2; tokenMatched = true; }
-		if (categoryLower.includes(token)) { score += 2; tokenMatched = true; }
-		if (tagsJoined.includes(token)) { score += 1; tokenMatched = true; }
+		if (titleLower.includes(token)) {
+			score += 4;
+			tokenMatched = true;
+		}
+		if (brandLower.includes(token)) {
+			score += 3;
+			tokenMatched = true;
+		}
+		if (categoryLower.includes(token)) {
+			score += 3;
+			tokenMatched = true;
+		}
+		if (variantLower.includes(token)) {
+			score += 2;
+			tokenMatched = true;
+		}
+		if (tagsJoined.includes(token)) {
+			score += 1;
+			tokenMatched = true;
+		}
 
 		if (!tokenMatched) allMatch = false;
 	}
@@ -61,7 +87,8 @@ function scoreProduct(product: Product, tokens: string[]): number {
 	if (!allMatch) return 0;
 
 	const fullQuery = tokens.join(' ');
-	if (titleLower.includes(fullQuery)) score += 5;
+	if (titleLower.includes(fullQuery)) score += 6;
+	if (titleLower.startsWith(fullQuery)) score += 3;
 
 	return score;
 }
@@ -79,6 +106,16 @@ function bestDiscount(product: Product): number {
 	return Math.max(...inStock.map((p) => Math.round(((p.mrp - p.price) / p.mrp) * 100)));
 }
 
+function getEffectiveUnitPrice(product: Product): number {
+	if (product.unitPrice?.pricePer100g !== undefined) {
+		return product.unitPrice.pricePer100g;
+	}
+	if (product.unitPrice?.pricePerLitre !== undefined) {
+		return product.unitPrice.pricePerLitre / 10; // Normalize comparable magnitude
+	}
+	return bestPrice(product);
+}
+
 // ---------------------------------------------------------------------------
 // Main search
 // ---------------------------------------------------------------------------
@@ -88,7 +125,7 @@ export function searchProducts(
 	filters?: SearchFilters,
 	sort: SortOption = 'relevance',
 	page: number = 1,
-	pageSize: number = 20
+	pageSize: number = 24
 ): SearchResult {
 	const tokens = tokenise(query);
 
@@ -100,6 +137,10 @@ export function searchProducts(
 		if (filters.category) {
 			const cat = normalise(filters.category);
 			scored = scored.filter((e) => normalise(e.product.category) === cat);
+		}
+		if (filters.brand) {
+			const br = normalise(filters.brand);
+			scored = scored.filter((e) => normalise(e.product.brand) === br);
 		}
 		if (filters.storeId) {
 			scored = scored.filter((e) =>
@@ -119,19 +160,29 @@ export function searchProducts(
 
 	// Aggregate categories
 	const categoryMap = new Map<string, number>();
+	const brandMap = new Map<string, number>();
 	for (const entry of scored) {
 		const cat = entry.product.category;
 		categoryMap.set(cat, (categoryMap.get(cat) ?? 0) + 1);
+
+		const b = entry.product.brand;
+		brandMap.set(b, (brandMap.get(b) ?? 0) + 1);
 	}
+
 	const categories = Array.from(categoryMap.entries())
+		.map(([name, count]) => ({ name, count }))
+		.sort((a, b) => b.count - a.count);
+
+	const brands = Array.from(brandMap.entries())
 		.map(([name, count]) => ({ name, count }))
 		.sort((a, b) => b.count - a.count);
 
 	// Price range
 	const allPrices = scored.map((e) => bestPrice(e.product, filters?.storeId));
-	const priceRange = allPrices.length > 0
-		? { min: Math.min(...allPrices), max: Math.max(...allPrices) }
-		: { min: 0, max: 0 };
+	const priceRange =
+		allPrices.length > 0
+			? { min: Math.min(...allPrices), max: Math.max(...allPrices) }
+			: { min: 0, max: 0 };
 
 	// Sort
 	switch (sort) {
@@ -140,6 +191,12 @@ export function searchProducts(
 			break;
 		case 'price_desc':
 			scored.sort((a, b) => bestPrice(b.product, filters?.storeId) - bestPrice(a.product, filters?.storeId));
+			break;
+		case 'unit_price_asc':
+			scored.sort((a, b) => getEffectiveUnitPrice(a.product) - getEffectiveUnitPrice(b.product));
+			break;
+		case 'unit_price_desc':
+			scored.sort((a, b) => getEffectiveUnitPrice(b.product) - getEffectiveUnitPrice(a.product));
 			break;
 		case 'discount_desc':
 			scored.sort((a, b) => bestDiscount(b.product) - bestDiscount(a.product));
@@ -158,7 +215,7 @@ export function searchProducts(
 	const start = (page - 1) * pageSize;
 	const paged = scored.slice(start, start + pageSize).map((e) => e.product);
 
-	return { products: paged, total, categories, priceRange };
+	return { products: paged, total, categories, brands, priceRange };
 }
 
 // ---------------------------------------------------------------------------
@@ -209,7 +266,7 @@ export function getSuggestions(query: string, limit: number = 8): SuggestionItem
 // Trending
 // ---------------------------------------------------------------------------
 
-export function getTrendingProducts(limit: number = 6): Product[] {
+export function getTrendingProducts(limit: number = 8): Product[] {
 	const sorted = [...products].sort((a, b) => b.popularity - a.popularity);
 	return sorted.slice(0, limit);
 }
