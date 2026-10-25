@@ -27,10 +27,10 @@
 			<a
 				href="/search?category={encodeURIComponent(cat.name)}"
 				onclick={() => handleClick(cat.name)}
-				class="group relative h-36 sm:h-44 rounded-2xl p-4 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br {cat.theme.gradient} flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+				class="relative h-36 sm:h-44 rounded-2xl p-4 overflow-hidden shadow-sm bg-gradient-to-br {cat.theme.gradient} flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer"
 			>
 				<!-- Subtle texture overlay -->
-				<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+				<div class="absolute inset-0 bg-black/10"></div>
 
 				<!-- Bold Category Title -->
 				<div class="relative z-10">
@@ -43,8 +43,8 @@
 					</span>
 				</div>
 
-				<!-- Corner Art Tile (Spotify tilted thumbnail effect) -->
-				<div class="absolute -bottom-3 -right-3 w-18 h-18 sm:w-22 sm:h-22 rounded-xl overflow-hidden shadow-2xl rotate-[22deg] group-hover:rotate-[15deg] group-hover:scale-110 transition-all duration-300 pointer-events-none border-2 border-white/20 bg-slate-900/40">
+				<!-- Corner Art Tile (Fixed position without hover rotation or scale) -->
+				<div class="absolute -bottom-3 -right-3 w-18 h-18 sm:w-22 sm:h-22 rounded-xl overflow-hidden shadow-2xl rotate-[22deg] pointer-events-none border-2 border-white/20 bg-slate-900/40">
 					<img
 						src={cat.sampleImage}
 						alt={cat.name}
