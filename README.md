@@ -13,7 +13,7 @@ SalesPoint is India's smartest multi-store price-comparison engine comparing **4
 - 🎮 **Immersive 3D Product Stage**: Three.js interactive 3D showcase with dynamic procedural products (Cold Soda Can, Flagship Smartphone, Crisp Snack Bag, ANC Headphones), neon pedestal, and mouse drag orbit.
 - 🎙️ **Voice AI Shopping Assistant**: Integrated Web Speech API (`SpeechRecognition` & `SpeechSynthesis`) with real-time transcription, audio waveforms, unit-economics intelligence (₹/100g, ₹/L), and voice read-aloud.
 - 📦 **Multi-Store Price Spread Visualizer**: Interactive 3D comparison bars highlighting the lowest verified offer, delivery speed, and instant savings across 8 stores.
-- 🔍 **Spotify-Style Instant Search**: Keyboard-navigable fast search with live entity chips, recent searches, category cards, and instant filtering.
+- 🔍 **Instant Smart Search**: Fast search with autocomplete, category quick pills, price-spread sorting, and deep filtering across 400+ products.
 - 👤 **Customer Profiles & Wishlist**: Dedicated `/profile` dashboard with wishlist management, instant price-drop alerts, 10-minute delivery pincode locator, and merchant filters.
 - ⚡ **Supabase Cloud Database Ready**: Pre-configured database layer in `src/lib/supabase/client.ts` for cloud persistence of profiles, wishlists, and price alerts with local storage fallback.
 - 🖱️ **Magnetic 3D Cursor**: Custom dual-layer interactive cursor with smooth spring damping and pointer-aware card tilt physics.
