@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Custom theme tokens with light / dark mode support */
 @theme {
   --color-primary: #5855E5;
@@ -92,6 +94,19 @@ html.dark body {
   background: linear-gradient(-45deg, #4F46E5, #7C3AED, #2563EB, #059669);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
+}
+
+/* 3D Depth and Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
 }
 
 /* Glassmorphism utility with dark mode variants */

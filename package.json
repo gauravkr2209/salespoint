@@ -26,5 +26,10 @@
 	"imports": {
 		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"@supabase/supabase-js": "^2.118.0",
+		"@types/three": "^0.186.0",
+		"three": "^0.186.1"
 	}
 }

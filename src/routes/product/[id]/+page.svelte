@@ -4,9 +4,13 @@
   import ComparisonTable from '$lib/components/ComparisonTable.svelte';
   import PriceHistoryChart from '$lib/components/PriceHistoryChart.svelte';
   import DealBadge from '$lib/components/DealBadge.svelte';
+  import Product3DViewer from '$lib/components/Product3DViewer.svelte';
+  import Comparison3DVisualizer from '$lib/components/Comparison3DVisualizer.svelte';
   import { products, getLowestStorePrice } from '$lib/data/products';
   import { getLowestPrice, getHighestPrice, getAveragePrice } from '$lib/data/priceHistory';
   import { formatPrice, getDiscountPercent } from '$lib/utils/formatPrice';
+  import { getProductImageUrl, getFallbackImage } from '$lib/utils/productImages';
+  import { isProductWishlisted, toggleWishlist, addPriceAlert } from '$lib/auth/store';
   import { goto } from '$app/navigation';
 
   let productId = $derived(page.params.id);
@@ -24,16 +28,28 @@
   let alertPrice = $state('');
   let alertSet = $state(false);
   let imageError = $state(false);
+  let is3DViewerOpen = $state(false);
+  let wishlisted = $state(false);
+
+  $effect(() => {
+    if (productId) {
+      wishlisted = isProductWishlisted(productId);
+    }
+  });
 
   function handleSearch(q: string) {
     goto(`/search?q=${encodeURIComponent(q)}`);
   }
 
+  function handleToggleWishlist() {
+    if (productId) {
+      wishlisted = toggleWishlist(productId);
+    }
+  }
+
   function setAlert() {
-    if (alertPrice) {
-      const alerts = JSON.parse(localStorage.getItem('priceAlerts') ?? '[]');
-      alerts.push({ productId, targetPrice: Number(alertPrice), createdAt: new Date().toISOString() });
-      localStorage.setItem('priceAlerts', JSON.stringify(alerts));
+    if (alertPrice && productId) {
+      addPriceAlert(productId, Number(alertPrice));
       alertSet = true;
     }
   }
@@ -61,12 +77,36 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <!-- Product Image Preview -->
         <div class="relative flex items-center justify-center bg-gray-50 dark:bg-slate-900/80 rounded-2xl p-8 min-h-[320px] border border-border/50 dark:border-slate-700/60 overflow-hidden group">
+          <!-- Top Controls: 3D Inspection + Wishlist -->
+          <div class="absolute top-3 right-3 z-10 flex items-center gap-2">
+            <button
+              onclick={handleToggleWishlist}
+              class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-800/90 hover:scale-110 active:scale-90 shadow-md border border-border/60 dark:border-slate-700 flex items-center justify-center transition-all cursor-pointer"
+              title={wishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
+              aria-label={wishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
+            >
+              <span class="text-sm">{wishlisted ? '❤️' : '🤍'}</span>
+            </button>
+
+            <button
+              onclick={() => is3DViewerOpen = true}
+              class="bg-slate-900/85 hover:bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md backdrop-blur-md border border-white/20 transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer"
+              aria-label="Inspect product in 3D"
+            >
+              <span class="text-xs">✨</span>
+              <span>Inspect 3D (360°)</span>
+            </button>
+          </div>
+
           {#if !imageError}
             <img
-              src={product.imageUrl}
+              src={getProductImageUrl(product)}
               alt={product.title}
               class="max-w-full max-h-80 object-contain rounded-lg drop-shadow-md group-hover:scale-105 transition-transform duration-300"
-              onerror={() => imageError = true}
+              onerror={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.src = getFallbackImage(product.category);
+              }}
             />
           {:else}
             <div class="flex flex-col items-center justify-center text-center p-6">
@@ -205,6 +245,11 @@
       </div>
     </div>
 
+    <!-- Dimensional Comparison Visualizer -->
+    <div class="mb-8">
+      <Comparison3DVisualizer {product} />
+    </div>
+
     <!-- Store Comparison Table -->
     <div class="bg-white dark:bg-slate-800 rounded-3xl border border-border dark:border-slate-700 p-6 sm:p-8 mb-8 shadow-sm transition-colors">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
@@ -232,6 +277,9 @@
       </div>
       <PriceHistoryChart productId={product.id} />
     </div>
+
+    <!-- 3D Inspection Modal -->
+    <Product3DViewer {product} bind:isOpen={is3DViewerOpen} />
   </div>
 {:else}
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">

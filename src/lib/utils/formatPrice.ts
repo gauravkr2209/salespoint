@@ -10,6 +10,8 @@ export function formatPrice(price: number): string {
 	return formatter.format(price);
 }
 
+export const formatCurrency = formatPrice;
+
 export function getDiscountPercent(mrp: number, price: number): number {
 	if (mrp <= 0 || price >= mrp) return 0;
 	return Math.round(((mrp - price) / mrp) * 100);
