@@ -19,8 +19,6 @@
 	let storeCount = $derived(product.storePrices.filter((sp) => sp.inStock).length);
 
 	let cardEl: HTMLElement | undefined = $state();
-	let tiltX = $state(0);
-	let tiltY = $state(0);
 	let shineX = $state(50);
 	let shineY = $state(50);
 	let shineOpacity = $state(0);
@@ -46,13 +44,6 @@
 		const x = e.clientX - rect.left;
 		const y = e.clientY - rect.top;
 
-		const centerX = rect.width / 2;
-		const centerY = rect.height / 2;
-
-		// Subtle 3D tilt (max 7 degrees)
-		tiltX = -((y - centerY) / centerY) * 6;
-		tiltY = ((x - centerX) / centerX) * 6;
-
 		shineX = (x / rect.width) * 100;
 		shineY = (y / rect.height) * 100;
 		shineOpacity = 0.15;
@@ -64,8 +55,6 @@
 
 	function handlePointerLeave() {
 		isHovered = false;
-		tiltX = 0;
-		tiltY = 0;
 		shineOpacity = 0;
 	}
 
@@ -82,12 +71,11 @@
 	onpointermove={handlePointerMove}
 	onpointerenter={handlePointerEnter}
 	onpointerleave={handlePointerLeave}
-	class="perspective-1000 transition-transform duration-300"
+	class="transition-all duration-300"
 >
 	<a
 		href="/product/{product.id}"
-		style="transform: rotateX({tiltX}deg) rotateY({tiltY}deg) scale3d({isHovered ? 1.02 : 1}, {isHovered ? 1.02 : 1}, 1); transform-style: preserve-3d;"
-		class="group block bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#5A3B8C]/20 hover:border-[#8B7CC7] transition-all duration-300 relative"
+		class="group block bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#5A3B8C]/25 hover:border-[#8B7CC7] hover:-translate-y-1.5 transition-all duration-300 relative"
 	>
 		<!-- Specular light sheen following cursor -->
 		<div
@@ -95,10 +83,9 @@
 			style="background: radial-gradient(circle 240px at {shineX}% {shineY}%, rgba(139, 124, 199, {shineOpacity}), transparent 80%);"
 		></div>
 
-		<!-- Image Container with 3D Parallax Depth -->
+		<!-- Image Container -->
 		<div
 			class="relative aspect-square bg-[#140E28] overflow-hidden p-5 flex items-center justify-center border-b border-[#3A3A52]/80"
-			style="transform: translateZ(16px);"
 		>
 			<img
 				src={getProductImageUrl(product)}
@@ -114,7 +101,6 @@
 			<!-- Discount badge in Royal Purple -->
 			{#if discount > 0}
 				<div
-					style="transform: translateZ(30px);"
 					class="absolute top-3 left-3 bg-[#5A3B8C] text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-md tracking-wider border border-[#8B7CC7]/40"
 				>
 					{discount}% OFF
@@ -124,7 +110,6 @@
 			<!-- Wishlist Heart Button -->
 			<button
 				onclick={handleToggleWishlist}
-				style="transform: translateZ(32px);"
 				class="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#2A1E4D]/90 hover:bg-[#34265E] hover:scale-110 active:scale-90 shadow-md border border-[#3A3A52] hover:border-[#8B7CC7] flex items-center justify-center transition-all cursor-pointer z-30"
 				title={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
 				aria-label={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
@@ -137,7 +122,6 @@
 			<!-- Pack Size / Unit Price Pill if available -->
 			{#if product.unitPrice}
 				<div
-					style="transform: translateZ(30px);"
 					class="absolute bottom-2.5 right-2.5 bg-[#2A1E4D]/90 backdrop-blur-md text-[#C9C2E3] text-[10px] font-bold px-2 py-0.5 rounded-lg border border-[#3A3A52] shadow-xs"
 				>
 					{product.unitPrice.formatted}
@@ -146,7 +130,7 @@
 		</div>
 
 		<!-- Info with elevated typography -->
-		<div class="p-4 space-y-2 relative z-10" style="transform: translateZ(10px);">
+		<div class="p-4 space-y-2 relative z-10">
 			<!-- Category & Brand -->
 			<div class="flex items-center justify-between text-xs">
 				<span class="font-extrabold text-[#8B7CC7] uppercase tracking-wider text-[11px]">

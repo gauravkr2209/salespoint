@@ -265,17 +265,7 @@
 				{#if wishlistItems.length > 0}
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
 						{#each wishlistItems as product (product.id)}
-							<div class="relative group">
-								<ProductCard {product} />
-								<button
-									onclick={() => handleRemoveWishlist(product.id)}
-									class="absolute top-3 right-3 z-30 w-8 h-8 rounded-full bg-[#2A1E4D] text-rose-400 hover:bg-rose-950/80 hover:text-white shadow-md flex items-center justify-center transition-all cursor-pointer border border-[#3A3A52]"
-									title="Remove from wishlist"
-									aria-label="Remove from wishlist"
-								>
-									✕
-								</button>
-							</div>
+							<ProductCard {product} />
 						{/each}
 					</div>
 				{:else}

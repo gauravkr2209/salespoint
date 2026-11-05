@@ -170,7 +170,7 @@
 				}, 250);
 			}}
 			type="text"
-			class="w-full py-4 pl-12 pr-28 text-sm sm:text-base bg-transparent text-white outline-none placeholder-transparent font-medium"
+			class="w-full py-4 pl-12 pr-32 sm:pr-36 text-sm sm:text-base bg-transparent text-white outline-none placeholder-transparent font-medium"
 			placeholder={placeholder}
 			aria-label="Search catalog"
 			autocomplete="off"
@@ -182,6 +182,24 @@
 			<div class="absolute left-12 top-1/2 -translate-y-1/2 text-[#8E84B0] pointer-events-none select-none text-xs sm:text-sm truncate max-w-[65%] font-medium">
 				<TypewriterText texts={placeholderTexts} speed={70} pause={2000} />
 			</div>
+		{/if}
+
+		<!-- Clear Query Button -->
+		{#if query}
+			<button
+				type="button"
+				onclick={() => {
+					query = '';
+					suggestions = [];
+					inputElement?.focus();
+				}}
+				class="absolute right-24 sm:right-28 text-[#8E84B0] hover:text-white p-1 rounded-full hover:bg-[#3A3A52]/50 transition-colors cursor-pointer"
+				aria-label="Clear search query"
+			>
+				<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
 		{/if}
 
 		<!-- Search Action Button in Royal Purple -->

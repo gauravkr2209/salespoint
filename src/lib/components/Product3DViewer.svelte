@@ -298,10 +298,10 @@
 				{/if}
 
 				<!-- Floating Controls Bar -->
-				<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[#140E28]/90 backdrop-blur-md px-3 py-2 rounded-2xl border border-[#3A3A52] shadow-xl">
+				<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 bg-[#140E28]/95 backdrop-blur-md px-2.5 sm:px-3 py-2 rounded-2xl border border-[#3A3A52] shadow-xl max-w-[92vw] overflow-x-auto scrollbar-none whitespace-nowrap">
 					<button
 						onclick={toggleWireframe}
-						class="px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isWireframe
+						class="shrink-0 px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isWireframe
 							? 'bg-[#5A3B8C] text-white border-[#8B7CC7]'
 							: 'text-[#C9C2E3] hover:text-white border-[#3A3A52] hover:bg-[#2A1E4D]'}"
 					>
@@ -310,7 +310,7 @@
 
 					<button
 						onclick={toggleLighting}
-						class="px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isNeonMode
+						class="shrink-0 px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isNeonMode
 							? 'bg-[#5A3B8C] text-white border-[#8B7CC7]'
 							: 'text-[#C9C2E3] hover:text-white border-[#3A3A52] hover:bg-[#2A1E4D]'}"
 					>
@@ -319,7 +319,7 @@
 
 					<button
 						onclick={() => zoomLevel = Math.min(zoomLevel + 0.15, 1.6)}
-						class="px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
+						class="shrink-0 px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 						title="Zoom in"
 					>
 						🔍+
@@ -327,7 +327,7 @@
 
 					<button
 						onclick={() => zoomLevel = Math.max(zoomLevel - 0.15, 0.6)}
-						class="px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
+						class="shrink-0 px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 						title="Zoom out"
 					>
 						🔍-
@@ -335,7 +335,7 @@
 
 					<button
 						onclick={resetView}
-						class="px-2.5 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
+						class="shrink-0 px-2.5 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 					>
 						🔄 Reset
 					</button>
@@ -343,7 +343,7 @@
 			</div>
 
 			<!-- Footer -->
-			<div class="p-3 bg-[#140E28] border-t border-[#3A3A52] text-center text-xs text-[#8E84B0] flex items-center justify-between px-6">
+			<div class="p-3 bg-[#140E28] border-t border-[#3A3A52] text-center text-xs text-[#8E84B0] flex flex-col sm:flex-row gap-1 items-center justify-between px-4 sm:px-6">
 				<span>🖱️ Drag to rotate 360° in 3D space</span>
 				<span class="text-[#8B7CC7] font-semibold">Verified Product Silhouette</span>
 			</div>

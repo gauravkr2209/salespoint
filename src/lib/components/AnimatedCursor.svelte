@@ -81,7 +81,7 @@
 	<div
 		bind:this={cursorRing}
 		style="transform: translate3d({ringX}px, {ringY}px, 0) translate(-50%, -50%) scale({isClicking ? 0.8 : isHovered ? 1.6 : 1});"
-		class="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full transition-all duration-150 ease-out will-change-transform {isHovered
+		class="hidden md:block pointer-events-none fixed top-0 left-0 z-[9999] rounded-full transition-all duration-150 ease-out will-change-transform {isHovered
 			? 'w-10 h-10 bg-[#8B7CC7]/15 border-2 border-[#8B7CC7] shadow-[0_0_20px_rgba(139,124,199,0.4)] backdrop-blur-[1px]'
 			: 'w-8 h-8 border border-[#5A3B8C]/60 bg-[#5A3B8C]/10'}"
 	></div>
@@ -90,6 +90,6 @@
 	<div
 		bind:this={cursorDot}
 		style="transform: translate3d({mouseX}px, {mouseY}px, 0) translate(-50%, -50%) scale({isClicking ? 1.4 : isHovered ? 0.5 : 1});"
-		class="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full w-2 h-2 bg-gradient-to-r from-[#8B7CC7] to-[#C9C2E3] shadow-md shadow-[#8B7CC7]/60 transition-transform duration-75 ease-out will-change-transform"
+		class="hidden md:block pointer-events-none fixed top-0 left-0 z-[10000] rounded-full w-2 h-2 bg-gradient-to-r from-[#8B7CC7] to-[#C9C2E3] shadow-md shadow-[#8B7CC7]/60 transition-transform duration-75 ease-out will-change-transform"
 	></div>
 {/if}

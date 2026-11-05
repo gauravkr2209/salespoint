@@ -663,7 +663,7 @@
 			bind:this={canvasContainerEl}
 			role="region"
 			aria-label="3D Product Canvas"
-			class="order-1 lg:order-2 lg:col-span-7 relative h-[300px] sm:h-[380px] lg:h-[460px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none overflow-hidden bg-[#140E28]"
+			class="order-1 lg:order-2 lg:col-span-7 relative h-[300px] sm:h-[380px] lg:h-[460px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none overflow-hidden bg-[#140E28] touch-pan-y"
 			onpointerdown={handlePointerDown}
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}

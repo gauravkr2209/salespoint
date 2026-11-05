@@ -10,9 +10,9 @@
   let { children } = $props();
   let isMobileMenuOpen = $state(false);
 
-  // Close mobile menu on page change
+  // Close mobile menu on page change or query param change
   $effect(() => {
-    const _ = page.url.pathname;
+    const _ = page.url.href;
     isMobileMenuOpen = false;
   });
 
@@ -44,7 +44,7 @@
     <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
       <!-- Logo with ample separation -->
       <a href="/" class="flex items-center gap-3 shrink-0 mr-2 sm:mr-4 group">
-        <div class="w-10 h-10 bg-gradient-to-tr from-[#5A3B8C] to-[#8B7CC7] rounded-xl flex items-center justify-center shadow-lg shadow-[#5A3B8C]/40 group-hover:scale-105 group-hover:rotate-2 transition-all border border-[#8B7CC7]/40">
+        <div class="w-10 h-10 bg-gradient-to-tr from-[#5A3B8C] to-[#8B7CC7] rounded-xl flex items-center justify-center shadow-lg shadow-[#5A3B8C]/40 group-hover:scale-105 transition-all border border-[#8B7CC7]/40">
           <span class="text-white font-black text-sm tracking-wider">SP</span>
         </div>
         <span class="text-xl sm:text-2xl font-black text-white tracking-tight">
@@ -119,6 +119,7 @@
       <div class="space-y-1.5">
         <a
           href="/"
+          onclick={() => isMobileMenuOpen = false}
           class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-white bg-[#140E28] border border-[#3A3A52] hover:bg-[#2A1E4D] transition-colors"
         >
           <span>🏠</span>
@@ -128,6 +129,7 @@
         {#each navCategories as item}
           <a
             href={item.href}
+            onclick={() => isMobileMenuOpen = false}
             class="flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold text-[#C9C2E3] hover:text-white bg-[#140E28] border border-[#3A3A52] hover:bg-[#2A1E4D] transition-colors"
           >
             <div class="flex items-center gap-3">
@@ -144,6 +146,7 @@
 
         <a
           href="/profile"
+          onclick={() => isMobileMenuOpen = false}
           class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-white bg-[#5A3B8C] border border-[#8B7CC7]/40 hover:bg-[#6D47A6] transition-colors shadow-sm"
         >
           <span>👤</span>

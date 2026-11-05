@@ -33,7 +33,7 @@
 
 <div class="bg-[#2A1E4D] rounded-2xl border border-[#3A3A52] overflow-hidden shadow-xl">
 	<!-- Header -->
-	<div class="px-6 py-4 border-b border-[#3A3A52] bg-[#1A1333] flex flex-wrap items-center justify-between gap-2">
+	<div class="px-4 sm:px-6 py-4 border-b border-[#3A3A52] bg-[#1A1333] flex flex-wrap items-center justify-between gap-2">
 		<div>
 			<h3 class="text-base font-black text-white">Price Comparison Matrix</h3>
 			<p class="text-xs text-[#8E84B0] mt-0.5">
@@ -53,12 +53,12 @@
 		<table class="w-full text-left">
 			<thead>
 				<tr class="bg-[#140E28] text-xs text-[#8B7CC7] uppercase tracking-wider border-b border-[#3A3A52]">
-					<th class="px-6 py-3.5 font-bold">Seller & Store</th>
-					<th class="px-6 py-3.5 font-bold">Price</th>
-					<th class="px-6 py-3.5 font-bold hidden sm:table-cell">MRP</th>
-					<th class="px-6 py-3.5 font-bold hidden md:table-cell">Discount</th>
-					<th class="px-6 py-3.5 font-bold text-center">Availability</th>
-					<th class="px-6 py-3.5 font-bold text-right">Action</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold">Seller & Store</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold">Price</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold hidden sm:table-cell">MRP</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold hidden md:table-cell">Discount</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold text-center">Availability</th>
+					<th class="px-3.5 sm:px-6 py-3.5 font-bold text-right">Action</th>
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-[#3A3A52]">
@@ -71,29 +71,29 @@
 							: 'bg-[#2A1E4D]'}"
 					>
 						<!-- Store -->
-						<td class="px-6 py-4">
-							<div class="flex items-center gap-3">
-								<span class="text-2xl p-1.5 bg-[#140E28] border border-[#3A3A52] rounded-xl shadow-xs">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4">
+							<div class="flex items-center gap-2.5 sm:gap-3">
+								<span class="text-xl sm:text-2xl p-1 sm:p-1.5 bg-[#140E28] border border-[#3A3A52] rounded-xl shadow-xs shrink-0">
 									{storeConfig[sp.store]?.emoji ?? '🏪'}
 								</span>
 								<div>
-									<div class="flex items-center gap-2">
-										<span class="font-bold text-sm text-white">
+									<div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+										<span class="font-bold text-xs sm:text-sm text-white">
 											{sp.store}
 										</span>
 										{#if isCheapest}
-											<span class="text-[10px] font-black uppercase bg-[#5A3B8C] text-white border border-[#8B7CC7]/40 px-2 py-0.5 rounded-full shadow-xs">
+											<span class="text-[9px] sm:text-[10px] font-black uppercase bg-[#5A3B8C] text-white border border-[#8B7CC7]/40 px-2 py-0.5 rounded-full shadow-xs">
 												Lowest
 											</span>
 										{/if}
 										{#if storeConfig[sp.store]?.badge}
-											<span class="text-[10px] font-bold bg-[#140E28] border border-[#3A3A52] text-[#8B7CC7] px-1.5 py-0.5 rounded">
+											<span class="text-[9px] sm:text-[10px] font-bold bg-[#140E28] border border-[#3A3A52] text-[#8B7CC7] px-1.5 py-0.5 rounded">
 												{storeConfig[sp.store]?.badge}
 											</span>
 										{/if}
 									</div>
 									{#if sp.deliveryEta}
-										<p class="text-[11px] text-[#8E84B0] mt-0.5">
+										<p class="text-[10px] sm:text-[11px] text-[#8E84B0] mt-0.5">
 											Delivery: {sp.deliveryEta}
 										</p>
 									{/if}
@@ -102,14 +102,14 @@
 						</td>
 
 						<!-- Price -->
-						<td class="px-6 py-4">
-							<span class="text-base font-black {isCheapest ? 'text-white drop-shadow-[0_0_12px_rgba(139,124,199,0.3)]' : 'text-[#C9C2E3]'}">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4">
+							<span class="text-sm sm:text-base font-black {isCheapest ? 'text-white drop-shadow-[0_0_12px_rgba(139,124,199,0.3)]' : 'text-[#C9C2E3]'}">
 								{formatPrice(sp.price)}
 							</span>
 						</td>
 
 						<!-- MRP -->
-						<td class="px-6 py-4 hidden sm:table-cell">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4 hidden sm:table-cell">
 							{#if discount > 0}
 								<span class="text-sm text-[#8E84B0] line-through">
 									{formatPrice(sp.mrp)}
@@ -120,7 +120,7 @@
 						</td>
 
 						<!-- Discount -->
-						<td class="px-6 py-4 hidden md:table-cell">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4 hidden md:table-cell">
 							{#if discount > 0}
 								<span class="text-xs font-bold text-[#8B7CC7] bg-[#140E28] border border-[#3A3A52] px-2.5 py-1 rounded-md">
 									{discount}% off
@@ -131,7 +131,7 @@
 						</td>
 
 						<!-- Status -->
-						<td class="px-6 py-4 text-center">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4 text-center">
 							{#if sp.inStock}
 								<span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-800/60 px-2.5 py-1 rounded-full">
 									<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
@@ -146,7 +146,7 @@
 						</td>
 
 						<!-- Visit button -->
-						<td class="px-6 py-4 text-right">
+						<td class="px-3.5 sm:px-6 py-3.5 sm:py-4 text-right">
 							<a
 								href={sp.url}
 								target="_blank"

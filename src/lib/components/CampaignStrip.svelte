@@ -3,7 +3,7 @@
 </script>
 
 {#if visible}
-	<div class="w-full bg-gradient-to-r from-[#1A1235] via-[#2A1E4D] to-[#1A1235] border-b border-[#3A3A52] text-[#C9C2E3] text-center py-2.5 px-4 text-xs sm:text-sm relative z-50 shadow-sm">
+	<div class="w-full bg-gradient-to-r from-[#1A1235] via-[#2A1E4D] to-[#1A1235] border-b border-[#3A3A52] text-[#C9C2E3] text-center py-2.5 pr-10 pl-4 sm:px-12 text-xs sm:text-sm relative z-50 shadow-sm">
 		<span class="font-medium inline-flex items-center gap-1.5 flex-wrap justify-center">
 			<span class="text-[#8B7CC7]">💡</span>
 			<span>Pro tip: Add</span>

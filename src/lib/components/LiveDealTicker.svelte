@@ -43,7 +43,7 @@
 
 <div class="w-full my-12 bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] shadow-2xl overflow-hidden transition-colors">
 	<!-- Tab Bar -->
-	<div class="flex flex-wrap items-center justify-between border-b border-[#3A3A52] px-6 py-4 bg-[#1A1333]">
+	<div class="flex flex-wrap items-center justify-between border-b border-[#3A3A52] px-4 sm:px-6 py-3.5 sm:py-4 bg-[#1A1333] gap-2">
 		<div class="flex items-center gap-2.5">
 			<span class="flex h-2.5 w-2.5 relative">
 				<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8B7CC7] opacity-75"></span>
@@ -53,25 +53,25 @@
 				SalesPoint Live Intelligence Radar
 			</h3>
 		</div>
-		<div class="flex gap-1.5 p-1 bg-[#140E28] border border-[#3A3A52] rounded-xl mt-2 sm:mt-0">
+		<div class="flex gap-1.5 p-1 bg-[#140E28] border border-[#3A3A52] rounded-xl mt-2 sm:mt-0 max-w-full overflow-x-auto scrollbar-none">
 			<button
 				type="button"
 				onclick={() => activeTab = 'live'}
-				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'live' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
+				class="shrink-0 px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'live' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				⚡ Real-Time Drops
 			</button>
 			<button
 				type="button"
 				onclick={() => activeTab = 'scanner'}
-				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'scanner' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
+				class="shrink-0 px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'scanner' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				🛡️ Fake Discount Shield
 			</button>
 			<button
 				type="button"
 				onclick={() => activeTab = 'ticker'}
-				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'ticker' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
+				class="shrink-0 px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'ticker' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				📊 Multi-Store Index
 			</button>
