@@ -146,18 +146,18 @@
 							pointStyle: 'circle',
 							padding: 16,
 							font: { size: 12, family: 'Inter, system-ui, sans-serif' },
-							color: '#64748B'
+							color: '#C9C2E3'
 						}
 					},
 					tooltip: {
-						backgroundColor: '#1E293B',
-						titleColor: '#E2E8F0',
-						bodyColor: '#FFFFFF',
-						borderColor: '#334155',
+						backgroundColor: '#2A1E4D',
+						titleColor: '#FFFFFF',
+						bodyColor: '#C9C2E3',
+						borderColor: '#5A3B8C',
 						borderWidth: 1,
-						cornerRadius: 8,
+						cornerRadius: 12,
 						padding: 12,
-						titleFont: { size: 12 },
+						titleFont: { size: 12, weight: 'bold' },
 						bodyFont: { size: 13, weight: 'bold' },
 						usePointStyle: true,
 						callbacks: {
@@ -181,20 +181,20 @@
 					x: {
 						grid: { display: false },
 						ticks: {
-							color: '#94A3B8',
+							color: '#8E84B0',
 							font: { size: 11 },
 							maxTicksLimit: activeRange === '30d' ? 10 : 12
 						},
-						border: { display: false }
+						border: { color: '#3A3A52' }
 					},
 					y: {
-						grid: { color: '#F1F5F9' },
+						grid: { color: 'rgba(58, 58, 82, 0.4)' },
 						ticks: {
-							color: '#94A3B8',
+							color: '#8E84B0',
 							font: { size: 11 },
 							callback: (val) => formatPrice(val as number)
 						},
-						border: { display: false }
+						border: { color: '#3A3A52' }
 					}
 				}
 			}
@@ -216,26 +216,26 @@
 	});
 </script>
 
-<div class="bg-white dark:bg-slate-800 rounded-2xl border border-border/80 dark:border-slate-700 overflow-hidden shadow-sm">
+<div class="bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] overflow-hidden shadow-xl">
 	<!-- Header -->
-	<div class="flex items-center justify-between px-6 py-4 border-b border-border/80 dark:border-slate-700">
-		<h3 class="text-base font-bold text-text-primary dark:text-white">Price History Analytics</h3>
-		<div class="flex gap-1 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl">
+	<div class="flex items-center justify-between px-6 py-4 border-b border-[#3A3A52] bg-[#1A1333]">
+		<h3 class="text-base font-black text-white flex items-center gap-2">
+			<span>📈</span> Price History Analytics
+		</h3>
+		<div class="flex gap-1.5 bg-[#140E28] p-1 rounded-xl border border-[#3A3A52]">
 			<button
 				onclick={() => (activeRange = '30d')}
-				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-colors cursor-pointer
-					{activeRange === '30d'
-					? 'bg-white dark:bg-slate-800 text-primary dark:text-indigo-400 shadow-xs'
-					: 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
+				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeRange === '30d'
+					? 'bg-[#5A3B8C] text-white shadow-xs border border-[#8B7CC7]/40'
+					: 'text-[#8E84B0] hover:text-white'}"
 			>
 				30 Days
 			</button>
 			<button
 				onclick={() => (activeRange = '90d')}
-				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-colors cursor-pointer
-					{activeRange === '90d'
-					? 'bg-white dark:bg-slate-800 text-primary dark:text-indigo-400 shadow-xs'
-					: 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
+				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeRange === '90d'
+					? 'bg-[#5A3B8C] text-white shadow-xs border border-[#8B7CC7]/40'
+					: 'text-[#8E84B0] hover:text-white'}"
 			>
 				90 Days
 			</button>
@@ -243,7 +243,7 @@
 	</div>
 
 	<!-- Chart -->
-	<div class="p-5">
+	<div class="p-6">
 		<div class="relative h-72">
 			<canvas bind:this={canvasElement}></canvas>
 		</div>

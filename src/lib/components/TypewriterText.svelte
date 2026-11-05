@@ -43,5 +43,5 @@
 
 <span class="inline-flex items-center">
 	<span>{displayText}</span>
-	<span class="ml-0.5 inline-block w-0.5 h-5 bg-primary animate-pulse"></span>
+	<span class="ml-0.5 inline-block w-0.5 h-5 bg-[#8B7CC7] animate-pulse"></span>
 </span>

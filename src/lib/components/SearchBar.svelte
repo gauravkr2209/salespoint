@@ -141,14 +141,14 @@
 <div class="relative w-full max-w-2xl mx-auto">
 	<!-- Search input container -->
 	<div
-		class="relative flex items-center bg-white dark:bg-slate-900 rounded-full border-2 transition-all duration-300 shadow-md {
+		class="relative flex items-center bg-[#1A1333] rounded-2xl border-2 transition-all duration-300 shadow-xl {
 			isFocused
-				? 'border-primary ring-4 ring-primary/10 shadow-xl shadow-primary/10'
-				: 'border-border/80 dark:border-slate-800 hover:border-primary/50'
+				? 'border-[#8B7CC7] ring-4 ring-[#5A3B8C]/30 shadow-2xl shadow-[#5A3B8C]/20'
+				: 'border-[#3A3A52] hover:border-[#8B7CC7]/60'
 		}"
 	>
-		<!-- Search Icon -->
-		<div class="absolute left-4.5 text-text-secondary dark:text-slate-400 pointer-events-none flex items-center">
+		<!-- Search Icon in Soft Lavender -->
+		<div class="absolute left-4.5 text-[#8B7CC7] pointer-events-none flex items-center">
 			<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
 			</svg>
@@ -170,7 +170,7 @@
 				}, 250);
 			}}
 			type="text"
-			class="w-full py-4 pl-12 pr-28 text-sm sm:text-base bg-transparent text-text-primary dark:text-white outline-none placeholder-transparent font-medium"
+			class="w-full py-4 pl-12 pr-28 text-sm sm:text-base bg-transparent text-white outline-none placeholder-transparent font-medium"
 			placeholder={placeholder}
 			aria-label="Search catalog"
 			autocomplete="off"
@@ -179,16 +179,16 @@
 
 		<!-- Typewriter Animated Placeholder -->
 		{#if !query}
-			<div class="absolute left-12 top-1/2 -translate-y-1/2 text-text-secondary dark:text-slate-400 pointer-events-none select-none text-xs sm:text-sm truncate max-w-[65%]">
+			<div class="absolute left-12 top-1/2 -translate-y-1/2 text-[#8E84B0] pointer-events-none select-none text-xs sm:text-sm truncate max-w-[65%] font-medium">
 				<TypewriterText texts={placeholderTexts} speed={70} pause={2000} />
 			</div>
 		{/if}
 
-		<!-- Search Action Button -->
+		<!-- Search Action Button in Royal Purple -->
 		<button
 			type="button"
 			onclick={handleSubmit}
-			class="absolute right-2 bg-primary hover:bg-primary-hover active:scale-95 text-white px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-md shadow-primary/25"
+			class="absolute right-2.5 bg-[#5A3B8C] hover:bg-[#6D47A6] active:scale-95 text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-md shadow-[#5A3B8C]/40 border border-[#8B7CC7]/40"
 		>
 			<span>Search</span>
 			<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -199,20 +199,20 @@
 
 	<!-- URL Detection Banner -->
 	{#if query && isUrl(query)}
-		<div class="absolute left-4 -bottom-6 text-xs text-primary dark:text-indigo-400 font-bold flex items-center gap-1.5">
+		<div class="absolute left-4 -bottom-6 text-xs text-[#8B7CC7] font-bold flex items-center gap-1.5 animate-in fade-in">
 			<span>🔗</span> Store URL recognized — press Enter to inspect price comparison
 		</div>
 	{/if}
 
-	<!-- Autocomplete Dropdown Menu -->
+	<!-- Autocomplete Dropdown Menu in Deep Purple -->
 	{#if showDropdown}
 		<div
-			class="absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl border border-border/80 dark:border-slate-800 shadow-2xl z-50 overflow-hidden divide-y divide-border/60 dark:divide-slate-800 animate-in fade-in zoom-in-98 duration-150"
+			class="absolute top-full left-0 right-0 mt-2 bg-[#2A1E4D] backdrop-blur-2xl rounded-2xl border border-[#3A3A52] shadow-2xl z-50 overflow-hidden divide-y divide-[#3A3A52] animate-in fade-in zoom-in-98 duration-150"
 		>
 			{#if !query.trim()}
 				<!-- Trending Quick Queries -->
 				<div class="p-4 space-y-3">
-					<h4 class="text-[11px] font-black text-text-secondary dark:text-slate-400 uppercase tracking-wider font-mono flex items-center gap-1.5">
+					<h4 class="text-[11px] font-black text-[#8B7CC7] uppercase tracking-wider font-mono flex items-center gap-1.5">
 						<span>🔥</span> Popular Searches
 					</h4>
 					<div class="flex flex-wrap gap-2">
@@ -220,7 +220,7 @@
 							<button
 								type="button"
 								onmousedown={() => commitSearch(t.query)}
-								class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-semibold text-text-primary dark:text-slate-200 transition-colors cursor-pointer"
+								class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#140E28] hover:bg-[#34265E] border border-[#3A3A52] text-xs font-semibold text-[#C9C2E3] hover:text-white transition-colors cursor-pointer"
 							>
 								<span>{t.icon}</span>
 								<span>{t.label}</span>
@@ -236,23 +236,23 @@
 							onmousedown={() => handleSelectSuggestion(item)}
 							class="flex items-center justify-between p-2.5 rounded-xl transition-colors cursor-pointer {
 								idx === selectedIndex 
-									? 'bg-primary/10 text-primary dark:bg-primary/20' 
-									: 'hover:bg-slate-100 dark:hover:bg-slate-800/80 text-text-primary dark:text-white'
+									? 'bg-[#5A3B8C] text-white shadow-xs' 
+									: 'hover:bg-[#34265E] text-[#C9C2E3] hover:text-white'
 							}"
 							role="button"
 							tabindex="0"
 						>
 							<div class="flex items-center gap-3 min-w-0">
 								{#if item.imageUrl}
-									<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0 border border-border/40 dark:border-slate-700">
+									<div class="w-8 h-8 rounded-lg bg-[#140E28] overflow-hidden shrink-0 border border-[#3A3A52]">
 										<img src={item.imageUrl} alt="" class="w-full h-full object-contain p-0.5" />
 									</div>
 								{:else if item.type === 'category'}
-									<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 text-sm">
+									<div class="w-8 h-8 rounded-lg bg-[#5A3B8C]/30 text-[#8B7CC7] flex items-center justify-center shrink-0 text-sm border border-[#3A3A52]">
 										🏷️
 									</div>
 								{:else}
-									<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 text-sm">
+									<div class="w-8 h-8 rounded-lg bg-[#140E28] text-[#8B7CC7] flex items-center justify-center shrink-0 text-sm border border-[#3A3A52]">
 										🔍
 									</div>
 								{/if}
@@ -261,7 +261,7 @@
 										{item.text}
 									</p>
 									{#if item.category}
-										<p class="text-[10px] text-text-secondary dark:text-slate-400">
+										<p class="text-[10px] text-[#8E84B0]">
 											In Category • {item.category}
 										</p>
 									{/if}
@@ -270,7 +270,7 @@
 
 							{#if item.price}
 								<div class="text-right shrink-0 pl-2">
-									<span class="text-xs font-black text-primary dark:text-emerald-400">
+									<span class="text-xs font-black text-[#8B7CC7] group-hover:text-white">
 										From {formatCurrency(item.price)}
 									</span>
 								</div>
@@ -280,14 +280,14 @@
 				</div>
 
 				<!-- Footer Action -->
-				<div class="p-3 bg-slate-50 dark:bg-slate-950/50 flex items-center justify-between">
-					<span class="text-[11px] text-text-secondary dark:text-slate-400">
-						Press <kbd class="px-1.5 py-0.5 rounded bg-white dark:bg-slate-800 text-[10px] font-mono border border-border">Enter</kbd> to search
+				<div class="p-3 bg-[#140E28]/80 flex items-center justify-between border-t border-[#3A3A52]">
+					<span class="text-[11px] text-[#8E84B0]">
+						Press <kbd class="px-1.5 py-0.5 rounded bg-[#2A1E4D] text-[10px] font-mono border border-[#3A3A52] text-[#C9C2E3]">Enter</kbd> to search
 					</span>
 					<button
 						type="button"
 						onmousedown={handleSubmit}
-						class="text-xs font-bold text-primary dark:text-primary-light hover:underline cursor-pointer"
+						class="text-xs font-bold text-[#8B7CC7] hover:text-white transition-colors cursor-pointer"
 					>
 						Search for "{query}" →
 					</button>

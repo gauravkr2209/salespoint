@@ -41,34 +41,37 @@
 	});
 </script>
 
-<div class="w-full my-12 bg-white dark:bg-slate-800 rounded-3xl border border-border/80 dark:border-slate-700 shadow-xl overflow-hidden transition-colors">
+<div class="w-full my-12 bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] shadow-2xl overflow-hidden transition-colors">
 	<!-- Tab Bar -->
-	<div class="flex flex-wrap items-center justify-between border-b border-border/60 dark:border-slate-700/60 px-6 py-4 bg-slate-50/70 dark:bg-slate-900/60">
-		<div class="flex items-center gap-2">
-			<span class="w-2.5 h-2.5 rounded-full bg-danger animate-ping"></span>
-			<h3 class="text-xs sm:text-sm font-black text-text-primary dark:text-white tracking-wide uppercase flex items-center gap-2">
-				SalesPoint Live Market Intelligence Radar
+	<div class="flex flex-wrap items-center justify-between border-b border-[#3A3A52] px-6 py-4 bg-[#1A1333]">
+		<div class="flex items-center gap-2.5">
+			<span class="flex h-2.5 w-2.5 relative">
+				<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8B7CC7] opacity-75"></span>
+				<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#8B7CC7]"></span>
+			</span>
+			<h3 class="text-xs sm:text-sm font-black text-white tracking-wide uppercase flex items-center gap-2">
+				SalesPoint Live Intelligence Radar
 			</h3>
 		</div>
-		<div class="flex gap-1.5 p-1 bg-white dark:bg-slate-800 border border-border dark:border-slate-700 rounded-xl">
+		<div class="flex gap-1.5 p-1 bg-[#140E28] border border-[#3A3A52] rounded-xl mt-2 sm:mt-0">
 			<button
 				type="button"
 				onclick={() => activeTab = 'live'}
-				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'live' ? 'bg-primary text-white shadow-xs' : 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
+				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'live' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				⚡ Real-Time Drops
 			</button>
 			<button
 				type="button"
 				onclick={() => activeTab = 'scanner'}
-				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'scanner' ? 'bg-primary text-white shadow-xs' : 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
+				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'scanner' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				🛡️ Fake Discount Shield
 			</button>
 			<button
 				type="button"
 				onclick={() => activeTab = 'ticker'}
-				class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'ticker' ? 'bg-primary text-white shadow-xs' : 'text-text-secondary dark:text-slate-400 hover:text-text-primary dark:hover:text-white'}"
+				class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer {activeTab === 'ticker' ? 'bg-[#5A3B8C] text-white shadow-md' : 'text-[#8E84B0] hover:text-white'}"
 			>
 				📊 Multi-Store Index
 			</button>
@@ -80,54 +83,54 @@
 		{#if activeTab === 'live'}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{#each liveDeals as item (item.id)}
-					<div class="group relative bg-slate-50 dark:bg-slate-900/70 hover:bg-white dark:hover:bg-slate-800 border border-border/70 dark:border-slate-700 hover:border-primary/50 dark:hover:border-indigo-500/50 p-4 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-						<div class="flex items-start justify-between gap-2 mb-2">
-							<span class="text-2xl p-2 bg-white dark:bg-slate-800 rounded-xl shadow-2xs group-hover:scale-110 transition-transform">
+					<div class="group relative bg-[#1F173C] hover:bg-[#34265E]/60 border border-[#3A3A52] hover:border-[#8B7CC7] p-4.5 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+						<div class="flex items-start justify-between gap-2 mb-2.5">
+							<span class="text-2xl p-2 bg-[#140E28] border border-[#3A3A52] rounded-xl shadow-xs group-hover:scale-110 transition-transform">
 								{item.emoji}
 							</span>
-							<span class="text-[11px] font-black text-white bg-gradient-to-r from-success to-emerald-600 px-2.5 py-1 rounded-full shadow-xs">
+							<span class="text-[11px] font-black text-white bg-[#5A3B8C] border border-[#8B7CC7]/40 px-3 py-1 rounded-full shadow-sm">
 								{item.drop}
 							</span>
 						</div>
-						<h4 class="text-sm font-bold text-text-primary dark:text-slate-100 line-clamp-1 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors">
+						<h4 class="text-sm font-bold text-[#C9C2E3] line-clamp-1 group-hover:text-white transition-colors">
 							{item.title}
 						</h4>
-						<div class="flex items-center justify-between text-xs text-text-secondary dark:text-slate-400 mt-3 pt-2 border-t border-border/40 dark:border-slate-700/60">
-							<span class="font-bold text-text-primary dark:text-slate-200 flex items-center gap-1">
-								<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+						<div class="flex items-center justify-between text-xs text-[#8E84B0] mt-3.5 pt-2.5 border-t border-[#3A3A52]">
+							<span class="font-bold text-white flex items-center gap-1.5">
+								<span class="w-1.5 h-1.5 rounded-full bg-[#8B7CC7]"></span>
 								{item.store}
 							</span>
-							<span>{item.time}</span>
+							<span class="text-[11px]">{item.time}</span>
 						</div>
 					</div>
 				{/each}
 			</div>
 
 		{:else if activeTab === 'scanner'}
-			<div class="bg-gradient-to-r from-indigo-900 via-primary to-purple-900 rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
-				<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+			<div class="bg-gradient-to-r from-[#1A1235] via-[#2A1E4D] to-[#1F173C] border border-[#3A3A52] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl">
+				<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-[#5A3B8C]/20 rounded-full blur-3xl pointer-events-none"></div>
 				<div class="max-w-2xl relative z-10">
-					<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold mb-3">
+					<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5A3B8C]/40 border border-[#8B7CC7]/40 text-xs font-semibold mb-3.5 text-[#C9C2E3]">
 						<span>🛡️</span> SalesPoint Price Rigging Detector
 					</div>
-					<h4 class="text-xl sm:text-2xl font-black mb-2">
+					<h4 class="text-xl sm:text-2xl font-black mb-3 text-white tracking-tight">
 						How SalesPoint Stops "Fake Festival Sales" & Supermarket Markups
 					</h4>
-					<p class="text-xs sm:text-sm text-white/80 leading-relaxed mb-4">
+					<p class="text-xs sm:text-sm text-[#C9C2E3] leading-relaxed mb-6 font-medium">
 						Many retail platforms artificially increase the MRP or list price by 15% to 30% right before festival sales, then advertise a "Huge 40% Off". Our background price-intelligence algorithms record real historical data daily across 400+ products to expose inflated discounts.
 					</p>
 					<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-						<div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
-							<div class="text-lg font-black text-amber-300">90 Days</div>
-							<div class="text-[11px] text-white/70">Continuous Price Snapshots</div>
+						<div class="bg-[#140E28] rounded-xl p-3.5 border border-[#3A3A52]">
+							<div class="text-lg font-black text-white">90 Days</div>
+							<div class="text-[11px] text-[#8E84B0]">Continuous Price Snapshots</div>
 						</div>
-						<div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
-							<div class="text-lg font-black text-green-300">100% Verified</div>
-							<div class="text-[11px] text-white/70">Historical Price Accuracy</div>
+						<div class="bg-[#140E28] rounded-xl p-3.5 border border-[#3A3A52]">
+							<div class="text-lg font-black text-emerald-400">100% Verified</div>
+							<div class="text-[11px] text-[#8E84B0]">Historical Price Accuracy</div>
 						</div>
-						<div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10 col-span-2 sm:col-span-1">
-							<div class="text-lg font-black text-cyan-300">₹0 Markups</div>
-							<div class="text-[11px] text-white/70">Unbiased Retailer Comparison</div>
+						<div class="bg-[#140E28] rounded-xl p-3.5 border border-[#3A3A52] col-span-2 sm:col-span-1">
+							<div class="text-lg font-black text-[#8B7CC7]">₹0 Markups</div>
+							<div class="text-[11px] text-[#8E84B0]">Unbiased Retailer Comparison</div>
 						</div>
 					</div>
 				</div>
@@ -135,46 +138,46 @@
 
 		{:else if activeTab === 'ticker'}
 			<div class="space-y-4">
-				<div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-border dark:border-slate-700">
-					<div class="flex items-center justify-between mb-4 text-xs font-bold text-text-secondary dark:text-slate-400">
-						<span>STORE PLATFORM</span>
-						<span>AVERAGE CATALOGUE SAVINGS</span>
+				<div class="p-6 bg-[#1F173C] rounded-2xl border border-[#3A3A52]">
+					<div class="flex items-center justify-between mb-4 text-xs font-black text-[#8B7CC7] uppercase tracking-wider">
+						<span>Store Platform</span>
+						<span>Average Catalogue Savings</span>
 					</div>
-					<div class="space-y-3.5">
+					<div class="space-y-4">
 						<div>
-							<div class="flex justify-between text-xs font-bold mb-1 dark:text-slate-200">
+							<div class="flex justify-between text-xs font-bold mb-1.5 text-white">
 								<span>Blinkit & Zepto (Snacks & Quick Commerce)</span>
-								<span class="text-amber-500">Fast 10-15 Min Delivery</span>
+								<span class="text-[#8B7CC7]">Fast 10-15 Min Delivery</span>
 							</div>
-							<div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-								<div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
+							<div class="w-full bg-[#140E28] border border-[#3A3A52] h-2.5 rounded-full overflow-hidden">
+								<div class="bg-[#5A3B8C] h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
 							</div>
 						</div>
 						<div>
-							<div class="flex justify-between text-xs font-bold mb-1 dark:text-slate-200">
+							<div class="flex justify-between text-xs font-bold mb-1.5 text-white">
 								<span>Amazon India</span>
-								<span class="text-amazon">23.4% Avg Savings</span>
+								<span class="text-[#C9C2E3]">23.4% Avg Savings</span>
 							</div>
-							<div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-								<div class="bg-amazon h-full rounded-full transition-all duration-1000" style="width: 78%"></div>
+							<div class="w-full bg-[#140E28] border border-[#3A3A52] h-2.5 rounded-full overflow-hidden">
+								<div class="bg-[#8B7CC7] h-full rounded-full transition-all duration-1000" style="width: 78%"></div>
 							</div>
 						</div>
 						<div>
-							<div class="flex justify-between text-xs font-bold mb-1 dark:text-slate-200">
+							<div class="flex justify-between text-xs font-bold mb-1.5 text-white">
 								<span>Flipkart & Flipkart Minutes</span>
-								<span class="text-flipkart">24.1% Avg Savings</span>
+								<span class="text-[#C9C2E3]">24.1% Avg Savings</span>
 							</div>
-							<div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-								<div class="bg-flipkart h-full rounded-full transition-all duration-1000" style="width: 82%"></div>
+							<div class="w-full bg-[#140E28] border border-[#3A3A52] h-2.5 rounded-full overflow-hidden">
+								<div class="bg-[#6D47A6] h-full rounded-full transition-all duration-1000" style="width: 82%"></div>
 							</div>
 						</div>
 						<div>
-							<div class="flex justify-between text-xs font-bold mb-1 dark:text-slate-200">
+							<div class="flex justify-between text-xs font-bold mb-1.5 text-white">
 								<span>Croma Electronics</span>
-								<span class="text-croma">18.9% Avg Savings</span>
+								<span class="text-[#C9C2E3]">18.9% Avg Savings</span>
 							</div>
-							<div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-								<div class="bg-croma h-full rounded-full transition-all duration-1000" style="width: 65%"></div>
+							<div class="w-full bg-[#140E28] border border-[#3A3A52] h-2.5 rounded-full overflow-hidden">
+								<div class="bg-[#5A3B8C] h-full rounded-full transition-all duration-1000" style="width: 65%"></div>
 							</div>
 						</div>
 					</div>

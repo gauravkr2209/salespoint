@@ -2,12 +2,12 @@
 export type ThemeMode = 'light' | 'dark' | 'system';
 
 export function getStoredTheme(): ThemeMode {
-	if (typeof window === 'undefined') return 'system';
+	if (typeof window === 'undefined') return 'dark';
 	try {
 		const val = localStorage.getItem('salespoint_theme') as ThemeMode;
 		if (val === 'light' || val === 'dark' || val === 'system') return val;
 	} catch {}
-	return 'system';
+	return 'dark';
 }
 
 export function applyTheme(mode: ThemeMode): void {
@@ -17,7 +17,7 @@ export function applyTheme(mode: ThemeMode): void {
 	} catch {}
 
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-	const isDark = mode === 'dark' || (mode === 'system' && prefersDark);
+	const isDark = mode === 'dark' || (mode === 'system' ? prefersDark || true : false);
 
 	if (isDark) {
 		document.documentElement.classList.add('dark');

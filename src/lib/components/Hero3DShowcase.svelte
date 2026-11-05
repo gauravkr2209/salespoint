@@ -551,39 +551,39 @@
 	}
 </script>
 
-<div class="relative w-full max-w-5xl mx-auto rounded-3xl bg-white/90 dark:bg-slate-900/90 border border-border/80 dark:border-slate-800 shadow-2xl overflow-hidden backdrop-blur-2xl transition-all duration-300 my-8">
+<div class="relative w-full max-w-5xl mx-auto rounded-3xl bg-[#2A1E4D] border border-[#3A3A52] shadow-2xl overflow-hidden backdrop-blur-2xl transition-all duration-300 my-8">
 	<!-- Background glow accents -->
-	<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
-	<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+	<div class="absolute -top-32 -left-32 w-96 h-96 bg-[#5A3B8C]/25 rounded-full blur-3xl pointer-events-none"></div>
+	<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-[#8B7CC7]/20 rounded-full blur-3xl pointer-events-none"></div>
 
 	<!-- Stage Header & Category Selector -->
-	<div class="relative z-20 px-6 py-5 border-b border-border/80 dark:border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-slate-50/60 dark:bg-slate-950/40 backdrop-blur-md">
+	<div class="relative z-20 px-6 py-5 border-b border-[#3A3A52] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-[#1A1333] backdrop-blur-md">
 		<div>
 			<div class="flex items-center gap-2">
-				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 dark:bg-indigo-500/20 text-primary dark:text-indigo-300 border border-primary/20 dark:border-indigo-500/30 text-xs font-black uppercase tracking-wider">
+				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5A3B8C]/40 text-[#C9C2E3] border border-[#8B7CC7]/40 text-xs font-black uppercase tracking-wider">
 					<span class="flex h-2 w-2 relative">
-						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-						<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8B7CC7] opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-2 w-2 bg-[#8B7CC7]"></span>
 					</span>
 					Interactive 3D Stage
 				</span>
-				<span class="text-xs font-semibold text-text-secondary dark:text-slate-400 hidden sm:inline">
+				<span class="text-xs font-semibold text-[#8E84B0] hidden sm:inline">
 					Drag to inspect 360°
 				</span>
 			</div>
-			<h3 class="text-lg sm:text-xl font-black text-text-primary dark:text-white mt-1.5">
+			<h3 class="text-lg sm:text-xl font-black text-white mt-1.5">
 				Real-Time Multi-Store Product Showcase
 			</h3>
 		</div>
 
 		<!-- Model Selector Pills -->
-		<div class="flex items-center gap-1.5 bg-slate-200/70 dark:bg-slate-800/80 p-1.5 rounded-2xl border border-border/80 dark:border-slate-700/80 self-stretch md:self-auto overflow-x-auto">
+		<div class="flex items-center gap-1.5 bg-[#140E28] p-1.5 rounded-2xl border border-[#3A3A52] self-stretch md:self-auto overflow-x-auto">
 			{#each showcaseItems as item, idx}
 				<button
 					onclick={() => selectModel(idx)}
 					class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition-all duration-200 flex items-center gap-1.5 cursor-pointer shrink-0 {selectedIndex === idx
-						? 'bg-gradient-to-r from-primary to-indigo-600 text-white shadow-md shadow-primary/30 scale-102'
-						: 'text-text-secondary dark:text-slate-300 hover:text-text-primary dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-700/50'}"
+						? 'bg-[#5A3B8C] text-white shadow-md shadow-[#5A3B8C]/40 border border-[#8B7CC7]/40 scale-102'
+						: 'text-[#8E84B0] hover:text-white hover:bg-[#2A1E4D]'}"
 				>
 					<span>{item.emoji}</span>
 					<span>{item.brand}</span>
@@ -595,55 +595,55 @@
 	<!-- Main Stage: Split Layout with 3D Canvas + Deal Details Card -->
 	<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[380px] lg:min-h-[440px] relative">
 		<!-- Verified Deal Details Card -->
-		<div class="order-2 lg:order-1 lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between border-t lg:border-t-0 lg:border-r border-border/80 dark:border-slate-800 z-10 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md">
+		<div class="order-2 lg:order-1 lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between border-t lg:border-t-0 lg:border-r border-[#3A3A52] z-10 bg-[#1F173C]">
 			<div class="space-y-4">
 				<div class="flex flex-wrap items-center gap-2">
-					<span class="text-xs font-black px-3 py-1 rounded-full shadow-xs uppercase tracking-wider flex items-center gap-1.5 {currentItem.storeBadgeColor}">
+					<span class="text-xs font-black px-3 py-1 rounded-full shadow-xs uppercase tracking-wider flex items-center gap-1.5 bg-[#5A3B8C] text-white border border-[#8B7CC7]/40">
 						<span>{currentItem.storeLogo}</span> Lowest on {currentItem.store}
 					</span>
-					<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/80">
+					<span class="text-xs font-bold text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-800/60">
 						{currentItem.delivery}
 					</span>
 				</div>
 
 				<div>
-					<span class="text-xs font-bold uppercase tracking-wider text-text-secondary dark:text-slate-400">
+					<span class="text-xs font-bold uppercase tracking-wider text-[#8B7CC7]">
 						{currentItem.category}
 					</span>
-					<h4 class="text-xl sm:text-2xl font-black text-text-primary dark:text-white mt-1 leading-tight">
+					<h4 class="text-xl sm:text-2xl font-black text-white mt-1 leading-tight">
 						{currentItem.name}
 					</h4>
 				</div>
 
 				<!-- Pricing & Verified Savings -->
-				<div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80 border border-border/80 dark:border-slate-700/80">
+				<div class="p-4 rounded-2xl bg-[#140E28] border border-[#3A3A52]">
 					<div class="flex items-baseline gap-3">
-						<span class="text-3xl font-black text-text-primary dark:text-white">
+						<span class="text-3xl font-black text-white">
 							{formatPrice(currentItem.price)}
 						</span>
-						<span class="text-sm text-text-secondary dark:text-slate-400 line-through">
+						<span class="text-sm text-[#8E84B0] line-through">
 							{formatPrice(currentItem.mrp)}
 						</span>
-						<span class="text-xs font-black text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-2.5 py-0.5 rounded-full">
+						<span class="text-xs font-black text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-2.5 py-0.5 rounded-full">
 							{currentItem.savingsPercent}% OFF
 						</span>
 					</div>
 
-					<div class="mt-2 text-xs font-semibold text-text-secondary dark:text-slate-300 flex items-center gap-1.5">
+					<div class="mt-2 text-xs font-semibold text-[#8B7CC7] flex items-center gap-1.5">
 						<span>⚖️</span>
 						<span>{currentItem.unitPrice}</span>
 					</div>
 				</div>
 
-				<p class="text-xs sm:text-sm text-text-secondary dark:text-slate-300 leading-relaxed">
+				<p class="text-xs sm:text-sm text-[#C9C2E3] leading-relaxed">
 					{currentItem.highlight}
 				</p>
 			</div>
 
-			<div class="pt-6 mt-4 border-t border-border/60 dark:border-slate-800 flex items-center justify-between">
+			<div class="pt-6 mt-4 border-t border-[#3A3A52] flex items-center justify-between">
 				<a
 					href={currentItem.linkUrl}
-					class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs sm:text-sm font-black shadow-md shadow-primary/20 transition-all hover:gap-3 active:scale-95"
+					class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#5A3B8C] hover:bg-[#6D47A6] text-white text-xs sm:text-sm font-black shadow-md shadow-[#5A3B8C]/40 border border-[#8B7CC7]/40 transition-all hover:gap-3 active:scale-95"
 				>
 					<span>View Verified Deal</span>
 					<span>→</span>
@@ -651,7 +651,7 @@
 
 				<button
 					onclick={() => autoRotate = !autoRotate}
-					class="text-xs font-semibold text-text-secondary dark:text-slate-400 hover:text-primary dark:hover:text-indigo-400 cursor-pointer flex items-center gap-1.5"
+					class="text-xs font-semibold text-[#8E84B0] hover:text-[#8B7CC7] cursor-pointer flex items-center gap-1.5"
 				>
 					<span>{autoRotate ? '⏸️ Pause Orbit' : '▶️ Resume Orbit'}</span>
 				</button>
@@ -663,7 +663,7 @@
 			bind:this={canvasContainerEl}
 			role="region"
 			aria-label="3D Product Canvas"
-			class="order-1 lg:order-2 lg:col-span-7 relative h-[300px] sm:h-[380px] lg:h-[460px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none overflow-hidden"
+			class="order-1 lg:order-2 lg:col-span-7 relative h-[300px] sm:h-[380px] lg:h-[460px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none overflow-hidden bg-[#140E28]"
 			onpointerdown={handlePointerDown}
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}
@@ -673,17 +673,17 @@
 				<canvas bind:this={canvasEl} class="w-full h-full block"></canvas>
 			{:else}
 				<div class="flex flex-col items-center justify-center p-8 text-center animate-in fade-in">
-					<div class="w-36 h-36 rounded-3xl bg-gradient-to-br from-indigo-500/20 to-purple-600/20 border border-indigo-500/30 flex items-center justify-center text-7xl shadow-2xl mb-4 backdrop-blur-md">
+					<div class="w-36 h-36 rounded-3xl bg-[#2A1E4D] border border-[#3A3A52] flex items-center justify-center text-7xl shadow-2xl mb-4 backdrop-blur-md">
 						{currentItem.emoji}
 					</div>
-					<h4 class="text-xl font-black text-text-primary dark:text-white mb-1">{currentItem.name}</h4>
-					<p class="text-xs text-text-secondary dark:text-slate-400 max-w-sm">{currentItem.highlight}</p>
+					<h4 class="text-xl font-black text-white mb-1">{currentItem.name}</h4>
+					<p class="text-xs text-[#8E84B0] max-w-sm">{currentItem.highlight}</p>
 				</div>
 			{/if}
 
 			<!-- Floating rotation guide pill -->
 			<div class="absolute bottom-4 right-4 z-20 pointer-events-none">
-				<div class="px-3 py-1 rounded-full bg-slate-900/80 dark:bg-slate-950/80 text-white text-[11px] font-semibold border border-white/10 backdrop-blur-md shadow-lg flex items-center gap-1.5">
+				<div class="px-3 py-1 rounded-full bg-[#2A1E4D]/90 text-white text-[11px] font-semibold border border-[#3A3A52] backdrop-blur-md shadow-lg flex items-center gap-1.5">
 					<span class="animate-spin text-xs">🔄</span>
 					<span>360° Drag & Hover</span>
 				</div>

@@ -38,7 +38,6 @@
       sidebarFilters.categories = [categoryParam];
       currentPage = 1;
     } else if (!categoryParam && sidebarFilters.categories.length > 0) {
-      // Clear category filter if removed from URL
       sidebarFilters.categories = [];
     }
   });
@@ -106,9 +105,9 @@
   </title>
 </svelte:head>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 bg-[#0E0B1D]">
   <!-- Search bar header -->
-  <div class="max-w-2xl mx-auto mb-4">
+  <div class="max-w-2xl mx-auto mb-6">
     <SearchBar onSearch={handleSearch} initialValue={query} />
   </div>
 
@@ -120,8 +119,8 @@
         onclick={() => handleQuickCategory(item.category)}
         class="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer border {
           isActive
-            ? 'bg-primary text-white border-primary shadow-sm shadow-primary/30'
-            : 'bg-white dark:bg-slate-900 border-border/80 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-primary/50'
+            ? 'bg-[#5A3B8C] text-white border-[#8B7CC7] shadow-md shadow-[#5A3B8C]/30'
+            : 'bg-[#2A1E4D] border-[#3A3A52] text-[#C9C2E3] hover:border-[#8B7CC7] hover:text-white hover:bg-[#34265E]'
         }"
       >
         <span>{item.emoji}</span>
@@ -131,20 +130,20 @@
   </div>
 
   <!-- Results Header + Sort Controls -->
-  <div class="flex flex-wrap items-center justify-between gap-4 pt-2 pb-4 border-b border-border/80 dark:border-slate-800">
+  <div class="flex flex-wrap items-center justify-between gap-4 pt-2 pb-5 border-b border-[#3A3A52]">
     <div>
-      <h1 class="text-xl sm:text-2xl font-black text-text-primary dark:text-white flex items-center gap-2">
+      <h1 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2 tracking-tight">
         {#if categoryParam}
           <span>Department:</span>
-          <span class="text-primary dark:text-indigo-400">{categoryParam}</span>
+          <span class="text-[#8B7CC7]">{categoryParam}</span>
         {:else if query}
           <span>Results for:</span>
-          <span class="text-primary dark:text-indigo-400">"{query}"</span>
+          <span class="text-[#8B7CC7]">"{query}"</span>
         {:else}
           <span>All Verified Catalog</span>
         {/if}
       </h1>
-      <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 mt-1">
+      <p class="text-xs sm:text-sm text-[#8E84B0] mt-1 font-medium">
         Showing {results.products.length} of {results.total} verified items across Blinkit, Zepto, Amazon, Flipkart, Minutes & Croma
       </p>
     </div>
@@ -152,29 +151,29 @@
     <div class="flex items-center gap-3">
       <!-- Mobile filter trigger -->
       <button
-        class="lg:hidden flex items-center gap-2 px-4 py-2 border border-border dark:border-slate-700 rounded-xl text-xs sm:text-sm font-bold text-text-secondary dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 cursor-pointer shadow-xs"
+        class="lg:hidden flex items-center gap-2 px-4 py-2 border border-[#3A3A52] rounded-xl text-xs sm:text-sm font-bold text-[#C9C2E3] bg-[#2A1E4D] hover:bg-[#34265E] hover:text-white cursor-pointer shadow-sm"
         onclick={() => showFilters = !showFilters}
         aria-label="Toggle Filters"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#8B7CC7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
         </svg>
         <span>Filters</span>
       </button>
 
-      <!-- Sort Dropdown -->
+      <!-- Sort Dropdown in Deep Purple -->
       <select
-        class="px-4 py-2 border border-border dark:border-slate-700 rounded-xl text-xs sm:text-sm font-semibold text-text-primary dark:text-slate-200 bg-white dark:bg-slate-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary shadow-xs"
+        class="px-4 py-2 border border-[#3A3A52] rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#2A1E4D] hover:border-[#8B7CC7] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#8B7CC7] shadow-sm"
         onchange={handleSortChange}
         value={currentSort}
         aria-label="Sort products by"
       >
-        <option value="relevance">Sort: Relevance</option>
-        <option value="price_asc">Price: Low → High</option>
-        <option value="price_desc">Price: High → Low</option>
-        <option value="discount_desc">Discount: High → Low</option>
-        <option value="unit_price_asc">Unit Price: Low → High (₹/100g, ₹/L)</option>
-        <option value="unit_price_desc">Unit Price: High → Low</option>
+        <option value="relevance" class="bg-[#2A1E4D] text-white">Sort: Relevance</option>
+        <option value="price_asc" class="bg-[#2A1E4D] text-white">Price: Low → High</option>
+        <option value="price_desc" class="bg-[#2A1E4D] text-white">Price: High → Low</option>
+        <option value="discount_desc" class="bg-[#2A1E4D] text-white">Discount: High → Low</option>
+        <option value="unit_price_asc" class="bg-[#2A1E4D] text-white">Unit Price: Low → High (₹/100g, ₹/L)</option>
+        <option value="unit_price_desc" class="bg-[#2A1E4D] text-white">Unit Price: High → Low</option>
       </select>
     </div>
   </div>
@@ -200,11 +199,11 @@
           {/each}
         </div>
 
-        <!-- Pagination Bar -->
+        <!-- Pagination Bar in Dark Purple -->
         {#if totalPages > 1}
           <div class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 mt-12 pb-8">
             <button
-              class="px-3 py-2 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-text-secondary dark:text-slate-300 rounded-xl text-xs sm:text-sm font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-slate-700 cursor-pointer shadow-xs transition-colors"
+              class="px-3.5 py-2 border border-[#3A3A52] bg-[#2A1E4D] text-[#C9C2E3] rounded-xl text-xs sm:text-sm font-bold disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#34265E] hover:text-white cursor-pointer shadow-sm transition-all"
               disabled={currentPage === 1}
               onclick={() => handlePageChange(currentPage - 1)}
             >
@@ -212,13 +211,13 @@
             </button>
             {#each visiblePages as p, idx}
               {#if idx > 0 && p - visiblePages[idx - 1] > 1}
-                <span class="px-2 text-text-secondary dark:text-slate-500">...</span>
+                <span class="px-2 text-[#8E84B0]">...</span>
               {/if}
               <button
-                class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs {
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-sm {
                   p === currentPage 
-                    ? 'bg-primary text-white shadow-md shadow-primary/20' 
-                    : 'border border-border dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-text-secondary dark:text-slate-300'
+                    ? 'bg-[#5A3B8C] text-white border border-[#8B7CC7] shadow-md shadow-[#5A3B8C]/40' 
+                    : 'border border-[#3A3A52] bg-[#2A1E4D] hover:bg-[#34265E] text-[#C9C2E3] hover:text-white'
                 }"
                 onclick={() => handlePageChange(p)}
               >
@@ -226,7 +225,7 @@
               </button>
             {/each}
             <button
-              class="px-3 py-2 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-text-secondary dark:text-slate-300 rounded-xl text-xs sm:text-sm font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-slate-700 cursor-pointer shadow-xs transition-colors"
+              class="px-3.5 py-2 border border-[#3A3A52] bg-[#2A1E4D] text-[#C9C2E3] rounded-xl text-xs sm:text-sm font-bold disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#34265E] hover:text-white cursor-pointer shadow-sm transition-all"
               disabled={currentPage === totalPages}
               onclick={() => handlePageChange(currentPage + 1)}
             >
@@ -235,11 +234,11 @@
           </div>
         {/if}
       {:else}
-        <!-- Empty State -->
-        <div class="text-center py-20 bg-white dark:bg-slate-900 rounded-3xl border border-dashed border-border dark:border-slate-800 p-8 shadow-xs">
+        <!-- Empty State in Deep Purple -->
+        <div class="text-center py-20 bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] p-8 shadow-xl">
           <div class="text-5xl mb-4">🔍</div>
-          <h3 class="text-lg font-bold text-text-primary dark:text-white mb-2">No matching products found</h3>
-          <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 max-w-md mx-auto mb-6">
+          <h3 class="text-lg font-black text-white mb-2">No matching products found</h3>
+          <p class="text-xs sm:text-sm text-[#8E84B0] max-w-md mx-auto mb-6">
             We couldn't find any items matching your exact query or selected filters. Try searching for "Chips", "Coca-Cola", "Lay's", or reset your filters.
           </p>
           <button
@@ -247,7 +246,7 @@
               sidebarFilters = { categories: [], stores: [], priceMin: null, priceMax: null, minDiscount: null };
               goto('/search?q=');
             }}
-            class="px-5 py-2.5 bg-primary hover:bg-primary-hover active:scale-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all cursor-pointer"
+            class="px-5 py-2.5 bg-[#5A3B8C] hover:bg-[#6D47A6] active:scale-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-lg shadow-[#5A3B8C]/30 border border-[#8B7CC7]/40 transition-all cursor-pointer"
           >
             Reset All Filters
           </button>

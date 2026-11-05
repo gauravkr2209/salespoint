@@ -87,18 +87,18 @@
 	);
 </script>
 
-<aside class="bg-white dark:bg-slate-800 rounded-2xl border border-border/80 dark:border-slate-700 p-5 space-y-6 shadow-sm">
+<aside class="bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] p-5 space-y-6 shadow-xl">
 	<!-- Header -->
-	<div class="flex items-center justify-between">
-		<h3 class="text-xs font-black text-text-primary dark:text-slate-100 uppercase tracking-wider">
-			Filters
+	<div class="flex items-center justify-between pb-3 border-b border-[#3A3A52]">
+		<h3 class="text-xs font-black text-white uppercase tracking-wider flex items-center gap-2">
+			<span>⚡</span> Filters
 		</h3>
 		{#if hasActiveFilters}
 			<button
 				onclick={clearAll}
-				class="text-xs text-danger font-bold hover:underline cursor-pointer"
+				class="text-xs text-[#8B7CC7] hover:text-white font-bold transition-colors cursor-pointer"
 			>
-				Clear All
+				Reset All
 			</button>
 		{/if}
 	</div>
@@ -106,7 +106,7 @@
 	<!-- Categories -->
 	{#if categories.length > 0}
 		<div class="space-y-3">
-			<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+			<h4 class="text-xs font-black text-[#8B7CC7] uppercase tracking-wider">
 				Categories ({categories.length})
 			</h4>
 			<div class="space-y-1.5 max-h-56 overflow-y-auto pr-1">
@@ -116,12 +116,12 @@
 							type="checkbox"
 							checked={filters.categories.includes(cat.name)}
 							onchange={() => toggleCategory(cat.name)}
-							class="w-4 h-4 rounded border-border text-primary focus:ring-primary/30 accent-primary"
+							class="w-4 h-4 rounded border-[#3A3A52] bg-[#140E28] text-[#5A3B8C] focus:ring-[#8B7CC7] accent-[#5A3B8C] cursor-pointer"
 						/>
-						<span class="flex-1 text-xs font-medium text-text-primary dark:text-slate-300 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors truncate">
+						<span class="flex-1 text-xs font-medium text-[#C9C2E3] group-hover:text-white transition-colors truncate">
 							{cat.name}
 						</span>
-						<span class="text-[10px] text-text-secondary dark:text-slate-400 bg-slate-100 dark:bg-slate-700/60 px-1.5 py-0.5 rounded-full font-bold">
+						<span class="text-[10px] text-[#8E84B0] bg-[#140E28] border border-[#3A3A52] px-2 py-0.5 rounded-full font-bold">
 							{cat.count}
 						</span>
 					</label>
@@ -131,8 +131,8 @@
 	{/if}
 
 	<!-- Stores -->
-	<div class="space-y-3">
-		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+	<div class="space-y-3 pt-3 border-t border-[#3A3A52]">
+		<h4 class="text-xs font-black text-[#8B7CC7] uppercase tracking-wider">
 			Sellers & Quick Commerce
 		</h4>
 		<div class="space-y-1.5 max-h-48 overflow-y-auto pr-1">
@@ -142,10 +142,10 @@
 						type="checkbox"
 						checked={filters.stores.includes(store)}
 						onchange={() => toggleStore(store)}
-						class="w-4 h-4 rounded border-border text-primary focus:ring-primary/30 accent-primary"
+						class="w-4 h-4 rounded border-[#3A3A52] bg-[#140E28] text-[#5A3B8C] focus:ring-[#8B7CC7] accent-[#5A3B8C] cursor-pointer"
 					/>
 					<span class="text-sm">{storeEmoji[store]}</span>
-					<span class="flex-1 text-xs font-medium text-text-primary dark:text-slate-300 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors">
+					<span class="flex-1 text-xs font-medium text-[#C9C2E3] group-hover:text-white transition-colors">
 						{store}
 					</span>
 				</label>
@@ -154,13 +154,13 @@
 	</div>
 
 	<!-- Price Range -->
-	<div class="space-y-3">
-		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+	<div class="space-y-3 pt-3 border-t border-[#3A3A52]">
+		<h4 class="text-xs font-black text-[#8B7CC7] uppercase tracking-wider">
 			Price Range
 		</h4>
 		<div class="flex items-center gap-2">
 			<div class="relative flex-1">
-				<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-text-secondary">₹</span>
+				<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-[#8E84B0]">₹</span>
 				<input
 					type="number"
 					placeholder={String(priceRange.min)}
@@ -170,13 +170,13 @@
 						filters.priceMin = val ? Number(val) : null;
 						notifyChange();
 					}}
-					class="w-full pl-6 pr-2 py-2 text-xs border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary dark:bg-slate-900 text-text-primary dark:text-white"
+					class="w-full pl-6 pr-2 py-2 text-xs border border-[#3A3A52] rounded-xl focus:outline-none focus:border-[#8B7CC7] bg-[#140E28] text-white"
 					min="0"
 				/>
 			</div>
-			<span class="text-text-secondary text-xs">to</span>
+			<span class="text-[#8E84B0] text-xs">to</span>
 			<div class="relative flex-1">
-				<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-text-secondary">₹</span>
+				<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-[#8E84B0]">₹</span>
 				<input
 					type="number"
 					placeholder={String(priceRange.max)}
@@ -186,7 +186,7 @@
 						filters.priceMax = val ? Number(val) : null;
 						notifyChange();
 					}}
-					class="w-full pl-6 pr-2 py-2 text-xs border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary dark:bg-slate-900 text-text-primary dark:text-white"
+					class="w-full pl-6 pr-2 py-2 text-xs border border-[#3A3A52] rounded-xl focus:outline-none focus:border-[#8B7CC7] bg-[#140E28] text-white"
 					min="0"
 				/>
 			</div>
@@ -194,19 +194,18 @@
 	</div>
 
 	<!-- Discount Quick Filters -->
-	<div class="space-y-3">
-		<h4 class="text-xs font-bold text-text-secondary dark:text-slate-400 uppercase tracking-wider">
+	<div class="space-y-3 pt-3 border-t border-[#3A3A52]">
+		<h4 class="text-xs font-black text-[#8B7CC7] uppercase tracking-wider">
 			Min Discount
 		</h4>
-		<div class="grid grid-cols-2 gap-1.5">
+		<div class="grid grid-cols-2 gap-2">
 			{#each discountOptions as opt}
 				<button
 					type="button"
 					onclick={() => setDiscount(opt.value)}
-					class="py-1.5 text-xs font-bold rounded-lg border transition-colors cursor-pointer
-						{filters.minDiscount === opt.value
-						? 'bg-primary text-white border-primary shadow-xs'
-						: 'bg-white dark:bg-slate-900 text-text-primary dark:text-slate-300 border-border dark:border-slate-700 hover:border-primary/50'}"
+					class="py-2 text-xs font-bold rounded-xl border transition-all cursor-pointer {filters.minDiscount === opt.value
+						? 'bg-[#5A3B8C] text-white border-[#8B7CC7] shadow-sm'
+						: 'bg-[#140E28] text-[#C9C2E3] border-[#3A3A52] hover:border-[#8B7CC7]/60 hover:text-white'}"
 				>
 					{opt.label}
 				</button>

@@ -2,40 +2,83 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Custom theme tokens with light / dark mode support */
+/* Official SalesPoint Purple Design Tokens */
 @theme {
-  --color-primary: #5855E5;
-  --color-primary-dark: #4543B8;
-  --color-primary-light: #EEF2FF;
-  --color-surface: #FFFFFF;
-  --color-border: #CAD5E2;
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #64748B;
-  --color-success: #16A34A;
-  --color-warning: #EAB308;
-  --color-danger: #DC2626;
+  --color-midnight: #0E0B1D;
+  --color-deep-purple: #2A1E4D;
+  --color-royal-purple: #5A3B8C;
+  --color-soft-lavender: #8B7CC7;
+  --color-pale-lavender: #C9C2E3;
+  --color-slate-purple: #3A3A52;
+
+  /* Elevated surface tokens */
+  --color-surface-base: #0E0B1D;
+  --color-surface-card: #2A1E4D;
+  --color-surface-elevated: #1F173C;
+  --color-surface-hover: #34265E;
+  --color-surface-sunken: #140E28;
+
+  /* Primary system tokens */
+  --color-primary: #5A3B8C;
+  --color-primary-dark: #472D70;
+  --color-primary-hover: #6D47A6;
+  --color-primary-light: #8B7CC7;
+
+  /* Text & Border tokens */
+  --color-border: #3A3A52;
+  --color-border-subtle: rgba(139, 124, 199, 0.25);
+  --color-border-focus: #8B7CC7;
+  --color-text-primary: #C9C2E3;
+  --color-text-bright: #FFFFFF;
+  --color-text-secondary: #8E84B0;
+  --color-text-muted: #6C628C;
+
+  /* Restrained semantic colors */
+  --color-success: #10B981;
+  --color-success-bg: #132828;
+  --color-warning: #F59E0B;
+  --color-warning-bg: #2B2215;
+  --color-danger: #F43F5E;
+  --color-danger-bg: #2D1424;
+
+  /* Store brand accents (harmonized for dark purple) */
   --color-amazon: #FF9900;
-  --color-flipkart: #2874F0;
+  --color-flipkart: #3880FF;
   --color-myntra: #FF3F6C;
-  --color-croma: #00966B;
-  --color-ajio: #3B3A3C;
+  --color-croma: #00B07B;
+  --color-ajio: #8B7CC7;
   --color-blinkit: #F8CB46;
-  --color-zepto: #8B5CF6;
-  --color-minutes: #22C55E;
+  --color-zepto: #A78BFA;
+  --color-minutes: #34D399;
 }
 
-/* Base styles */
+:root {
+  --bg-main: #0E0B1D;
+  --bg-card: #2A1E4D;
+  --border-color: #3A3A52;
+  --text-main: #C9C2E3;
+  --text-bright: #FFFFFF;
+  --text-muted: #8E84B0;
+  --accent-royal: #5A3B8C;
+  --accent-soft: #8B7CC7;
+  color-scheme: dark;
+}
+
+/* Base styles — Global dark midnight background */
+html {
+  background-color: #0E0B1D;
+  color: #C9C2E3;
+  color-scheme: dark;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #F8FAFC;
-  color: #0F172A;
+  background-color: #0E0B1D;
+  color: #C9C2E3;
+  min-height: 100vh;
   overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-html.dark body {
-  background-color: #0B0F19;
-  color: #F1F5F9;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Reduced-motion accessibility */
@@ -54,14 +97,14 @@ html.dark body {
   50% { transform: translateY(-8px); }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.05); }
+@keyframes floatDelayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.06); }
 }
 
 @keyframes gradientShift {
@@ -75,28 +118,30 @@ html.dark body {
 }
 
 .animate-float-delayed {
-  animation: float 5s ease-in-out 1.5s infinite;
+  animation: floatDelayed 5s ease-in-out 1.5s infinite;
 }
 
 .animate-pulse-glow {
   animation: pulseGlow 6s ease-in-out infinite;
 }
 
+/* Lavender-Purple Brand Gradient Text */
 .animated-gradient-text {
-  background: linear-gradient(135deg, #6366F1 0%, #A855F7 35%, #EC4899 70%, #6366F1 100%);
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #C9C2E3 0%, #8B7CC7 50%, #FFFFFF 100%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 8s ease infinite;
+  animation: gradientShift 6s ease infinite;
 }
 
+/* Atmospheric Purple Gradient Card Background */
 .animated-gradient-bg {
-  background: linear-gradient(-45deg, #4F46E5, #7C3AED, #2563EB, #059669);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  background: linear-gradient(135deg, #2A1E4D 0%, #3B2A68 50%, #1A1333 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
 }
 
-/* 3D Depth and Perspective Utilities */
+/* 3D Depth Utilities */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -109,49 +154,52 @@ html.dark body {
   backface-visibility: hidden;
 }
 
-/* Glassmorphism utility with dark mode variants */
+/* Glassmorphism panels for Deep Purple surfaces */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(42, 30, 77, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-html.dark .glass-panel {
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid rgba(55, 65, 81, 0.6);
+  border: 1px solid #3A3A52;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(42, 30, 77, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid #3A3A52;
 }
 
-html.dark .glass-card {
-  background: rgba(17, 24, 39, 0.7);
-  border: 1px solid rgba(51, 65, 85, 0.7);
+/* Radial ambient lighting effects */
+.radial-purple-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(90, 59, 140, 0.22) 0%, rgba(14, 11, 29, 0) 70%);
 }
 
-/* Scrollbar */
+.radial-lavender-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(139, 124, 199, 0.18) 0%, rgba(14, 11, 29, 0) 70%);
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0E0B1D;
 }
-html.dark ::-webkit-scrollbar-track {
-  background: #0f172a;
-}
+
 ::-webkit-scrollbar-thumb {
-  background: #CAD5E2;
+  background: #2A1E4D;
+  border: 1px solid #3A3A52;
   border-radius: 9999px;
 }
-html.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #5A3B8C;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #8B7CC7;
+  outline-offset: 2px;
 }

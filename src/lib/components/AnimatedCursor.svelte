@@ -17,7 +17,6 @@
 	let animId: number | null = null;
 
 	onMount(() => {
-		// Detect touch-only mobile devices to avoid interfering with mobile touch
 		isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 		if (isTouchDevice || prefersReducedMotion()) return;
 
@@ -26,7 +25,6 @@
 			mouseY = e.clientY;
 			if (!isVisible) isVisible = true;
 
-			// Check if hovering interactive element
 			const target = e.target as HTMLElement | null;
 			if (target) {
 				const isInteractive = Boolean(
@@ -58,7 +56,6 @@
 		document.addEventListener('mouseleave', handleMouseLeave);
 		document.addEventListener('mouseenter', handleMouseEnter);
 
-		// Smooth spring interpolation for outer ring
 		const animate = () => {
 			const ease = 0.18;
 			ringX += (mouseX - ringX) * ease;
@@ -80,19 +77,19 @@
 </script>
 
 {#if !isTouchDevice && isVisible}
-	<!-- Outer Spring Ring with Fluid Glow -->
+	<!-- Outer Spring Ring with Soft Lavender Glow -->
 	<div
 		bind:this={cursorRing}
-		style="transform: translate3d({ringX}px, {ringY}px, 0) translate(-50%, -50%) scale({isClicking ? 0.8 : isHovered ? 1.7 : 1});"
+		style="transform: translate3d({ringX}px, {ringY}px, 0) translate(-50%, -50%) scale({isClicking ? 0.8 : isHovered ? 1.6 : 1});"
 		class="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full transition-all duration-150 ease-out will-change-transform {isHovered
-			? 'w-10 h-10 bg-primary/15 dark:bg-indigo-400/20 border-2 border-primary/60 dark:border-indigo-400/80 shadow-[0_0_20px_rgba(99,102,241,0.5)] backdrop-blur-[2px]'
-			: 'w-8 h-8 border border-primary/40 dark:border-indigo-400/50 bg-primary/5 dark:bg-indigo-500/10'}"
+			? 'w-10 h-10 bg-[#8B7CC7]/15 border-2 border-[#8B7CC7] shadow-[0_0_20px_rgba(139,124,199,0.4)] backdrop-blur-[1px]'
+			: 'w-8 h-8 border border-[#5A3B8C]/60 bg-[#5A3B8C]/10'}"
 	></div>
 
 	<!-- Inner Precision Dot -->
 	<div
 		bind:this={cursorDot}
-		style="transform: translate3d({mouseX}px, {mouseY}px, 0) translate(-50%, -50%) scale({isClicking ? 1.5 : isHovered ? 0.5 : 1});"
-		class="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full w-2 h-2 bg-gradient-to-r from-primary to-purple-500 shadow-md shadow-primary/80 transition-transform duration-75 ease-out will-change-transform"
+		style="transform: translate3d({mouseX}px, {mouseY}px, 0) translate(-50%, -50%) scale({isClicking ? 1.4 : isHovered ? 0.5 : 1});"
+		class="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full w-2 h-2 bg-gradient-to-r from-[#8B7CC7] to-[#C9C2E3] shadow-md shadow-[#8B7CC7]/60 transition-transform duration-75 ease-out will-change-transform"
 	></div>
 {/if}

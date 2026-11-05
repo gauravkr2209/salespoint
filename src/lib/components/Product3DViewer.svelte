@@ -240,20 +240,20 @@
 
 {#if isOpen}
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
+		class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
 		role="dialog"
 		aria-modal="true"
 		aria-label="3D Dimensional Product Inspection"
 	>
-		<div class="relative w-full max-w-2xl bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+		<div class="relative w-full max-w-2xl bg-[#2A1E4D] border border-[#3A3A52] rounded-3xl shadow-2xl overflow-hidden flex flex-col">
 			<!-- Header -->
-			<div class="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+			<div class="p-4 sm:p-5 border-b border-[#3A3A52] flex items-center justify-between bg-[#1A1333]">
 				<div>
 					<div class="flex items-center gap-2">
-						<span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">
+						<span class="text-xs font-bold uppercase tracking-wider text-[#C9C2E3] bg-[#5A3B8C] px-2.5 py-0.5 rounded-full border border-[#8B7CC7]/40">
 							3D Dimensional Inspection
 						</span>
-						<span class="text-xs text-slate-400">{product.brand}</span>
+						<span class="text-xs text-[#8E84B0]">{product.brand}</span>
 					</div>
 					<h3 class="text-base sm:text-lg font-black text-white mt-1 line-clamp-1">
 						{product.title}
@@ -261,7 +261,7 @@
 				</div>
 				<button
 					onclick={() => isOpen = false}
-					class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+					class="p-2 rounded-xl text-[#8E84B0] hover:text-white hover:bg-[#34265E] transition-colors cursor-pointer"
 					aria-label="Close 3D inspection modal"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -275,7 +275,7 @@
 				bind:this={containerEl}
 				role="region"
 				aria-label="3D Interactive Product Viewer Canvas"
-				class="relative h-[380px] sm:h-[450px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing bg-radial from-slate-850 to-slate-950 select-none"
+				class="relative h-[380px] sm:h-[450px] w-full flex items-center justify-center cursor-grab active:cursor-grabbing bg-[#0E0B1D] select-none"
 				onpointerdown={handlePointerDown}
 				onpointermove={handlePointerMove}
 				onpointerup={handlePointerUp}
@@ -298,12 +298,12 @@
 				{/if}
 
 				<!-- Floating Controls Bar -->
-				<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slate-950/85 backdrop-blur-md px-3 py-2 rounded-2xl border border-slate-700/80 shadow-xl">
+				<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[#140E28]/90 backdrop-blur-md px-3 py-2 rounded-2xl border border-[#3A3A52] shadow-xl">
 					<button
 						onclick={toggleWireframe}
 						class="px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isWireframe
-							? 'bg-indigo-600 text-white border-indigo-400'
-							: 'text-slate-300 hover:text-white border-slate-700'}"
+							? 'bg-[#5A3B8C] text-white border-[#8B7CC7]'
+							: 'text-[#C9C2E3] hover:text-white border-[#3A3A52] hover:bg-[#2A1E4D]'}"
 					>
 						🕸️ Wireframe
 					</button>
@@ -311,15 +311,15 @@
 					<button
 						onclick={toggleLighting}
 						class="px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer {isNeonMode
-							? 'bg-purple-600 text-white border-purple-400'
-							: 'text-slate-300 hover:text-white border-slate-700'}"
+							? 'bg-[#5A3B8C] text-white border-[#8B7CC7]'
+							: 'text-[#C9C2E3] hover:text-white border-[#3A3A52] hover:bg-[#2A1E4D]'}"
 					>
 						💡 {isNeonMode ? 'Neon Light' : 'Studio Light'}
 					</button>
 
 					<button
 						onclick={() => zoomLevel = Math.min(zoomLevel + 0.15, 1.6)}
-						class="px-2 py-1 text-xs font-bold rounded-lg text-slate-300 hover:text-white border border-slate-700 cursor-pointer"
+						class="px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 						title="Zoom in"
 					>
 						🔍+
@@ -327,7 +327,7 @@
 
 					<button
 						onclick={() => zoomLevel = Math.max(zoomLevel - 0.15, 0.6)}
-						class="px-2 py-1 text-xs font-bold rounded-lg text-slate-300 hover:text-white border border-slate-700 cursor-pointer"
+						class="px-2 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 						title="Zoom out"
 					>
 						🔍-
@@ -335,7 +335,7 @@
 
 					<button
 						onclick={resetView}
-						class="px-2.5 py-1 text-xs font-bold rounded-lg text-slate-300 hover:text-white border border-slate-700 cursor-pointer"
+						class="px-2.5 py-1 text-xs font-bold rounded-lg text-[#C9C2E3] hover:text-white border border-[#3A3A52] hover:bg-[#2A1E4D] cursor-pointer"
 					>
 						🔄 Reset
 					</button>
@@ -343,9 +343,9 @@
 			</div>
 
 			<!-- Footer -->
-			<div class="p-3 bg-slate-950/80 border-t border-slate-800 text-center text-xs text-slate-400 flex items-center justify-between px-6">
+			<div class="p-3 bg-[#140E28] border-t border-[#3A3A52] text-center text-xs text-[#8E84B0] flex items-center justify-between px-6">
 				<span>🖱️ Drag to rotate 360° in 3D space</span>
-				<span class="text-indigo-400 font-semibold">Verified Product Silhouette</span>
+				<span class="text-[#8B7CC7] font-semibold">Verified Product Silhouette</span>
 			</div>
 		</div>
 	</div>

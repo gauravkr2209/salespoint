@@ -39,15 +39,15 @@
 
 <CampaignStrip />
 
-<header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-border/80 dark:border-slate-800 shadow-xs transition-colors">
+<header class="sticky top-0 z-40 bg-[#0E0B1D]/90 backdrop-blur-xl border-b border-[#3A3A52] shadow-xl transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 sm:h-18 gap-4">
+    <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
       <!-- Logo with ample separation -->
       <a href="/" class="flex items-center gap-3 shrink-0 mr-2 sm:mr-4 group">
-        <div class="w-9 h-9 bg-gradient-to-tr from-primary to-indigo-500 rounded-xl flex items-center justify-center shadow-md shadow-primary/20 group-hover:scale-105 group-hover:rotate-2 transition-all">
+        <div class="w-10 h-10 bg-gradient-to-tr from-[#5A3B8C] to-[#8B7CC7] rounded-xl flex items-center justify-center shadow-lg shadow-[#5A3B8C]/40 group-hover:scale-105 group-hover:rotate-2 transition-all border border-[#8B7CC7]/40">
           <span class="text-white font-black text-sm tracking-wider">SP</span>
         </div>
-        <span class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+        <span class="text-xl sm:text-2xl font-black text-white tracking-tight">
           Sales<span class="animated-gradient-text">Point</span>
         </span>
       </a>
@@ -56,7 +56,7 @@
       <nav class="hidden lg:flex items-center gap-1 xl:gap-2 whitespace-nowrap">
         <a
           href="/"
-          class="text-xs xl:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white px-2 xl:px-2.5 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all shrink-0"
+          class="text-xs xl:text-sm font-bold text-[#C9C2E3] hover:text-white px-3 py-2 rounded-xl hover:bg-[#2A1E4D] border border-transparent hover:border-[#3A3A52] transition-all shrink-0"
         >
           Home
         </a>
@@ -64,12 +64,12 @@
         {#each navCategories as item}
           <a
             href={item.href}
-            class="text-xs xl:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white px-2 xl:px-2.5 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all flex items-center gap-1.5 shrink-0"
+            class="text-xs xl:text-sm font-bold text-[#C9C2E3] hover:text-white px-3 py-2 rounded-xl hover:bg-[#2A1E4D] border border-transparent hover:border-[#3A3A52] transition-all flex items-center gap-1.5 shrink-0"
           >
             <span>{item.emoji}</span>
             <span>{item.label}</span>
             {#if item.badge}
-              <span class="hidden 2xl:inline-block text-[10px] font-black bg-primary/10 text-primary dark:bg-primary/20 dark:text-indigo-300 px-1.5 py-0.2 rounded-full">
+              <span class="hidden 2xl:inline-block text-[10px] font-black bg-[#140E28] text-[#8B7CC7] border border-[#3A3A52] px-2 py-0.5 rounded-full">
                 {item.badge}
               </span>
             {/if}
@@ -78,7 +78,7 @@
 
         <a
           href="/profile"
-          class="hidden xl:flex text-xs xl:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white px-2 xl:px-2.5 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all items-center gap-1 shrink-0"
+          class="hidden xl:flex text-xs xl:text-sm font-bold text-[#C9C2E3] hover:text-white px-3 py-2 rounded-xl hover:bg-[#2A1E4D] border border-transparent hover:border-[#3A3A52] transition-all items-center gap-1.5 shrink-0"
         >
           <span>👤</span>
           <span>Profile</span>
@@ -93,7 +93,7 @@
         <!-- Mobile & Tablet Hamburger Button -->
         <button
           onclick={() => isMobileMenuOpen = !isMobileMenuOpen}
-          class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-border/80 dark:border-slate-700 cursor-pointer"
+          class="lg:hidden p-2 rounded-xl text-[#C9C2E3] hover:text-white bg-[#2A1E4D] hover:bg-[#34265E] transition-colors border border-[#3A3A52] cursor-pointer"
           aria-label="Toggle Navigation Menu"
           aria-expanded={isMobileMenuOpen}
         >
@@ -115,11 +115,11 @@
 
   <!-- Mobile / Tablet Drawer Menu -->
   {#if isMobileMenuOpen}
-    <div class="lg:hidden bg-white/95 dark:bg-slate-900/95 border-b border-border/80 dark:border-slate-800 backdrop-blur-2xl px-4 py-5 shadow-2xl animate-in slide-in-from-top-4 duration-200">
-      <div class="space-y-1">
+    <div class="lg:hidden bg-[#0E0B1D]/95 border-b border-[#3A3A52] backdrop-blur-2xl px-4 py-5 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+      <div class="space-y-1.5">
         <a
           href="/"
-          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-white bg-[#140E28] border border-[#3A3A52] hover:bg-[#2A1E4D] transition-colors"
         >
           <span>🏠</span>
           <span>Home</span>
@@ -128,14 +128,14 @@
         {#each navCategories as item}
           <a
             href={item.href}
-            class="flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            class="flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold text-[#C9C2E3] hover:text-white bg-[#140E28] border border-[#3A3A52] hover:bg-[#2A1E4D] transition-colors"
           >
             <div class="flex items-center gap-3">
               <span>{item.emoji}</span>
               <span>{item.label}</span>
             </div>
             {#if item.badge}
-              <span class="text-xs font-black bg-primary/10 text-primary dark:bg-primary/20 dark:text-indigo-300 px-2.5 py-0.5 rounded-full">
+              <span class="text-xs font-black bg-[#2A1E4D] text-[#8B7CC7] border border-[#3A3A52] px-2.5 py-0.5 rounded-full">
                 {item.badge} items
               </span>
             {/if}
@@ -144,7 +144,7 @@
 
         <a
           href="/profile"
-          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-primary dark:text-indigo-400 bg-primary/5 dark:bg-indigo-950/40 hover:bg-primary/10 transition-colors"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-bold text-white bg-[#5A3B8C] border border-[#8B7CC7]/40 hover:bg-[#6D47A6] transition-colors shadow-sm"
         >
           <span>👤</span>
           <span>Customer Profile & Price Alerts</span>
@@ -154,38 +154,38 @@
   {/if}
 </header>
 
-<main class="min-h-[75vh] bg-surface-soft dark:bg-slate-950 text-text-primary dark:text-slate-100 transition-colors">
+<main class="min-h-[75vh] bg-[#0E0B1D] text-[#C9C2E3] transition-colors">
   {@render children()}
 </main>
 
 <!-- Floating Chatbot Assistant -->
 <Chatbot />
 
-<footer class="bg-white dark:bg-slate-900 border-t border-border dark:border-slate-800 mt-20 relative overflow-hidden transition-colors">
+<footer class="bg-[#0E0B1D] border-t border-[#3A3A52] mt-20 relative overflow-hidden transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
       <!-- Brand & Mission -->
       <div class="lg:col-span-2 space-y-4">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-gradient-to-tr from-[#5A3B8C] to-[#8B7CC7] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm border border-[#8B7CC7]/40">
             SP
           </div>
-          <span class="text-xl font-black text-text-primary dark:text-white">Sales<span class="text-primary">Point</span></span>
+          <span class="text-xl font-black text-white">Sales<span class="animated-gradient-text">Point</span></span>
         </div>
-        <p class="text-xs sm:text-sm text-text-secondary dark:text-slate-400 leading-relaxed max-w-sm">
+        <p class="text-xs sm:text-sm text-[#8E84B0] leading-relaxed max-w-sm">
           India's smarter multi-category shopping and price intelligence engine. We index real-time prices across 400+ grocery snacks, cold beverages, electronics, and lifestyle products to protect consumers from artificial discounts.
         </p>
-        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-text-secondary dark:text-slate-400">
-          <span class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-success"></span>
+        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-[#C9C2E3]">
+          <span class="flex items-center gap-1.5 bg-[#140E28] px-3 py-1.5 rounded-full border border-[#3A3A52]">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             415 Verified SKUs
           </span>
-          <span class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span class="flex items-center gap-1.5 bg-[#140E28] px-3 py-1.5 rounded-full border border-[#3A3A52]">
+            <span class="w-2 h-2 rounded-full bg-[#8B7CC7]"></span>
             8 Supported Stores
           </span>
-          <span class="flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="flex items-center gap-1.5 bg-[#140E28] px-3 py-1.5 rounded-full border border-[#3A3A52]">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             10-min Quick Commerce
           </span>
         </div>
@@ -193,46 +193,46 @@
 
       <!-- Categories -->
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-text-primary dark:text-slate-200 mb-3">Food & Beverages</h4>
-        <ul class="space-y-2 text-xs sm:text-sm text-text-secondary dark:text-slate-400">
-          <li><a href="/search?category=Chips" class="hover:text-primary dark:hover:text-primary-light transition-colors">Chips & Crisps (116)</a></li>
-          <li><a href="/search?category=Soft%20Drinks%20%26%20Sodas" class="hover:text-primary dark:hover:text-primary-light transition-colors">Soft Drinks & Sodas (42)</a></li>
-          <li><a href="/search?category=Juices%20%26%20Fruit%20Drinks" class="hover:text-primary dark:hover:text-primary-light transition-colors">Fruit Juices (25)</a></li>
-          <li><a href="/search?category=Energy%20%26%20Sports%20Drinks" class="hover:text-primary dark:hover:text-primary-light transition-colors">Energy & Sports Drinks (18)</a></li>
-          <li><a href="/search?category=Namkeen%20%26%20Savoury%20Snacks" class="hover:text-primary dark:hover:text-primary-light transition-colors">Namkeen & Bhujia (11)</a></li>
-          <li><a href="/search?category=Chocolates%20%26%20Candy" class="hover:text-primary dark:hover:text-primary-light transition-colors">Chocolates & Candy (9)</a></li>
+        <h4 class="text-xs font-black uppercase tracking-wider text-[#8B7CC7] mb-4">Food & Beverages</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-[#8E84B0]">
+          <li><a href="/search?category=Chips" class="hover:text-white transition-colors">Chips & Crisps (116)</a></li>
+          <li><a href="/search?category=Soft%20Drinks%20%26%20Sodas" class="hover:text-white transition-colors">Soft Drinks & Sodas (42)</a></li>
+          <li><a href="/search?category=Juices%20%26%20Fruit%20Drinks" class="hover:text-white transition-colors">Fruit Juices (25)</a></li>
+          <li><a href="/search?category=Energy%20%26%20Sports%20Drinks" class="hover:text-white transition-colors">Energy & Sports Drinks (18)</a></li>
+          <li><a href="/search?category=Namkeen%20%26%20Savoury%20Snacks" class="hover:text-white transition-colors">Namkeen & Bhujia (11)</a></li>
+          <li><a href="/search?category=Chocolates%20%26%20Candy" class="hover:text-white transition-colors">Chocolates & Candy (9)</a></li>
         </ul>
       </div>
 
       <!-- Stores -->
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-text-primary dark:text-slate-200 mb-3">Tracked Merchants</h4>
-        <ul class="space-y-2 text-xs sm:text-sm text-text-secondary dark:text-slate-400">
-          <li class="flex items-center gap-1.5"><span>⚡</span> Blinkit Quick Commerce</li>
-          <li class="flex items-center gap-1.5"><span>⚡</span> Zepto 10-Min Grocery</li>
-          <li class="flex items-center gap-1.5"><span>⚡</span> Flipkart Minutes</li>
-          <li class="flex items-center gap-1.5"><span>🛒</span> Amazon India</li>
-          <li class="flex items-center gap-1.5"><span>🛍️</span> Flipkart</li>
-          <li class="flex items-center gap-1.5"><span>🔌</span> Croma Electronics</li>
-          <li class="flex items-center gap-1.5"><span>👗</span> Myntra Fashion</li>
+        <h4 class="text-xs font-black uppercase tracking-wider text-[#8B7CC7] mb-4">Tracked Merchants</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-[#8E84B0]">
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>⚡</span> Blinkit Quick Commerce</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>⚡</span> Zepto 10-Min Grocery</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>⚡</span> Flipkart Minutes</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>🛒</span> Amazon India</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>🛍️</span> Flipkart</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>🔌</span> Croma Electronics</li>
+          <li class="flex items-center gap-2 text-[#C9C2E3]"><span>👗</span> Myntra Fashion</li>
         </ul>
       </div>
 
       <!-- Features & AI -->
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-text-primary dark:text-slate-200 mb-3">Intelligence Tech</h4>
-        <ul class="space-y-2 text-xs sm:text-sm text-text-secondary dark:text-slate-400">
+        <h4 class="text-xs font-black uppercase tracking-wider text-[#8B7CC7] mb-4">Intelligence Tech</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-[#8E84B0]">
           <li>Unit-Price Normalization (₹/100g, ₹/L)</li>
           <li>Blinkit vs Zepto Comparison</li>
           <li>Fake Discount Shield</li>
           <li>90-Day Price Graphs</li>
           <li>Shopping AI Assistant</li>
-          <li>Dark / Light / System Mode</li>
+          <li>Dark Midnight Purple Mode</li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-border dark:border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-secondary dark:text-slate-400">
+    <div class="border-t border-[#3A3A52] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8E84B0]">
       <p>© 2026 SalesPoint. Multi-Store Shopping Intelligence & Unit Price Comparison.</p>
     </div>
   </div>

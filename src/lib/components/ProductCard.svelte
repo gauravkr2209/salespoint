@@ -49,13 +49,13 @@
 		const centerX = rect.width / 2;
 		const centerY = rect.height / 2;
 
-		// Subtle 3D tilt (max 8 degrees)
-		tiltX = -((y - centerY) / centerY) * 7;
-		tiltY = ((x - centerX) / centerX) * 7;
+		// Subtle 3D tilt (max 7 degrees)
+		tiltX = -((y - centerY) / centerY) * 6;
+		tiltY = ((x - centerX) / centerX) * 6;
 
 		shineX = (x / rect.width) * 100;
 		shineY = (y / rect.height) * 100;
-		shineOpacity = 0.22;
+		shineOpacity = 0.15;
 	}
 
 	function handlePointerEnter() {
@@ -87,23 +87,23 @@
 	<a
 		href="/product/{product.id}"
 		style="transform: rotateX({tiltX}deg) rotateY({tiltY}deg) scale3d({isHovered ? 1.02 : 1}, {isHovered ? 1.02 : 1}, 1); transform-style: preserve-3d;"
-		class="group block bg-white dark:bg-slate-800 rounded-3xl border border-border/80 dark:border-slate-700/80 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50 dark:hover:border-indigo-500/50 transition-all duration-200 relative"
+		class="group block bg-[#2A1E4D] rounded-3xl border border-[#3A3A52] overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#5A3B8C]/20 hover:border-[#8B7CC7] transition-all duration-300 relative"
 	>
 		<!-- Specular light sheen following cursor -->
 		<div
 			class="pointer-events-none absolute inset-0 z-30 transition-opacity duration-300 rounded-3xl"
-			style="background: radial-gradient(circle 240px at {shineX}% {shineY}%, rgba(255, 255, 255, {shineOpacity}), transparent 80%);"
+			style="background: radial-gradient(circle 240px at {shineX}% {shineY}%, rgba(139, 124, 199, {shineOpacity}), transparent 80%);"
 		></div>
 
 		<!-- Image Container with 3D Parallax Depth -->
 		<div
-			class="relative aspect-square bg-slate-50 dark:bg-slate-900/60 overflow-hidden p-5 flex items-center justify-center"
-			style="transform: translateZ(18px);"
+			class="relative aspect-square bg-[#140E28] overflow-hidden p-5 flex items-center justify-center border-b border-[#3A3A52]/80"
+			style="transform: translateZ(16px);"
 		>
 			<img
 				src={getProductImageUrl(product)}
 				alt={product.title}
-				class="w-full h-full object-contain group-hover:scale-108 transition-transform duration-300 drop-shadow-sm"
+				class="w-full h-full object-contain group-hover:scale-108 transition-transform duration-300 drop-shadow-md"
 				loading="lazy"
 				onerror={(e) => {
 					const target = e.currentTarget as HTMLImageElement;
@@ -111,11 +111,11 @@
 				}}
 			/>
 
-			<!-- Discount badge with elevated 3D depth -->
+			<!-- Discount badge in Royal Purple -->
 			{#if discount > 0}
 				<div
-					style="transform: translateZ(32px);"
-					class="absolute top-3 left-3 bg-gradient-to-r from-success to-emerald-600 text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-md tracking-wider border border-white/20"
+					style="transform: translateZ(30px);"
+					class="absolute top-3 left-3 bg-[#5A3B8C] text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-md tracking-wider border border-[#8B7CC7]/40"
 				>
 					{discount}% OFF
 				</div>
@@ -124,12 +124,12 @@
 			<!-- Wishlist Heart Button -->
 			<button
 				onclick={handleToggleWishlist}
-				style="transform: translateZ(34px);"
-				class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-800/90 hover:scale-110 active:scale-90 shadow-md border border-border/60 dark:border-slate-700 flex items-center justify-center transition-all cursor-pointer z-30"
+				style="transform: translateZ(32px);"
+				class="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#2A1E4D]/90 hover:bg-[#34265E] hover:scale-110 active:scale-90 shadow-md border border-[#3A3A52] hover:border-[#8B7CC7] flex items-center justify-center transition-all cursor-pointer z-30"
 				title={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
 				aria-label={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
 			>
-				<span class="text-sm transition-transform {isWishlisted ? 'scale-110' : 'opacity-60'}">
+				<span class="text-sm transition-transform {isWishlisted ? 'scale-110' : 'opacity-70'}">
 					{isWishlisted ? '❤️' : '🤍'}
 				</span>
 			</button>
@@ -137,8 +137,8 @@
 			<!-- Pack Size / Unit Price Pill if available -->
 			{#if product.unitPrice}
 				<div
-					style="transform: translateZ(32px);"
-					class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10 shadow-xs"
+					style="transform: translateZ(30px);"
+					class="absolute bottom-2.5 right-2.5 bg-[#2A1E4D]/90 backdrop-blur-md text-[#C9C2E3] text-[10px] font-bold px-2 py-0.5 rounded-lg border border-[#3A3A52] shadow-xs"
 				>
 					{product.unitPrice.formatted}
 				</div>
@@ -146,48 +146,48 @@
 		</div>
 
 		<!-- Info with elevated typography -->
-		<div class="p-4 space-y-2 relative z-10" style="transform: translateZ(12px);">
+		<div class="p-4 space-y-2 relative z-10" style="transform: translateZ(10px);">
 			<!-- Category & Brand -->
 			<div class="flex items-center justify-between text-xs">
-				<span class="font-extrabold text-primary dark:text-indigo-400 uppercase tracking-wider text-[11px]">
+				<span class="font-extrabold text-[#8B7CC7] uppercase tracking-wider text-[11px]">
 					{product.brand}
 				</span>
-				<span class="text-[10px] bg-slate-100 dark:bg-slate-700/60 text-text-secondary dark:text-slate-300 px-2 py-0.5 rounded-full font-medium truncate max-w-[110px]">
+				<span class="text-[10px] bg-[#140E28] text-[#8E84B0] border border-[#3A3A52]/70 px-2 py-0.5 rounded-full font-medium truncate max-w-[120px]">
 					{product.category}
 				</span>
 			</div>
 
 			<!-- Title -->
-			<h3 class="text-sm font-bold text-text-primary dark:text-slate-100 leading-snug line-clamp-2 group-hover:text-primary dark:group-hover:text-indigo-400 transition-colors">
+			<h3 class="text-sm font-bold text-[#C9C2E3] leading-snug line-clamp-2 group-hover:text-white transition-colors">
 				{product.title}
 			</h3>
 
 			<!-- Price row & Unit Price -->
 			<div class="pt-1">
 				<div class="flex items-baseline gap-2">
-					<span class="text-lg font-black text-text-primary dark:text-white">
+					<span class="text-lg font-black text-white">
 						{formatPrice(bestPrice.price)}
 					</span>
 					{#if discount > 0}
-						<span class="text-xs text-text-secondary dark:text-slate-400 line-through">
+						<span class="text-xs text-[#8E84B0] line-through">
 							{formatPrice(bestPrice.mrp)}
 						</span>
 					{/if}
 				</div>
 				{#if product.variant}
-					<p class="text-[11px] text-text-secondary dark:text-slate-400 font-medium">
+					<p class="text-[11px] text-[#8E84B0] font-medium truncate">
 						Variant: {product.variant}
 					</p>
 				{/if}
 			</div>
 
 			<!-- Store count & Lowest store -->
-			<div class="flex items-center justify-between text-[11px] text-text-secondary dark:text-slate-400 pt-2 border-t border-border/50 dark:border-slate-700/60">
-				<span class="flex items-center gap-1 font-semibold text-text-primary dark:text-slate-200">
-					<span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+			<div class="flex items-center justify-between text-[11px] text-[#8E84B0] pt-2 border-t border-[#3A3A52]">
+				<span class="flex items-center gap-1.5 font-semibold text-[#C9C2E3]">
+					<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
 					Lowest on {bestPrice.store}
 				</span>
-				<span>{storeCount} stores</span>
+				<span class="text-[#8E84B0]">{storeCount} stores</span>
 			</div>
 		</div>
 	</a>
